@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppProvider } from './context/AppContext'; // 1. Provider ko import karo
-import DashboardLayout from './components/DashboardLayout';
+import DashboardLayout from './components/DashboardCard';
 import LandingPage from './pages/LandingPage';
 import AuthPage from './pages/AuthPage';
 
