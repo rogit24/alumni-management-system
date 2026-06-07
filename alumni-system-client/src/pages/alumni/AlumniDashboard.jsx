@@ -40,11 +40,18 @@ function AlumniDashboard() {
       currentUser?.name || "Alumni"
     );
 
+    const myMessages = messages.filter(
+      (msg) =>
+        msg &&
+        (msg.senderEmail === currentUser?.email ||
+          msg.receiverEmail === currentUser?.email)
+    );
+
     setStats({
       jobs: jobs.length,
       applications: applications.length,
       referrals: referrals.length,
-      messages: messages.length,
+      messages: myMessages.length,
     });
   }, []);
 

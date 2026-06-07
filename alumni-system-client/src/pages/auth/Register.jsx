@@ -44,101 +44,81 @@ function Register() {
 
    toast.success("Registration Successful");
 
-    navigate("/");
+    navigate("/login");
   };
 
   return (
-    <div
-      className="container-fluid"
-      style={{
-        minHeight: "100vh",
-        background:
-          "linear-gradient(135deg,#0f172a,#1e293b,#312e81)",
-      }}
-    >
+    <div className="auth-container">
       {/* Navbar */}
-
-      <nav className="navbar navbar-dark py-3">
-        <div className="container">
-          <h3 className="text-white fw-bold">
-            🎓 Alumni Connect System
-          </h3>
+      <nav className="auth-navbar d-flex justify-content-between align-items-center">
+        <h3 className="logo-text m-0 d-flex align-items-center gap-2">
+          <span>🎓</span> AlumniConnect
+        </h3>
+        <div>
+          <Link
+            to="/login"
+            className="btn btn-outline-light fw-bold px-4 py-2 rounded-pill"
+          >
+            Sign In
+          </Link>
         </div>
       </nav>
 
-      <div className="container">
-        <div className="row align-items-center min-vh-100">
+      <div className="container py-5">
+        <div className="row align-items-center gy-5">
 
           {/* Left Side */}
-
-          <div className="col-lg-6 text-white">
-
-            <h1 className="display-4 fw-bold mb-3">
+          <div className="col-lg-6 text-dark">
+            <h1 className="display-4 fw-bold mb-3" style={{ color: '#0f172a' }}>
               Alumni Management System
             </h1>
-
-            <p className="lead mb-4">
-              Connect Students with Alumni,
-              Explore Career Opportunities,
-              Request Referrals and Build
-              Professional Networks.
+            <p className="lead mb-4" style={{ color: '#475569' }}>
+              Connect Students with Alumni, Explore Career Opportunities, Request Referrals and Build Professional Networks.
             </p>
 
-            <div className="row">
-
-              <div className="col-md-6 mb-3">
-                <div className="card bg-dark text-white p-3">
-                  <h5>💼 Job Portal</h5>
-                  <small>
+            <div className="row g-3">
+              <div className="col-md-6">
+                <div className="card card-dark p-3 h-100">
+                  <h5 className="fw-bold text-primary">💼 Job Portal</h5>
+                  <small className="text-muted">
                     Alumni can post jobs for students.
                   </small>
                 </div>
               </div>
 
-              <div className="col-md-6 mb-3">
-                <div className="card bg-dark text-white p-3">
-                  <h5>🤝 Referrals</h5>
-                  <small>
+              <div className="col-md-6">
+                <div className="card card-dark p-3 h-100">
+                  <h5 className="fw-bold text-success">🤝 Referrals</h5>
+                  <small className="text-muted">
                     Request referrals from alumni.
                   </small>
                 </div>
               </div>
 
-              <div className="col-md-6 mb-3">
-                <div className="card bg-dark text-white p-3">
-                  <h5>💬 Messaging</h5>
-                  <small>
+              <div className="col-md-6">
+                <div className="card card-dark p-3 h-100">
+                  <h5 className="fw-bold text-warning">💬 Messaging</h5>
+                  <small className="text-muted">
                     Chat directly with alumni.
                   </small>
                 </div>
               </div>
 
-              <div className="col-md-6 mb-3">
-                <div className="card bg-dark text-white p-3">
-                  <h5>🔔 Notifications</h5>
-                  <small>
+              <div className="col-md-6">
+                <div className="card card-dark p-3 h-100">
+                  <h5 className="fw-bold text-danger">🔔 Notifications</h5>
+                  <small className="text-muted">
                     Real-time updates and alerts.
                   </small>
                 </div>
               </div>
-
             </div>
-
           </div>
 
           {/* Right Side Register Form */}
-
           <div className="col-lg-6">
-
-            <div
-              className="card shadow-lg border-0 p-4"
-              style={{
-                borderRadius: "20px",
-                background: "#1e293b",
-                color: "white",
-              }}
-            >
-              <h2 className="text-center mb-4">
+            <div className="card card-dark shadow-lg border-0 p-4">
+              <h2 className="text-center mb-4 fw-bold" style={{ color: '#0f172a' }}>
                 Create Account
               </h2>
 
@@ -171,31 +151,24 @@ function Register() {
                 className="form-select mb-3"
                 onChange={handleChange}
               >
-                <option value="student">
-                  Student
-                </option>
-
-                <option value="alumni">
-                  Alumni
-                </option>
+                <option value="student">Student</option>
+                <option value="alumni">Alumni</option>
               </select>
 
               <button
-                className="btn btn-primary w-100"
+                className="btn gradient-btn w-100 border-0"
                 onClick={handleRegister}
               >
                 Register Now
               </button>
 
-              <p className="text-center mt-3">
+              <p className="text-center mt-3 mb-0">
                 Already Have Account?{" "}
-                <Link to="/">
+                <Link to="/login" className="fw-bold" style={{ color: '#6366f1' }}>
                   Login
                 </Link>
               </p>
-
             </div>
-
           </div>
 
         </div>

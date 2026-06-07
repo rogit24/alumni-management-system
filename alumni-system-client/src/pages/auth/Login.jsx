@@ -38,6 +38,13 @@ function Login() {
       return;
     }
 
+    // Check if the user is blocked in the database
+    const dbUser = registeredUsers.find((u) => u.email === user.email);
+    if (dbUser && dbUser.status === "Blocked") {
+      toast.error("Your account has been blocked by the Admin! ❌");
+      return;
+    }
+
     localStorage.setItem(
       "currentUser",
       JSON.stringify(user)
@@ -169,32 +176,7 @@ function Login() {
 
       </div>
 
-      {/* Statistics */}
 
-      <div className="row mb-5">
-
-        <div className="col-md-4">
-          <div className="stats-card">
-            <h2>500+</h2>
-            <p>Students</p>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="stats-card">
-            <h2>200+</h2>
-            <p>Alumni</p>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="stats-card">
-            <h2>100+</h2>
-            <p>Jobs Posted</p>
-          </div>
-        </div>
-
-      </div>
 
     </div>
 
