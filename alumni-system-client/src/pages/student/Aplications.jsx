@@ -51,7 +51,7 @@ function Applications() {
     );
 
     toast.success(
-      "Application Withdrawn Successfully ✅"
+      "Application Withdrawn Successfully"
     );
   };
 
