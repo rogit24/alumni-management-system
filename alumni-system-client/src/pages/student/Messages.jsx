@@ -151,7 +151,7 @@ function Messages() {
 
       </div>
     </StudentLayout>
-  );
+  ); 
 }
 
-// export default Messages;
+export default Messages;
