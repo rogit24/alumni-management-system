@@ -10,14 +10,23 @@ function Referrals() {
   }, []);
 
   const loadReferrals = () => {
-    const savedReferrals =
-      JSON.parse(localStorage.getItem("referrals")) || [];
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    const allReferrals = JSON.parse(localStorage.getItem("referrals")) || [];
 
-    setReferrals(savedReferrals);
+    const myReferrals = allReferrals.filter(
+      (ref) =>
+        ref &&
+        ref.alumniEmail?.trim().toLowerCase() ===
+          currentUser?.email?.trim().toLowerCase()
+    );
+
+    setReferrals(myReferrals);
   };
 
   const updateStatus = (id, status) => {
-    const updatedReferrals = referrals.map((ref) =>
+    const allReferrals = JSON.parse(localStorage.getItem("referrals")) || [];
+
+    const updatedReferrals = allReferrals.map((ref) =>
       ref.id === id
         ? {
             ...ref,
@@ -27,12 +36,7 @@ function Referrals() {
         : ref
     );
 
-    setReferrals(updatedReferrals);
-
-    localStorage.setItem(
-      "referrals",
-      JSON.stringify(updatedReferrals)
-    );
+    localStorage.setItem("referrals", JSON.stringify(updatedReferrals));
 
     const selectedReferral = updatedReferrals.find(
       (ref) => ref.id === id
@@ -57,14 +61,10 @@ function Referrals() {
       date: new Date().toLocaleString(),
     });
 
-    localStorage.setItem(
-      "notifications",
-      JSON.stringify(notifications)
-    );
+    localStorage.setItem("notifications", JSON.stringify(notifications));
 
-    toast.success(
-      `Referral ${status} Successfully`
-    );
+    toast.success(`Referral ${status} Successfully`);
+    loadReferrals();
   };
 
   return (

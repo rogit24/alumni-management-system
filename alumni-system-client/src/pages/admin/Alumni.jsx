@@ -3,48 +3,130 @@ import AdminLayout from "../../layouts/AdminLayout";
 
 function Alumni() {
   const [alumni, setAlumni] = useState([]);
+  const [jobs, setJobs] = useState([]);
+  const [referrals, setReferrals] = useState([]);
 
   useEffect(() => {
-    const users =
-      JSON.parse(localStorage.getItem("users")) || [];
-
+    const users = JSON.parse(localStorage.getItem("users")) || [];
     const filteredAlumni = users.filter(
-      (user) =>
-        user.role?.toLowerCase() === "alumni"
+      (user) => user && user.role?.toLowerCase() === "alumni"
     );
-
     setAlumni(filteredAlumni);
+
+    const allJobs = JSON.parse(localStorage.getItem("jobs")) || [];
+    setJobs(allJobs);
+
+    const allReferrals = JSON.parse(localStorage.getItem("referrals")) || [];
+    setReferrals(allReferrals);
   }, []);
 
   return (
     <AdminLayout>
-      <div className="container">
-
-        <h2 className="mb-4">
-          Alumni Management
-        </h2>
+      <div className="container-fluid py-2">
+        <div className="mb-4">
+          <h2 className="fw-bold text-dark">Alumni Registry</h2>
+          <p className="text-muted">Manage registered alumni, track posted job listings, and monitor referrals provided</p>
+        </div>
 
         {alumni.length === 0 ? (
-          <div className="card p-4 text-center">
-            No Alumni Found
+          <div className="card shadow-sm p-5 text-center bg-white" style={{ borderRadius: '20px' }}>
+            <i className="bi bi-award display-3 text-muted mb-3 d-block"></i>
+            <h5>No Alumni Found</h5>
+            <p className="text-muted mb-0">There are no alumni accounts registered in the database yet.</p>
           </div>
         ) : (
-          alumni.map((alum) => (
-            <div
-              className="card shadow p-3 mb-3"
-              key={alum.id}
-            >
-              <h5>{alum.name}</h5>
+          <div className="row g-4">
+            {alumni.map((alum) => {
+              const myJobs = jobs.filter((job) => job.postedByEmail === alum.email);
+              const myRefs = referrals.filter((ref) => ref.alumniEmail === alum.email);
 
-              <p>{alum.email}</p>
+              return (
+                <div className="col-12" key={alum.id || alum.email}>
+                  <div className="card shadow-sm p-4 bg-white border-0" style={{ borderRadius: '20px' }}>
+                    {/* Header */}
+                    <div className="d-flex justify-content-between align-items-start border-bottom pb-3 mb-3 flex-wrap gap-2">
+                      <div>
+                        <h4 className="fw-bold text-dark mb-1">{alum.name}</h4>
+                        <div className="d-flex flex-wrap gap-2 align-items-center">
+                          <span className="text-muted small"><i className="bi bi-envelope me-1"></i> {alum.email}</span>
+                          {alum.company && (
+                            <span className="badge bg-light text-dark border">
+                              💼 {alum.company}
+                            </span>
+                          )}
+                          {alum.skills && (
+                            <span className="badge bg-light text-dark border">
+                              🛠️ {alum.skills}
+                            </span>
+                          )}
+                          {alum.location && (
+                            <span className="badge bg-light text-dark border">
+                              📍 {alum.location}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                      <span className="badge bg-purple-subtle text-purple px-3 py-1.5 rounded-pill fw-bold">
+                        Alumni Account
+                      </span>
+                    </div>
 
-              <span className="badge bg-success">
-                Alumni
-              </span>
-            </div>
-          ))
+                    <div className="row g-4">
+                      {/* Posted Jobs column */}
+                      <div className="col-md-6 border-end">
+                        <h6 className="fw-bold text-dark mb-3 d-flex justify-content-between align-items-center">
+                          <span>💼 Jobs Posted</span>
+                          <span className="badge bg-secondary rounded-pill">{myJobs.length}</span>
+                        </h6>
+                        {myJobs.length === 0 ? (
+                          <p className="text-muted small mb-0 py-2">No job listings posted yet.</p>
+                        ) : (
+                          <div className="list-group list-group-flush" style={{ maxHeight: "250px", overflowY: "auto" }}>
+                            {myJobs.map((job) => (
+                              <div className="list-group-item bg-transparent px-0 py-2 border-0 d-flex justify-content-between align-items-center" key={job.id}>
+                                <div>
+                                  <span className="fw-semibold text-dark d-block">{job.title}</span>
+                                  <small className="text-muted">Company Name: {job.company}</small>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Referrals Handled column */}
+                      <div className="col-md-6">
+                        <h6 className="fw-bold text-dark mb-3 d-flex justify-content-between align-items-center">
+                          <span>🤝 Referrals Handled</span>
+                          <span className="badge bg-secondary rounded-pill">{myRefs.length}</span>
+                        </h6>
+                        {myRefs.length === 0 ? (
+                          <p className="text-muted small mb-0 py-2">No referral requests handled yet.</p>
+                        ) : (
+                          <div className="list-group list-group-flush" style={{ maxHeight: "250px", overflowY: "auto" }}>
+                            {myRefs.map((ref) => (
+                              <div className="list-group-item bg-transparent px-0 py-2 border-0 d-flex justify-content-between align-items-center" key={ref.id}>
+                                <div>
+                                  <span className="fw-semibold text-dark d-block">{ref.company}</span>
+                                  <small className="text-muted">Student: {ref.studentName || ref.studentEmail}</small>
+                                </div>
+                                <span className={`badge px-2 py-1 ${
+                                  ref.status === 'Approved' || ref.status === 'Accepted' ? 'bg-success-subtle text-success' : 'bg-warning-subtle text-warning'
+                                }`}>
+                                  {ref.status}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         )}
-
       </div>
     </AdminLayout>
   );

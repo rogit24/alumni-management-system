@@ -92,10 +92,20 @@ function AlumniSearch() {
         </div>
 
         <div className="row">
-          {filteredAlumni.length === 0 ? (
+          {search.trim() === "" ? (
             <div className="col-12">
-              <div className="card shadow p-5 text-center">
-                <h5>No Alumni Found</h5>
+              <div className="card shadow-sm p-5 text-center bg-white" style={{ borderRadius: '20px' }}>
+                <i className="bi bi-search text-primary display-4 mb-3 d-block"></i>
+                <h5 className="fw-bold text-dark">Search the Alumni Network</h5>
+                <p className="text-muted mb-0">Type a name, company, or professional skills above to search alumni profiles.</p>
+              </div>
+            </div>
+          ) : filteredAlumni.length === 0 ? (
+            <div className="col-12">
+              <div className="card shadow-sm p-5 text-center bg-white" style={{ borderRadius: '20px' }}>
+                <i className="bi bi-person-x text-danger display-4 mb-3 d-block"></i>
+                <h5 className="fw-bold text-dark">No Alumni Found</h5>
+                <p className="text-muted mb-0">Try search queries like "Google", "React", or "Amit".</p>
               </div>
             </div>
           ) : (

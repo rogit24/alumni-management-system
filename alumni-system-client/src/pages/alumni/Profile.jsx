@@ -123,6 +123,23 @@ function Profile() {
       JSON.stringify(allProfiles)
     );
 
+    // Update the user details in the main "users" collection so it reflects in student search
+    const allUsers = JSON.parse(localStorage.getItem("users")) || [];
+    const userIndex = allUsers.findIndex((u) => u.email === profile.email);
+    if (userIndex !== -1) {
+      allUsers[userIndex] = {
+        ...allUsers[userIndex],
+        name: profile.name,
+        company: profile.company,
+        skills: profile.skills,
+        experience: profile.experience,
+        location: profile.location,
+        about: profile.about,
+        photo: profile.photo,
+      };
+      localStorage.setItem("users", JSON.stringify(allUsers));
+    }
+
     // Update current logged-in user
     const currentUser = JSON.parse(
       localStorage.getItem("currentUser")
@@ -131,6 +148,10 @@ function Profile() {
     if (currentUser) {
       currentUser.name = profile.name;
       currentUser.email = profile.email;
+      currentUser.company = profile.company;
+      currentUser.skills = profile.skills;
+      currentUser.experience = profile.experience;
+      currentUser.location = profile.location;
 
       localStorage.setItem(
         "currentUser",

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import users from "../../data/users";
 import { toast } from "react-toastify";
 
 function Login() {
@@ -19,13 +18,7 @@ function Login() {
   };
 
   const handleLogin = () => {
-    const registeredUsers =
-      JSON.parse(localStorage.getItem("users")) || [];
-
-    const allUsers = [
-      ...users,
-      ...registeredUsers,
-    ];
+    const allUsers = JSON.parse(localStorage.getItem("users")) || [];
 
     const user = allUsers.find(
       (u) =>
@@ -38,9 +31,7 @@ function Login() {
       return;
     }
 
-    // Check if the user is blocked in the database
-    const dbUser = registeredUsers.find((u) => u.email === user.email);
-    if (dbUser && dbUser.status === "Blocked") {
+    if (user.status === "Blocked") {
       toast.error("Your account has been blocked by the Admin! ❌");
       return;
     }
