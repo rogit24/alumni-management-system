@@ -10,13 +10,13 @@ function AlumniSearch() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // 1. Read directly from the consolidated "users" local storage key
+    //  Read directly from the consolidated "users" local storage key
     const allUsers = JSON.parse(localStorage.getItem("users")) || [];
 
-    // 2. Filter down to pull out ONLY profiles whose role is designated as alumni
+    // Filter down to pull out ONLY profiles whose role is designated as alumni
     const alumniProfiles = allUsers.filter((u) => u && u.role === "alumni");
 
-    // 3. Map fallback IDs cleanly to ensure React lists remain stable
+    // Map fallback IDs cleanly to ensure React lists remain stable
     const alumniWithIds = alumniProfiles.map((item, index) => ({
       ...item,
       id: item.id || item.email || `alumni-${index}`,

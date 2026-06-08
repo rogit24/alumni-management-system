@@ -69,7 +69,6 @@ function Login() {
   return (
     <div className="auth-container">
 
-      {/* Navbar */}
       <nav className="auth-navbar d-flex justify-content-between align-items-center">
         <h3 className="logo-text">
           🎓 Alumni Connect
@@ -89,7 +88,6 @@ function Login() {
 
         <div className="row hero-section align-items-center">
 
-          {/* Left Section */}
 
           <div className="col-lg-7">
 
@@ -126,7 +124,6 @@ function Login() {
 
           </div>
 
-          {/* Login Form */}
 
           <div className="col-lg-5">
 

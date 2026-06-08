@@ -119,7 +119,7 @@ function Profile() {
             <img
               src={
                 profile.profileImage ||
-                "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                "https://cdn-icons-png.flaticon.com/512/149/149071.png"
               }
               alt="Profile"
               className="rounded-circle shadow"

@@ -59,7 +59,6 @@ function AlumniDashboard() {
     <AlumniLayout>
       <div className="container-fluid">
 
-        {/* Welcome Section */}
 
         <div className="mb-5">
           <h2 className="fw-bold">
@@ -71,7 +70,6 @@ function AlumniDashboard() {
           </p>
         </div>
 
-        {/* Dashboard Cards */}
 
         <div className="row g-4">
 
@@ -135,7 +133,6 @@ function AlumniDashboard() {
 
         </div>
 
-        {/* Quick Overview */}
 
        
 

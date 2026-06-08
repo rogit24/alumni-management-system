@@ -56,7 +56,7 @@ function AdminDashboard() {
         </div>
 
         <div className="row g-4">
-          {/* Total Users */}
+          
           <div className="col-md-3">
             <div className="dashboard-card card-blue p-4 shadow-sm rounded">
               <div className="card-icon">👥</div>
@@ -65,7 +65,7 @@ function AdminDashboard() {
             </div>
           </div>
 
-          {/* Students */}
+          
           <div className="col-md-3">
             <div className="dashboard-card card-green p-4 shadow-sm rounded">
               <div className="card-icon">🎓</div>
@@ -74,7 +74,7 @@ function AdminDashboard() {
             </div>
           </div>
 
-          {/* Alumni */}
+         
           <div className="col-md-3">
             <div className="dashboard-card card-purple p-4 shadow-sm rounded">
               <div className="card-icon">🏆</div>
@@ -83,7 +83,7 @@ function AdminDashboard() {
             </div>
           </div>
 
-          {/* Admins */}
+          
           <div className="col-md-3">
             <div className="dashboard-card card-orange p-4 shadow-sm rounded">
               <div className="card-icon">🛡️</div>
@@ -92,7 +92,7 @@ function AdminDashboard() {
             </div>
           </div>
 
-          {/* Jobs Posted */}
+          
           <div className="col-md-3">
             <div className="dashboard-card card-cyan p-4 shadow-sm rounded">
               <div className="card-icon">💼</div>
@@ -101,7 +101,7 @@ function AdminDashboard() {
             </div>
           </div>
 
-          {/* Applications */}
+          
           <div className="col-md-3">
             <div className="dashboard-card card-red p-4 shadow-sm rounded">
               <div className="card-icon">📄</div>
@@ -110,7 +110,7 @@ function AdminDashboard() {
             </div>
           </div>
 
-          {/* Referrals */}
+         
           <div className="col-md-3">
             <div className="dashboard-card card-green p-4 shadow-sm rounded">
               <div className="card-icon">🤝</div>
@@ -119,7 +119,7 @@ function AdminDashboard() {
             </div>
           </div>
 
-          {/* Messages */}
+          
           <div className="col-md-3">
             <div className="dashboard-card card-purple p-4 shadow-sm rounded">
               <div className="card-icon">💬</div>

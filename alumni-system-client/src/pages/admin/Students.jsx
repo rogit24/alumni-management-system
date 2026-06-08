@@ -43,7 +43,6 @@ function Students() {
               return (
                 <div className="col-12" key={student.id || student.email}>
                   <div className="card shadow-sm p-4 bg-white border-0" style={{ borderRadius: '20px' }}>
-                    {/* Header */}
                     <div className="d-flex justify-content-between align-items-start border-bottom pb-3 mb-3 flex-wrap gap-2">
                       <div>
                         <h4 className="fw-bold text-dark mb-1">{student.name}</h4>
@@ -55,7 +54,6 @@ function Students() {
                     </div>
 
                     <div className="row g-4">
-                      {/* Job Applications column */}
                       <div className="col-md-6 border-end">
                         <h6 className="fw-bold text-dark mb-3 d-flex justify-content-between align-items-center">
                           <span>💼 Applications Submitted</span>
@@ -82,7 +80,6 @@ function Students() {
                         )}
                       </div>
 
-                      {/* Referrals column */}
                       <div className="col-md-6">
                         <h6 className="fw-bold text-dark mb-3 d-flex justify-content-between align-items-center">
                           <span>🤝 Referral Requests</span>

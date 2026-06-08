@@ -7,7 +7,7 @@ function LandingPage() {
 
   return (
     <div className="auth-container">
-      {/* Premium Navigation Header */}
+      
       <nav className="auth-navbar d-flex justify-content-between align-items-center">
         <h3 className="logo-text m-0 d-flex align-items-center gap-2">
           <span>🎓</span> AlumniConnect
@@ -29,7 +29,7 @@ function LandingPage() {
         </div>
       </nav>
 
-      {/* Hero Showcase Center Layout */}
+     
       <Container className="hero-section d-flex align-items-center py-5">
         <Row className="align-items-center gy-5">
           {/* Left Column: Heading and description */}
@@ -62,7 +62,7 @@ function LandingPage() {
               </Button>
             </div>
             
-            {/* Trust factors */}
+          
             <div className="d-flex align-items-center gap-4 text-muted">
               <div className="d-flex align-items-center gap-2">
                 <i className="bi bi-shield-check text-success fs-5"></i>
@@ -75,14 +75,14 @@ function LandingPage() {
             </div>
           </Col>
 
-          {/* Right Column: Visual Mockup Showcase */}
+         
           <Col lg={6}>
             <div className="position-relative p-4">
-              {/* Decorative background gradients */}
+       
               <div className="position-absolute bg-primary rounded-circle blur-3xl opacity-10" style={{ width: '300px', height: '300px', top: '-10%', right: '-10%', filter: 'blur(80px)' }}></div>
               <div className="position-absolute bg-purple rounded-circle blur-3xl opacity-10" style={{ width: '250px', height: '250px', bottom: '-10%', left: '-10%', filter: 'blur(75px)' }}></div>
 
-              {/* Interactive Dashboard Mockup Card */}
+              
               <Card className="card-dark border-0 p-4 shadow-lg position-relative" style={{ zIndex: 2 }}>
                 <div className="d-flex align-items-center justify-content-between mb-4 border-bottom pb-3">
                   <div className="d-flex align-items-center gap-2">
@@ -96,7 +96,7 @@ function LandingPage() {
                   </span>
                 </div>
 
-                {/* Simulated Referral Card */}
+                
                 <div className="bg-light p-3 rounded-4 mb-3 border border-light-subtle d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center gap-3">
                     <span className="fs-3">🤝</span>
@@ -108,7 +108,7 @@ function LandingPage() {
                   <span className="badge bg-success text-white px-2 py-1 rounded">Approved</span>
                 </div>
 
-                {/* Simulated Job Card */}
+                
                 <div className="bg-light p-3 rounded-4 mb-3 border border-light-subtle d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center gap-3">
                     <span className="fs-3">💻</span>
@@ -120,7 +120,7 @@ function LandingPage() {
                   <span className="badge bg-primary text-white px-2 py-1 rounded">Apply Now</span>
                 </div>
 
-                {/* Simulated Chat Bubble */}
+              
                 <div className="bg-primary-subtle text-primary p-3 rounded-4 border border-primary-subtle d-flex align-items-start gap-3">
                   <span className="fs-4">💬</span>
                   <div>

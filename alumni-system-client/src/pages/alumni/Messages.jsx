@@ -11,13 +11,13 @@ function Messages() {
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-  // Load list of students and active chat
+  // list of students and active chat
   useEffect(() => {
     const allUsers = JSON.parse(localStorage.getItem("users")) || [];
     const filteredStudents = allUsers.filter((u) => u && u.role === "student" && u.email !== currentUser?.email);
     setStudentList(filteredStudents);
 
-    // Check if a student was selected from notifications/referrals
+    // To Check if a student was selected from notifications/referrals
     const initiallySelected = JSON.parse(localStorage.getItem("selectedStudent"));
     if (initiallySelected) {
       const found = filteredStudents.find((s) => s.email === initiallySelected.email);
@@ -107,7 +107,6 @@ function Messages() {
   return (
     <AlumniLayout>
       <div className="container-fluid py-2">
-        {/* Header Section */}
         <div className="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
           <div>
             <h2 className="fw-bold text-dark m-0">Student Messages Inbox</h2>
@@ -116,7 +115,6 @@ function Messages() {
         </div>
 
         <div className="row g-4">
-          {/* Left Column: Student Contact List */}
           <div className="col-md-4">
             <div className="card shadow-sm h-100 bg-white" style={{ minHeight: "600px" }}>
               <div className="card-header bg-transparent fw-bold text-dark border-0 pt-4 px-4 pb-2">
@@ -172,12 +170,10 @@ function Messages() {
             </div>
           </div>
 
-          {/* Right Column: Chat Box */}
           <div className="col-md-8">
             <div className="card shadow-sm h-100 bg-white d-flex flex-column" style={{ minHeight: "600px" }}>
               {selectedStudent ? (
                 <>
-                  {/* Chat Box Header */}
                   <div className="card-header bg-transparent border-bottom p-4 d-flex align-items-center gap-3">
                     <div
                       className="rounded-circle bg-primary-subtle text-primary fw-bold d-flex align-items-center justify-content-center"
@@ -193,7 +189,6 @@ function Messages() {
                     </div>
                   </div>
 
-                  {/* Messages Scroll Area */}
                   <div
                     className="card-body p-4 flex-grow-1"
                     style={{
@@ -234,7 +229,6 @@ function Messages() {
                     )}
                   </div>
 
-                  {/* Message Input Form */}
                   <div className="card-footer bg-transparent border-top p-3">
                     <div className="input-group shadow-sm" style={{ borderRadius: "12px", overflow: "hidden" }}>
                       <input

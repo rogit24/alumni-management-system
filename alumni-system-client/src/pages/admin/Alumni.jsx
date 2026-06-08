@@ -94,7 +94,7 @@ function Alumni() {
                         )}
                       </div>
 
-                      {/* Referrals Handled column */}
+                      
                       <div className="col-md-6">
                         <h6 className="fw-bold text-dark mb-3 d-flex justify-content-between align-items-center">
                           <span>🤝 Referrals Handled</span>

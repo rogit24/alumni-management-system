@@ -50,7 +50,6 @@ function Register() {
 
   return (
     <div className="auth-container">
-      {/* Navbar */}
       <nav className="auth-navbar d-flex justify-content-between align-items-center">
         <h3 className="logo-text m-0 d-flex align-items-center gap-2">
           <span>🎓</span> AlumniConnect
@@ -68,7 +67,6 @@ function Register() {
       <div className="container py-5">
         <div className="row align-items-center gy-5">
 
-          {/* Left Side */}
           <div className="col-lg-6 text-dark">
             <h1 className="display-4 fw-bold mb-3" style={{ color: '#0f172a' }}>
               Alumni Management System
@@ -116,7 +114,6 @@ function Register() {
             </div>
           </div>
 
-          {/* Right Side Register Form */}
           <div className="col-lg-6">
             <div className="card card-dark shadow-lg border-0 p-4">
               <h2 className="text-center mb-4 fw-bold" style={{ color: '#0f172a' }}>

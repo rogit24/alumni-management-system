@@ -19,13 +19,11 @@ function Reports() {
   const [referralsList, setReferralsList] = useState([]);
 
   useEffect(() => {
-    // Read the single source of truth database collections
     const users = JSON.parse(localStorage.getItem("users")) || [];
     const jobs = JSON.parse(localStorage.getItem("jobs")) || [];
     const applications = JSON.parse(localStorage.getItem("applications")) || [];
     const referrals = JSON.parse(localStorage.getItem("referrals")) || [];
 
-    // Derive deeper analytic metrics
     const students = users.filter((u) => u && u.role === "student");
     const alumni = users.filter((u) => u && u.role === "alumni");
     const admins = users.filter((u) => u && u.role === "admin");
@@ -45,9 +43,9 @@ function Reports() {
       totalReferrals: referrals.length,
     });
 
-    // Take the last 5 registered users for a summary feed table
+    // last 5 registered users for a summary feed table
     setRecentUsers(users.slice(-5).reverse());
-    // Get full list of jobs and referrals
+    // full list of jobs and referrals
     setJobsList(jobs);
     setReferralsList(referrals);
   }, []);
@@ -55,7 +53,6 @@ function Reports() {
   return (
     <AdminLayout>
       <div className="container-fluid py-2">
-        {/* Header section */}
         <div className="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
           <div>
             <h2 className="fw-bold text-dark m-0">Portal Operations & Performance Audit</h2>
@@ -69,7 +66,6 @@ function Reports() {
           </button>
         </div>
 
-        {/* Row 1: Core High-Level Counters */}
         <div className="row g-4 mb-4">
           <div className="col-md-4">
             <div className="card shadow-sm p-4 border-start border-primary border-4 bg-white">
@@ -105,9 +101,7 @@ function Reports() {
           </div>
         </div>
 
-        {/* Row 2: Deep Metric Cards and Lists */}
         <div className="row g-4 mb-4">
-          {/* Detailed Breakdown Card */}
           <div className="col-lg-5">
             <div className="card shadow-sm h-100 bg-white">
               <div className="card-header bg-transparent fw-bold text-dark border-0 pt-4 px-4">
