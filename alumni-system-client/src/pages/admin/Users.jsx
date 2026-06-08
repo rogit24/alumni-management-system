@@ -36,6 +36,24 @@ function Users() {
     );
   };
 
+  const approveAlumni = (id) => {
+    const updatedUsers = users.map((user) =>
+      user.id === id
+        ? {
+            ...user,
+            status: "Active",
+          }
+        : user
+    );
+
+    setUsers(updatedUsers);
+
+    localStorage.setItem(
+      "users",
+      JSON.stringify(updatedUsers)
+    );
+  };
+
   const deleteUser = (id) => {
 
     const updatedUsers =
@@ -80,6 +98,8 @@ function Users() {
                 className={
                   user.status === "Blocked"
                     ? "badge bg-danger ms-2"
+                    : user.status === "Pending Approval"
+                    ? "badge bg-warning text-dark ms-2"
                     : "badge bg-success ms-2"
                 }
               >
@@ -88,6 +108,17 @@ function Users() {
             </p>
 
             <div className="d-flex gap-2">
+
+              {user.role === "alumni" && user.status === "Pending Approval" && (
+                <button
+                  className="btn btn-success"
+                  onClick={() =>
+                    approveAlumni(user.id)
+                  }
+                >
+                  Approve Alumni
+                </button>
+              )}
 
               <button
                 className="btn btn-warning"

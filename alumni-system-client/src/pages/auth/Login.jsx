@@ -36,12 +36,17 @@ function Login() {
       return;
     }
 
+    if (user.role?.toLowerCase() === "alumni" && user.status === "Pending Approval") {
+      toast.error("Your alumni account is pending Admin approval! ❌");
+      return;
+    }
+
     localStorage.setItem(
       "currentUser",
       JSON.stringify(user)
     );
 
-  toast.success("Login Successful");
+    toast.success("Login Successful");
 
     switch (user.role.toLowerCase()) {
       case "student":
@@ -61,123 +66,123 @@ function Login() {
     }
   };
 
- return (
-  <div className="auth-container">
+  return (
+    <div className="auth-container">
 
-    {/* Navbar */}
-    <nav className="auth-navbar d-flex justify-content-between align-items-center">
-      <h3 className="logo-text">
-        🎓 Alumni Connect
-      </h3>
+      {/* Navbar */}
+      <nav className="auth-navbar d-flex justify-content-between align-items-center">
+        <h3 className="logo-text">
+          🎓 Alumni Connect
+        </h3>
 
-      <div>
-        <Link
-          to="/register"
-          className="btn btn-outline-light"
-        >
-          Register
-        </Link>
-      </div>
-    </nav>
-
-    <div className="container">
-
-      <div className="row hero-section align-items-center">
-
-        {/* Left Section */}
-
-        <div className="col-lg-7">
-
-          <h1 className="project-title mb-4">
-            Student-Alumni Connect System
-          </h1>
-
-          <p className="project-desc mb-4">
-            Connect students with alumni for
-             career guidance,
-            networking, job opportunities,
-            referrals and professional growth.
-          </p>
-
-          <div className="feature-item">
-            🎓 Search Alumni Network
-          </div>
-
-          <div className="feature-item">
-            💼 Find Jobs & Internships
-          </div>
-
-          <div className="feature-item">
-            🤝 Request Referrals
-          </div>
-
-          <div className="feature-item">
-            💬 Messaging
-          </div>
-
-          <div className="feature-item">
-            🔔 Smart Notifications
-          </div>
-
+        <div>
+          <Link
+            to="/register"
+            className="btn btn-outline-light"
+          >
+            Register
+          </Link>
         </div>
+      </nav>
 
-        {/* Login Form */}
+      <div className="container">
 
-        <div className="col-lg-5">
+        <div className="row hero-section align-items-center">
 
-          <div className="card card-dark p-4 shadow-lg">
+          {/* Left Section */}
 
-            <h2 className="text-center mb-4">
-              Login
-            </h2>
+          <div className="col-lg-7">
 
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              className="form-control mb-3"
-              onChange={handleChange}
-            />
+            <h1 className="project-title mb-4">
+              Student-Alumni Connect System
+            </h1>
 
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              className="form-control mb-3"
-              onChange={handleChange}
-            />
-
-            <button
-              className="btn gradient-btn w-100"
-              onClick={handleLogin}
-            >
-              Login
-            </button>
-
-            <p className="text-center mt-3">
-              New User?{" "}
-              <Link to="/register">
-                Register
-              </Link>
+            <p className="project-desc mb-4">
+              Connect students with alumni for
+              career guidance,
+              networking, job opportunities,
+              referrals and professional growth.
             </p>
 
+            <div className="feature-item">
+              🎓 Search Alumni Network
+            </div>
+
+            <div className="feature-item">
+              💼 Find Jobs & Internships
+            </div>
+
+            <div className="feature-item">
+              🤝 Request Referrals
+            </div>
+
+            <div className="feature-item">
+              💬 Messaging
+            </div>
+
+            <div className="feature-item">
+              🔔 Smart Notifications
+            </div>
+
+          </div>
+
+          {/* Login Form */}
+
+          <div className="col-lg-5">
+
+            <div className="card card-dark p-4 shadow-lg">
+
+              <h2 className="text-center mb-4">
+                Login
+              </h2>
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                className="form-control mb-3"
+                onChange={handleChange}
+              />
+
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                className="form-control mb-3"
+                onChange={handleChange}
+              />
+
+              <button
+                className="btn gradient-btn w-100"
+                onClick={handleLogin}
+              >
+                Login
+              </button>
+
+              <p className="text-center mt-3">
+                New User?{" "}
+                <Link to="/register">
+                  Register
+                </Link>
+              </p>
+
+            </div>
+
           </div>
 
         </div>
 
+
+
       </div>
 
+      <footer className="footer">
+        © 2026 Student-Alumni Connect System
 
+      </footer>
 
     </div>
-
-    <footer className="footer">
-      © 2026 Student-Alumni Connect System 
-     
-    </footer>
-
-  </div>
-);
+  );
 }
 
 export default Login;

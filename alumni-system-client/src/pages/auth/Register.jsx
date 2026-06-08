@@ -35,6 +35,7 @@ function Register() {
     users.push({
       id: Date.now(),
       ...formData,
+      status: formData.role === "alumni" ? "Pending Approval" : "Active",
     });
 
     localStorage.setItem(

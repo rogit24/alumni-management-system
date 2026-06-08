@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
 import AdminLayout from "../../layouts/AdminLayout";
-
-// 1. Apne custom mock data file ko import karein
-// (Path check kar lijiyega agar aapki folder structure thodi alag ho)
 import usersData from "../../data/users";
 
 function AdminDashboard() {
@@ -18,7 +15,7 @@ function AdminDashboard() {
   });
 
   const loadDashboard = () => {
-  // Read ONLY from localStorage now
+
   const users = JSON.parse(localStorage.getItem("users")) || [];
   const jobs = JSON.parse(localStorage.getItem("jobs")) || [];
   const applications = JSON.parse(localStorage.getItem("applications")) || [];
