@@ -32,7 +32,7 @@ function LandingPage() {
      
       <Container className="hero-section d-flex align-items-center py-5">
         <Row className="align-items-center gy-5">
-          {/* Left Column: Heading and description */}
+          
           <Col lg={6} className="text-start">
             <span className="badge bg-light text-primary border px-3 py-2 rounded-pill fw-bold mb-3 shadow-sm text-uppercase tracking-wider">
               ✨ Empowering Next-Gen Careers
