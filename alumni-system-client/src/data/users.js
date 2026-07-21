@@ -14,6 +14,7 @@ export const mockUsers = [
     email: "alumni1@gmail.com",
     password: "123",
     role: "alumni",
+    company:"Google",
   },
   {
     id: 3,
@@ -28,6 +29,8 @@ export const mockUsers = [
     email: "alumni2@gmail.com",
     password: "123",
     role: "alumni",
+    company:"Microsoft",
+
   },
   {
     id: 5,

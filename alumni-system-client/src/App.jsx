@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 
 // Public Pages
-import Landing from "./pages/LandingPage"; // Add your Landing page component here
+import Landing from "./pages/LandingPage"; 
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 

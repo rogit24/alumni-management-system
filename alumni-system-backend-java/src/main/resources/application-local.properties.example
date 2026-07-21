@@ -1,0 +1,6 @@
+# Local environment overrides
+# Rename this file to application-local.properties and add it to your .gitignore
+
+spring.datasource.url=jdbc:mysql://localhost:3306/alumnidb_local
+spring.datasource.username=your_local_username
+spring.datasource.password=your_local_password
