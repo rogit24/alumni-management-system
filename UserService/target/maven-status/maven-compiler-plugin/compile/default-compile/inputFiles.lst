@@ -1,0 +1,11 @@
+E:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\dto\RegisterRequest.java
+E:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\dto\UserDto.java
+E:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\controller\AuthController.java
+E:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\dto\LoginRequest.java
+E:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\security\JwtUtils.java
+E:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\UserServiceApplication.java
+E:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\entity\User.java
+E:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\service\AuthService.java
+E:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\dto\AuthResponse.java
+E:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\config\SecurityConfig.java
+E:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\repository\UserRepository.java
