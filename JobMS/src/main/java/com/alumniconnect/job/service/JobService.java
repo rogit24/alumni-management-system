@@ -7,7 +7,7 @@ import com.alumniconnect.job.entity.UserRole;
 
 public interface JobService {
  
-	JobDto create(JobDto jobDto,String userEmail);
+	JobDto create(JobDto jobDto,String userEmail,UserRole userRole);
 	
 	List<JobDto> getAllJobs();
 	
