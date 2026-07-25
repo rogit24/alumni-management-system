@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Bean;
 public class JobApplication {
 
     @Bean
-    public ModelMapper modelMapper() {
+    ModelMapper modelMapper() {
         return new ModelMapper();
     }
 

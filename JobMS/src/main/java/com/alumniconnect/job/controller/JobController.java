@@ -39,6 +39,8 @@ public class JobController {
 		this.jobService = jobService;
 	}
 	
+	
+//	creating a new job posting
 	@PostMapping
 	public ResponseEntity<JobDto> createJob(@Valid @RequestBody JobDto jobDto,
             @RequestHeader(value = "X-User-Email", required = false) String userEmail,
@@ -49,6 +51,8 @@ public class JobController {
 		return new ResponseEntity<>(createdJob,HttpStatus.CREATED);
 	}
 	
+	
+//	getting all the jobs present in db 
 	@GetMapping
 	public ResponseEntity<List<JobDto>> getAllJobs(
 			@RequestHeader(value="X-User-Email",required = false)String userEmail,
@@ -59,8 +63,17 @@ public class JobController {
 	}
 	
 	
-	
-	
+//	getting the job by the particular id 
+	@GetMapping("/{id}")
+	public ResponseEntity<JobDto> getJobById(
+			@PathVariable Long id,
+			@RequestHeader(value="X-User-Email",required=false)String userEmail,
+			@RequestHeader(value="x-User-Role",required=false)String userRole){
+		
+		validateRole(userRole, UserRole.ADMIN,UserRole.STUDENT,UserRole.ALUMNI);
+		JobDto job = jobService.getJobById(id);
+		return ResponseEntity.ok(job);
+	}
 	
 	
 	

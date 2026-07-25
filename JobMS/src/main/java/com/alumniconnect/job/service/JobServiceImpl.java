@@ -49,8 +49,10 @@ public class JobServiceImpl implements JobService {
 
 	@Override
 	public JobDto getJobById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		Job job = jobRepository.findById(id).
+				orElseThrow(()-> new RuntimeException("Job not found of id:"+id));
+		
+		return modelMapper.map(job, JobDto.class);
 	}
 
 	@Override
