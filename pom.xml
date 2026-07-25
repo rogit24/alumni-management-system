@@ -30,6 +30,8 @@
         <module>ApiGateway</module>
         <module>UserService</module>
         <module>TemplateMS</module>
+        <module>JobMS</module>
+        <module>ApplicationMS</module>
     </modules>
 
     <dependencyManagement>
