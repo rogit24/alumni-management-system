@@ -1,3 +1,9 @@
-com/alumniconnect/job/controller/JobController.class
 com/alumniconnect/job/exception/GlobalExceptionHandler.class
+com/alumniconnect/job/dto/JobDto.class
+com/alumniconnect/job/entity/Jobtype.class
+com/alumniconnect/job/repository/JobRepository.class
+com/alumniconnect/job/controller/JobController.class
+com/alumniconnect/job/entity/Job.class
 com/alumniconnect/job/JobApplication.class
+com/alumniconnect/job/entity/UserRole.class
+com/alumniconnect/job/service/JobService.class

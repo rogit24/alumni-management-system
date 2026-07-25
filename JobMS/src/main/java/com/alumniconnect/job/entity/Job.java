@@ -1,43 +1,43 @@
-package com.alumniconnect.job.entity;
 
-import java.time.LocalDate;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+	package com.alumniconnect.job.entity;
 
-@Entity
-@Table(name = "jobs")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class Job {
+	import jakarta.persistence.*;
+	import lombok.*;
+	import java.time.LocalDate;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Entity
+	@Table(name = "jobs")
+	@Getter
+	@Setter
+	@AllArgsConstructor
+	@NoArgsConstructor
+	public class Job {
 
-    @Column(nullable = false)
-    private String title;
+	    @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    private Long id;
 
-    @Column(nullable = false)
-    private String company;
+	    @Column(nullable = false)
+	    private String title;
 
-    private String salary;
+	    @Column(nullable = false)
+	    private String company;
 
-    private String location;
+	    private double  salary;
+	    @Column(length = 100)
+	    private String location;
 
-    @Column(length = 1000)
-    private String description;
+	    @Column(length = 1000)
+	    private String description;
 
-    private String postedByEmail;
+	    @Column(name = "posted_by_email")
+	    private String postedByEmail;
 
-    private LocalDate postedByDate;
-}
+	    @Column(name = "job_type")
+	    private Jobtype jobType; 
+
+	    @Column(name = "posted_date")
+	    private LocalDate postedDate; 
+	}
+
+

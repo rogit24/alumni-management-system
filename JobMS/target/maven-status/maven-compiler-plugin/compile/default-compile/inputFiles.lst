@@ -1,3 +1,9 @@
+/Users/naveen/alumni-management-system/JobMS/src/main/java/com/alumniconnect/job/entity/Job.java
+/Users/naveen/alumni-management-system/JobMS/src/main/java/com/alumniconnect/job/entity/Jobtype.java
 /Users/naveen/alumni-management-system/JobMS/src/main/java/com/alumniconnect/job/exception/GlobalExceptionHandler.java
+/Users/naveen/alumni-management-system/JobMS/src/main/java/com/alumniconnect/job/dto/JobDto.java
 /Users/naveen/alumni-management-system/JobMS/src/main/java/com/alumniconnect/job/controller/JobController.java
+/Users/naveen/alumni-management-system/JobMS/src/main/java/com/alumniconnect/job/repository/JobRepository.java
 /Users/naveen/alumni-management-system/JobMS/src/main/java/com/alumniconnect/job/JobApplication.java
+/Users/naveen/alumni-management-system/JobMS/src/main/java/com/alumniconnect/job/entity/UserRole.java
+/Users/naveen/alumni-management-system/JobMS/src/main/java/com/alumniconnect/job/service/JobService.java
