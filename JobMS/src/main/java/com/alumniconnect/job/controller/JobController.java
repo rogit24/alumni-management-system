@@ -12,6 +12,7 @@ import com.alumniconnect.job.service.JobService;
 import jakarta.validation.Valid;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -48,6 +49,14 @@ public class JobController {
 		return new ResponseEntity<>(createdJob,HttpStatus.CREATED);
 	}
 	
+	@GetMapping
+	public ResponseEntity<List<JobDto>> getAllJobs(
+			@RequestHeader(value="X-User-Email",required = false)String userEmail,
+			@RequestHeader(value="X-User-Role",required = false)String userRole){
+		validateRole(userRole, UserRole.ADMIN,UserRole.STUDENT,UserRole.ALUMNI);
+		List<JobDto> jobs = jobService.getAllJobs();
+		return ResponseEntity.ok(jobs);
+	}
 	
 	
 	

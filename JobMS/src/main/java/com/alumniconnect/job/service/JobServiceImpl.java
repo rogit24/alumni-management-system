@@ -2,6 +2,7 @@ package com.alumniconnect.job.service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,8 +42,9 @@ public class JobServiceImpl implements JobService {
 
 	@Override
 	public List<JobDto> getAllJobs() {
-		// TODO Auto-generated method stub
-		return null;
+		return jobRepository.findAll().stream()
+				.map(job->modelMapper.map(job, JobDto.class))
+				.collect(Collectors.toList());
 	}
 
 	@Override
