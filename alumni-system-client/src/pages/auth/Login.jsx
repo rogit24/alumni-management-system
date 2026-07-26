@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { auth } from "../../services/api";
 
 function Login() {
   const navigate = useNavigate();
@@ -17,52 +18,44 @@ function Login() {
     });
   };
 
-  const handleLogin = () => {
-    const allUsers = JSON.parse(localStorage.getItem("users")) || [];
-
-    const user = allUsers.find(
-      (u) =>
-        u.email === formData.email &&
-        u.password === formData.password
-    );
-
-    if (!user) {
-      toast.error("Invalid Credentials ❌");
+  const handleLogin = async () => {
+    if (!formData.email || !formData.password) {
+      toast.warning("Please enter email and password");
       return;
     }
 
-    if (user.status === "Blocked") {
-      toast.error("Your account has been blocked by the Admin! ❌");
-      return;
-    }
+    try {
+      const user = await auth.login(formData.email, formData.password);
 
-    if (user.role?.toLowerCase() === "alumni" && user.status === "Pending Approval") {
-      toast.error("Your alumni account is pending Admin approval! ❌");
-      return;
-    }
+      if (user.status?.toLowerCase() === "blocked") {
+        toast.error("Your account has been blocked by the Admin! ❌");
+        return;
+      }
 
-    localStorage.setItem(
-      "currentUser",
-      JSON.stringify(user)
-    );
+      if (user.role?.toLowerCase() === "alumni" && user.status?.toLowerCase() === "pending approval") {
+        toast.error("Your alumni account is pending Admin approval! ❌");
+        return;
+      }
 
-    toast.success("Login Successful");
+      localStorage.setItem("currentUser", JSON.stringify(user));
+      toast.success("Login Successful");
 
-    switch (user.role.toLowerCase()) {
-      case "student":
-        navigate("/student");
-        break;
-
-      case "alumni":
-        navigate("/alumni");
-        break;
-
-      case "admin":
-        navigate("/admin");
-        break;
-
-      default:
-        alert("Role not found");
+      switch (user.role.toLowerCase()) {
+        case "student":
+          navigate("/student");
+          break;
+        case "alumni":
+          navigate("/alumni");
+          break;
+        case "admin":
+          navigate("/admin");
+          break;
+        default:
+          toast.error("Role not recognized");
+      }
+    } catch (error) {
+      const errMsg = error.response?.data?.message || "Invalid Credentials ❌";
+      toast.error(errMsg);
     }
   };
 

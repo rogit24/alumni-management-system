@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import AdminLayout from "../../layouts/AdminLayout";
-import usersData from "../../data/users";
+import { auth, jobs as jobsApi } from "../../services/api";
 
 function AdminDashboard() {
   const [stats, setStats] = useState({
@@ -14,25 +14,28 @@ function AdminDashboard() {
     messages: 0,
   });
 
-  const loadDashboard = () => {
+  const loadDashboard = async () => {
+    try {
+      const users = await auth.getAllUsers();
+      const jobs = await jobsApi.getAll();
+      const applications = JSON.parse(localStorage.getItem("applications")) || [];
+      const referrals = JSON.parse(localStorage.getItem("referrals")) || [];
+      const messages = JSON.parse(localStorage.getItem("messages")) || [];
 
-  const users = JSON.parse(localStorage.getItem("users")) || [];
-  const jobs = JSON.parse(localStorage.getItem("jobs")) || [];
-  const applications = JSON.parse(localStorage.getItem("applications")) || [];
-  const referrals = JSON.parse(localStorage.getItem("referrals")) || [];
-  const messages = JSON.parse(localStorage.getItem("messages")) || [];
-
-  setStats({
-    users: users.length,
-    students: users.filter((u) => u.role === "student").length,
-    alumni: users.filter((u) => u.role === "alumni").length,
-    admins: users.filter((u) => u.role === "admin").length,
-    jobs: jobs.length,
-    applications: applications.length,
-    referrals: referrals.length,
-    messages: messages.length,
-  });
-};
+      setStats({
+        users: users.length,
+        students: users.filter((u) => u.role?.toLowerCase() === "student").length,
+        alumni: users.filter((u) => u.role?.toLowerCase() === "alumni").length,
+        admins: users.filter((u) => u.role?.toLowerCase() === "admin").length,
+        jobs: jobs.length,
+        applications: applications.length,
+        referrals: referrals.length,
+        messages: messages.length,
+      });
+    } catch (err) {
+      console.error("Error loading dashboard stats:", err);
+    }
+  };
 
   useEffect(() => {
     loadDashboard();

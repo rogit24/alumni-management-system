@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import AlumniLayout from "../../layouts/AlumniLayout";
 import { toast } from "react-toastify";
+import { jobs as jobsService } from "../../services/api";
 
 function JobManagement() {
   const [jobs, setJobs] = useState([]);
@@ -18,19 +19,20 @@ function JobManagement() {
     loadJobs();
   }, []);
 
-  const loadJobs = () => {
+  const loadJobs = async () => {
     const currentUser =
       JSON.parse(localStorage.getItem("currentUser"));
 
-    const savedJobs =
-      JSON.parse(localStorage.getItem("jobs")) || [];
-
-    const myJobs = savedJobs.filter(
-      (job) =>
-        job.postedByEmail === currentUser?.email
-    );
-
-    setJobs(myJobs);
+    try {
+      const data = await jobsService.getAll();
+      const myJobs = data.filter(
+        (job) =>
+          job.postedByEmail === currentUser?.email
+      );
+      setJobs(myJobs);
+    } catch (error) {
+      toast.error("Failed to load jobs from backend ❌");
+    }
   };
 
   const handleChange = (e) => {
@@ -40,7 +42,7 @@ function JobManagement() {
     });
   };
 
-  const addJob = () => {
+  const addJob = async () => {
     if (
       !jobData.title ||
       !jobData.company ||
@@ -53,100 +55,35 @@ function JobManagement() {
       return;
     }
 
-    const currentUser =
-      JSON.parse(localStorage.getItem("currentUser"));
+    try {
+      await jobsService.create(jobData);
 
-    const allJobs =
-      JSON.parse(localStorage.getItem("jobs")) || [];
-
-    const newJob = {
-      id: Date.now(),
-      title: jobData.title,
-      company: jobData.company,
-      location: jobData.location,
-      salary: jobData.salary,
-      description: jobData.description,
-      jobType: jobData.jobType,
-      postedBy: currentUser?.name,
-      postedByEmail: currentUser?.email,
-      postedDate:
-        new Date().toLocaleDateString(),
-    };
-
-    const updatedJobs = [
-      ...allJobs,
-      newJob,
-    ];
-
-    localStorage.setItem(
-      "jobs",
-      JSON.stringify(updatedJobs)
-    );
-
-    // Student Notifications
-    const notifications =
-      JSON.parse(
-        localStorage.getItem("notifications")
-      ) || [];
-
-    const users =
-      JSON.parse(
-        localStorage.getItem("users")
-      ) || [];
-
-    users
-      .filter(
-        (user) =>
-          user.role?.toLowerCase() === "student"
-      )
-      .forEach((student) => {
-        notifications.push({
-          id:
-            Date.now() +
-            Math.floor(
-              Math.random() * 1000
-            ),
-          userEmail: student.email,
-          message: `New Job Posted: ${jobData.title} at ${jobData.company}`,
-          date: new Date().toLocaleString(),
-        });
+      setJobData({
+        title: "",
+        company: "",
+        location: "",
+        salary: "",
+        description: "",
+        jobType: "",
       });
 
-    localStorage.setItem(
-      "notifications",
-      JSON.stringify(notifications)
-    );
+      await loadJobs();
 
-    setJobData({
-      title: "",
-      company: "",
-      location: "",
-      salary: "",
-      description: "",
-      jobType: "",
-    });
-
-    loadJobs();
-
-    toast.success("Job Posted Successfully");
+      toast.success("Job Posted Successfully");
+    } catch (error) {
+      const errMsg = error.response?.data?.message || "Failed to post job ❌";
+      toast.error(errMsg);
+    }
   };
 
-  const deleteJob = (id) => {
-    const allJobs =
-      JSON.parse(localStorage.getItem("jobs")) || [];
-
-    const updatedJobs = allJobs.filter(
-      (job) => job.id !== id
-    );
-
-    localStorage.setItem(
-      "jobs",
-      JSON.stringify(updatedJobs)
-    );
-
-    loadJobs();
-
-    toast.error("Job Deleted Successfully");
+  const deleteJob = async (id) => {
+    try {
+      await jobsService.delete(id);
+      await loadJobs();
+      toast.error("Job Deleted Successfully");
+    } catch (error) {
+      toast.error("Failed to delete job ❌");
+    }
   };
 
   return (
