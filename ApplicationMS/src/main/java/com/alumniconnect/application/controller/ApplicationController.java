@@ -12,6 +12,7 @@ import com.alumniconnect.application.service.ApplicationService;
 import jakarta.validation.Valid;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -55,6 +56,19 @@ public class ApplicationController {
 		return new ResponseEntity<>(createdApplication,HttpStatus.CREATED);
 	}
 	
+	@GetMapping
+     public ResponseEntity<List<ApplicationDto>> getApplications(
+    		 @RequestHeader(value="X-User-email",required = false)String email,
+    		 @RequestHeader(value="X-User-Role",required = false)String userRole){
+		validateRole(userRole,UserRole.STUDENT);
+		if(email ==null || email.isBlank()) {
+			throw new RuntimeException("Access denied: X-User-Email header is missing");
+		}
+		
+		List<ApplicationDto> applications = applicationService.getApplicationsForStudent(email);
+				return ResponseEntity.ok(applications);
+		
+	}
     
     
     private UserRole  validateRole(String userRoleStr, UserRole... allowedRoles) {

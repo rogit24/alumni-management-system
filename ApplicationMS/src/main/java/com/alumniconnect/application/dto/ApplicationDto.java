@@ -10,16 +10,19 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDate;
 
 import com.alumniconnect.application.entity.ApplicationStatus;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class ApplicationDto {
-
+    
+	@JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Long id;
 
     @NotNull(message = "Job ID is required")
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Long jobId;
 
     private String studentEmail;

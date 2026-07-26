@@ -2,6 +2,7 @@ package com.alumniconnect.application.service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,8 +74,12 @@ public class ApplicationServiceImpl implements ApplicationService {
 
 	@Override
 	public List<ApplicationDto> getApplicationsForStudent(String studentEmail) {
-		// TODO Auto-generated method stub
-		return null;
+		if(studentEmail==null || studentEmail.isBlank()) {
+			throw new RuntimeException("Student email is required");
+		}
+		return applicationRepository.findByStudentEmail(studentEmail).stream()
+                .map(app -> modelMapper.map(app, ApplicationDto.class))
+                .collect(Collectors.toList());
 	}
 
 	@Override
