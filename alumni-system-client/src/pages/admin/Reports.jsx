@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AdminLayout from "../../layouts/AdminLayout";
+import { auth, jobs as jobsApi } from "../../services/api";
 
 function Reports() {
   const [report, setReport] = useState({
@@ -19,34 +20,41 @@ function Reports() {
   const [referralsList, setReferralsList] = useState([]);
 
   useEffect(() => {
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    const jobs = JSON.parse(localStorage.getItem("jobs")) || [];
-    const applications = JSON.parse(localStorage.getItem("applications")) || [];
+    const loadData = async () => {
+      try {
+        const users = await auth.getAllUsers();
+        const jobs = await jobsApi.getAll();
+        const applications = JSON.parse(localStorage.getItem("applications")) || [];
+        const referrals = JSON.parse(localStorage.getItem("referrals")) || [];
+
+        const students = users.filter((u) => u && u.role?.toLowerCase() === "student");
+        const alumni = users.filter((u) => u && u.role?.toLowerCase() === "alumni");
+        const admins = users.filter((u) => u && u.role?.toLowerCase() === "admin");
+
+        const pending = applications.filter((app) => app && app.status === "Pending");
+        const approved = applications.filter((app) => app && (app.status === "Approved" || app.status === "Accepted"));
+
+        setReport({
+          totalUsers: users.length,
+          studentCount: students.length,
+          alumniCount: alumni.length,
+          adminCount: admins.length,
+          totalJobs: jobs.length,
+          totalApps: applications.length,
+          pendingApps: pending.length,
+          approvedApps: approved.length,
+          totalReferrals: referrals.length,
+        });
+
+        setRecentUsers(users.slice(-5).reverse());
+        setJobsList(jobs);
+      } catch (err) {
+        console.error("Error loading report data:", err);
+      }
+    };
+    loadData();
+
     const referrals = JSON.parse(localStorage.getItem("referrals")) || [];
-
-    const students = users.filter((u) => u && u.role === "student");
-    const alumni = users.filter((u) => u && u.role === "alumni");
-    const admins = users.filter((u) => u && u.role === "admin");
-
-    const pending = applications.filter((app) => app && app.status === "Pending");
-    const approved = applications.filter((app) => app && (app.status === "Approved" || app.status === "Accepted"));
-
-    setReport({
-      totalUsers: users.length,
-      studentCount: students.length,
-      alumniCount: alumni.length,
-      adminCount: admins.length,
-      totalJobs: jobs.length,
-      totalApps: applications.length,
-      pendingApps: pending.length,
-      approvedApps: approved.length,
-      totalReferrals: referrals.length,
-    });
-
-    // last 5 registered users for a summary feed table
-    setRecentUsers(users.slice(-5).reverse());
-    // full list of jobs and referrals
-    setJobsList(jobs);
     setReferralsList(referrals);
   }, []);
 

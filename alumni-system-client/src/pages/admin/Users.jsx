@@ -1,70 +1,52 @@
 import { useEffect, useState } from "react";
 import AdminLayout from "../../layouts/AdminLayout";
+import { auth } from "../../services/api";
 
 function Users() {
 
   const [users, setUsers] = useState([]);
 
+  const fetchUsers = async () => {
+    try {
+      const data = await auth.getAllUsers();
+      setUsers(data);
+    } catch (err) {
+      console.error("Error fetching users:", err);
+    }
+  };
+
   useEffect(() => {
-
-    const storedUsers =
-      JSON.parse(localStorage.getItem("users")) || [];
-
-    setUsers(storedUsers);
-
+    fetchUsers();
   }, []);
 
-  const blockUser = (id) => {
-
-    const updatedUsers = users.map((user) =>
-      user.id === id
-        ? {
-            ...user,
-            status:
-              user.status === "Blocked"
-                ? "Active"
-                : "Blocked",
-          }
-        : user
-    );
-
-    setUsers(updatedUsers);
-
-    localStorage.setItem(
-      "users",
-      JSON.stringify(updatedUsers)
-    );
+  const blockUser = async (id) => {
+    const userToBlock = users.find((u) => u.id === id);
+    if (!userToBlock) return;
+    const newStatus = userToBlock.status === "Blocked" ? "Active" : "Blocked";
+    try {
+      await auth.updateUserStatus(id, newStatus);
+      fetchUsers();
+    } catch (err) {
+      console.error("Error blocking/unblocking user:", err);
+    }
   };
 
-  const approveAlumni = (id) => {
-    const updatedUsers = users.map((user) =>
-      user.id === id
-        ? {
-            ...user,
-            status: "Active",
-          }
-        : user
-    );
-
-    setUsers(updatedUsers);
-
-    localStorage.setItem(
-      "users",
-      JSON.stringify(updatedUsers)
-    );
+  const approveAlumni = async (id) => {
+    try {
+      await auth.updateUserStatus(id, "Active");
+      fetchUsers();
+    } catch (err) {
+      console.error("Error approving alumni:", err);
+    }
   };
 
-  const deleteUser = (id) => {
-
-    const updatedUsers =
-      users.filter((user) => user.id !== id);
-
-    setUsers(updatedUsers);
-
-    localStorage.setItem(
-      "users",
-      JSON.stringify(updatedUsers)
-    );
+  const deleteUser = async (id) => {
+    try {
+      await auth.deleteUser(id);
+      fetchUsers();
+    } catch (err) {
+      console.error("Error deleting user:", err);
+    }
   };
 
   return (
