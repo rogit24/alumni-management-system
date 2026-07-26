@@ -1,0 +1,17 @@
+com\alumniconnect\profileservice\exception\ResourceNotFoundException.class
+com\alumniconnect\profileservice\exception\UnauthorizedException.class
+com\alumniconnect\profileservice\exception\ProfileAlreadyExistsException.class
+com\alumniconnect\profileservice\entity\Profile.class
+com\alumniconnect\profileservice\service\ProfileService.class
+com\alumniconnect\profileservice\util\SecurityContextUtil$UserSecurityDetails.class
+com\alumniconnect\profileservice\entity\Profile$ProfileBuilder.class
+com\alumniconnect\profileservice\service\impl\ProfileServiceImpl.class
+com\alumniconnect\profileservice\dto\ProfileDto$ProfileDtoBuilder.class
+com\alumniconnect\profileservice\config\OpenApiConfig.class
+com\alumniconnect\profileservice\repository\ProfileRepository.class
+com\alumniconnect\profileservice\ProfileApplication.class
+com\alumniconnect\profileservice\exception\GlobalExceptionHandler.class
+com\alumniconnect\profileservice\util\SecurityContextUtil.class
+com\alumniconnect\profileservice\controller\ProfileController.class
+com\alumniconnect\profileservice\dto\ProfileDto.class
+com\alumniconnect\profileservice\exception\AccessDeniedException.class

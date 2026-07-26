@@ -1,0 +1,13 @@
+D:\alumni-management-system\MessageMS\src\main\java\com\alumniconnect\messageservice\util\SecurityContextUtil.java
+D:\alumni-management-system\MessageMS\src\main\java\com\alumniconnect\messageservice\repository\MessageRepository.java
+D:\alumni-management-system\MessageMS\src\main\java\com\alumniconnect\messageservice\exception\ResourceNotFoundException.java
+D:\alumni-management-system\MessageMS\src\main\java\com\alumniconnect\messageservice\exception\AccessDeniedException.java
+D:\alumni-management-system\MessageMS\src\main\java\com\alumniconnect\messageservice\service\MessageService.java
+D:\alumni-management-system\MessageMS\src\main\java\com\alumniconnect\messageservice\controller\MessageController.java
+D:\alumni-management-system\MessageMS\src\main\java\com\alumniconnect\messageservice\MessageApplication.java
+D:\alumni-management-system\MessageMS\src\main\java\com\alumniconnect\messageservice\service\impl\MessageServiceImpl.java
+D:\alumni-management-system\MessageMS\src\main\java\com\alumniconnect\messageservice\exception\UnauthorizedException.java
+D:\alumni-management-system\MessageMS\src\main\java\com\alumniconnect\messageservice\config\OpenApiConfig.java
+D:\alumni-management-system\MessageMS\src\main\java\com\alumniconnect\messageservice\exception\GlobalExceptionHandler.java
+D:\alumni-management-system\MessageMS\src\main\java\com\alumniconnect\messageservice\dto\MessageDto.java
+D:\alumni-management-system\MessageMS\src\main\java\com\alumniconnect\messageservice\entity\Message.java

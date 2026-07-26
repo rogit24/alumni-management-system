@@ -1,4 +1,5 @@
 com\alumniconnect\gateway\ApiGatewayApplication.class
 com\alumniconnect\gateway\security\AuthenticationFilter.class
 com\alumniconnect\gateway\security\AuthenticationFilter$Config.class
+com\alumniconnect\gateway\config\OpenApiConfig.class
 com\alumniconnect\gateway\security\JwtUtils.class

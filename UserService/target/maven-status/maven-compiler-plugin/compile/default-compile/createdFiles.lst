@@ -1,4 +1,5 @@
 com\alumniconnect\userservice\dto\UserDto.class
+com\alumniconnect\userservice\config\OpenApiConfig.class
 com\alumniconnect\userservice\controller\AuthController.class
 com\alumniconnect\userservice\dto\RegisterRequest.class
 com\alumniconnect\userservice\dto\AuthResponse.class

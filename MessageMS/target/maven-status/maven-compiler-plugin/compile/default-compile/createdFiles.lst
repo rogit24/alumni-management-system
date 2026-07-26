@@ -1,0 +1,16 @@
+com\alumniconnect\messageservice\dto\MessageDto.class
+com\alumniconnect\messageservice\exception\GlobalExceptionHandler.class
+com\alumniconnect\messageservice\service\impl\MessageServiceImpl.class
+com\alumniconnect\messageservice\service\MessageService.class
+com\alumniconnect\messageservice\dto\MessageDto$MessageDtoBuilder.class
+com\alumniconnect\messageservice\exception\ResourceNotFoundException.class
+com\alumniconnect\messageservice\repository\MessageRepository.class
+com\alumniconnect\messageservice\util\SecurityContextUtil.class
+com\alumniconnect\messageservice\exception\AccessDeniedException.class
+com\alumniconnect\messageservice\config\OpenApiConfig.class
+com\alumniconnect\messageservice\entity\Message.class
+com\alumniconnect\messageservice\exception\UnauthorizedException.class
+com\alumniconnect\messageservice\util\SecurityContextUtil$UserSecurityDetails.class
+com\alumniconnect\messageservice\MessageApplication.class
+com\alumniconnect\messageservice\entity\Message$MessageBuilder.class
+com\alumniconnect\messageservice\controller\MessageController.class

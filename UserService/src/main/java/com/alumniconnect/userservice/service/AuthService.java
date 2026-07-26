@@ -73,7 +73,7 @@ public class AuthService {
             throw new RuntimeException("Your alumni account is pending Admin approval! ❌");
         }
 
-        String token = jwtUtils.generateToken(user.getEmail(), user.getRole().name());
+        String token = jwtUtils.generateToken(user.getId(), user.getEmail(), user.getRole().name());
 
         return AuthResponse.builder()
                 .token(token)
