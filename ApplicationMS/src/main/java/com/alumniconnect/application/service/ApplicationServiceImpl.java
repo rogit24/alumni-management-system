@@ -91,8 +91,19 @@ public class ApplicationServiceImpl implements ApplicationService {
 
 	@Override
 	public ApplicationDto updateApplicationStatus(Long id, ApplicationStatus status, UserRole userRole) {
-		// TODO Auto-generated method stub
-		return null;
+		if(status == null) {
+			throw new RuntimeException("Application status is required");
+			
+		}
+		
+		Application application = applicationRepository.findById(id).orElseThrow(()-> 
+		new RuntimeException("Appication not found with Id : "+ id) );
+		
+		application.setStatus(status);
+		Application updatedApplication=applicationRepository.save(application);
+		
+		
+		return modelMapper.map(updatedApplication,ApplicationDto.class);
 	}
 
 	

@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.alumniconnect.application.dto.ApplicationDto;
+import com.alumniconnect.application.entity.ApplicationStatus;
 import com.alumniconnect.application.entity.UserRole;
 import com.alumniconnect.application.service.ApplicationService;
 
@@ -82,8 +83,30 @@ public class ApplicationController {
         return ResponseEntity.ok(applications);
     }
 	
-	
-	
+	@PatchMapping("/{id}/status")
+	public ResponseEntity<ApplicationDto> updateStatus(@PathVariable Long id,
+            @RequestParam(value = "status", required = false) String queryStatus,
+            @RequestBody(required = false) Map<String, String> bodyStatusMap,
+            @RequestHeader(value = "X-User-Email", required = false) String userEmail,
+            @RequestHeader(value = "X-User-Role", required = false) String userRole) {
+
+        UserRole validatedRole = validateRole(userRole, UserRole.ALUMNI, UserRole.ADMIN);
+
+        String statusToUpdate = queryStatus;
+        if ((statusToUpdate == null || statusToUpdate.isBlank()) && bodyStatusMap != null) {
+            statusToUpdate = bodyStatusMap.get("status");
+        }
+
+        if (statusToUpdate == null || statusToUpdate.isBlank()) {
+            throw new RuntimeException("Status field is required either in query parameter or JSON request body");
+        }
+
+        ApplicationStatus statusEnum = ApplicationStatus.fromString(statusToUpdate);
+
+        ApplicationDto updated = applicationService.updateApplicationStatus(id, statusEnum, validatedRole);
+        return ResponseEntity.ok(updated);
+		
+	}
 	
 //	Validation of the UserRole
     private UserRole  validateRole(String userRoleStr, UserRole... allowedRoles) {
