@@ -1,15 +1,21 @@
 import { useEffect, useState } from "react";
 import StudentLayout from "../../layouts/StudentLayout";
 import { toast } from "react-toastify";
+import { jobs as jobsService } from "../../services/api";
 
 function Jobs() {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    const savedJobs =
-      JSON.parse(localStorage.getItem("jobs")) || [];
-
-    setJobs(savedJobs);
+    const fetchJobs = async () => {
+      try {
+        const data = await jobsService.getAll();
+        setJobs(data);
+      } catch (error) {
+        toast.error("Failed to load jobs from backend ❌");
+      }
+    };
+    fetchJobs();
   }, []);
 
   const applyJob = (job) => {

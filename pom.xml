@@ -31,14 +31,10 @@
         <module>ServiceRegistry</module>
         <module>ApiGateway</module>
         <module>UserService</module>
-        <module>TemplateMS</module>
-<<<<<<< HEAD
-        <module>ProfileMS</module>
-        <module>MessageMS</module>
-=======
         <module>JobMS</module>
         <module>ApplicationMS</module>
->>>>>>> origin/main
+        <module>ProfileMS</module>
+        <module>MessageMS</module>
     </modules>
 
     <dependencyManagement>

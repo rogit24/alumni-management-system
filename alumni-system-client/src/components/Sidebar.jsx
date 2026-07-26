@@ -44,7 +44,7 @@ function Sidebar() {
       </div>
 
       <div className="flex-grow-1">
-        {user?.role === "student" && (
+        {user?.role?.toLowerCase() === "student" && (
           <>
             <Link className={`sidebar-link ${isActive("/student")}`} to="/student">
               <i className="bi bi-speedometer2 me-2"></i> Dashboard
@@ -83,7 +83,7 @@ function Sidebar() {
           </>
         )}
 
-        {user?.role === "alumni" && (
+        {user?.role?.toLowerCase() === "alumni" && (
           <>
             <Link className={`sidebar-link ${isActive("/alumni")}`} to="/alumni">
               <i className="bi bi-speedometer2 me-2"></i> Dashboard
@@ -118,7 +118,7 @@ function Sidebar() {
           </>
         )}
 
-        {user?.role === "admin" && (
+        {user?.role?.toLowerCase() === "admin" && (
           <>
             <Link className={`sidebar-link ${isActive("/admin")}`} to="/admin">
               <i className="bi bi-speedometer2 me-2"></i> Dashboard

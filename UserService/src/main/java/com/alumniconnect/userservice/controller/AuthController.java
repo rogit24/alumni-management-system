@@ -45,4 +45,23 @@ public class AuthController {
         UserDto userDto = authService.getUserById(id);
         return ResponseEntity.ok(userDto);
     }
+
+    @GetMapping("/users")
+    public ResponseEntity<java.util.List<UserDto>> getAllUsers() {
+        return ResponseEntity.ok(authService.getAllUsers());
+    }
+
+    @PutMapping("/users/{id}/status")
+    public ResponseEntity<UserDto> updateUserStatus(
+            @PathVariable("id") Long id,
+            @RequestParam("status") String status) {
+        UserDto updated = authService.updateUserStatus(id, status);
+        return ResponseEntity.ok(updated);
+    }
+
+    @DeleteMapping("/users/{id}")
+    public ResponseEntity<Void> deleteUser(@PathVariable("id") Long id) {
+        authService.deleteUser(id);
+        return ResponseEntity.ok().build();
+    }
 }
