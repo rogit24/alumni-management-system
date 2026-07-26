@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+D:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\entity\User.java
+D:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\dto\UserDto.java
+D:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\dto\AuthResponse.java
+D:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\config\OpenApiConfig.java
+D:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\repository\UserRepository.java
+D:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\config\SecurityConfig.java
+D:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\dto\LoginRequest.java
+D:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\controller\AuthController.java
+D:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\UserServiceApplication.java
+D:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\service\AuthService.java
+D:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\dto\RegisterRequest.java
+D:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\security\JwtUtils.java
+=======
 /Users/naveen/alumni-management-system/UserService/src/main/java/com/alumniconnect/userservice/UserServiceApplication.java
 /Users/naveen/alumni-management-system/UserService/src/main/java/com/alumniconnect/userservice/config/SecurityConfig.java
 /Users/naveen/alumni-management-system/UserService/src/main/java/com/alumniconnect/userservice/controller/AuthController.java
@@ -9,3 +23,4 @@
 /Users/naveen/alumni-management-system/UserService/src/main/java/com/alumniconnect/userservice/repository/UserRepository.java
 /Users/naveen/alumni-management-system/UserService/src/main/java/com/alumniconnect/userservice/security/JwtUtils.java
 /Users/naveen/alumni-management-system/UserService/src/main/java/com/alumniconnect/userservice/service/AuthService.java
+>>>>>>> origin/main

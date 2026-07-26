@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+com\alumniconnect\userservice\dto\UserDto.class
+com\alumniconnect\userservice\config\OpenApiConfig.class
+com\alumniconnect\userservice\controller\AuthController.class
+com\alumniconnect\userservice\dto\RegisterRequest.class
+com\alumniconnect\userservice\dto\AuthResponse.class
+com\alumniconnect\userservice\config\SecurityConfig.class
+com\alumniconnect\userservice\security\JwtUtils.class
+com\alumniconnect\userservice\service\AuthService.class
+com\alumniconnect\userservice\entity\User$Role.class
+com\alumniconnect\userservice\entity\User$UserBuilder.class
+com\alumniconnect\userservice\dto\LoginRequest.class
+com\alumniconnect\userservice\dto\UserDto$UserDtoBuilder.class
+com\alumniconnect\userservice\repository\UserRepository.class
+com\alumniconnect\userservice\UserServiceApplication.class
+com\alumniconnect\userservice\entity\User.class
+com\alumniconnect\userservice\dto\AuthResponse$AuthResponseBuilder.class
+com\alumniconnect\userservice\entity\User$Status.class
+=======
 com/alumniconnect/userservice/entity/User$Role.class
 com/alumniconnect/userservice/config/SecurityConfig.class
 com/alumniconnect/userservice/dto/UserDto.class
@@ -14,3 +33,4 @@ com/alumniconnect/userservice/UserServiceApplication.class
 com/alumniconnect/userservice/repository/UserRepository.class
 com/alumniconnect/userservice/dto/LoginRequest.class
 com/alumniconnect/userservice/dto/AuthResponse.class
+>>>>>>> origin/main
