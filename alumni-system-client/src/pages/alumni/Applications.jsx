@@ -153,7 +153,6 @@ function Applications() {
                       )
                     }
                   >
-                    Reject
                   </button>
 
                 </div>
