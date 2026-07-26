@@ -12,6 +12,7 @@ public class JobApplication {
 
     @Bean
     ModelMapper modelMapper() {
+    	
         return new ModelMapper();
     }
 

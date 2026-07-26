@@ -1,6 +1,7 @@
 package com.alumniconnect.job.dto;
 
 import com.alumniconnect.job.entity.UserRole;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -15,6 +16,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class JobDto {
 	
+	@JsonProperty(access = JsonProperty.Access.READ_ONLY)
 	private Long id;
 
     @NotBlank(message = "Title is required")
@@ -23,7 +25,7 @@ public class JobDto {
     @NotBlank(message = "Company is required")
     private String company;
 
-    private String salary;
+    private double salary;
 
     private String location;
 

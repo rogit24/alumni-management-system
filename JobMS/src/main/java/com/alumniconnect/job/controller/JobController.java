@@ -75,7 +75,30 @@ public class JobController {
 		return ResponseEntity.ok(job);
 	}
 	
-	
+//	calling update api based on id 
+	@PutMapping("/{id}")
+	public ResponseEntity<JobDto> update(
+			@PathVariable long id,@Valid@RequestBody JobDto jobDto,
+			@RequestHeader(value="X-User-Email",required=false)String userEmail,
+			@RequestHeader(value="x-User-Role",required=false)String userRole){
+		 
+		UserRole enumRole = validateRole(userRole, UserRole.ADMIN,UserRole.ALUMNI);
+		JobDto updateJob = jobService.updateJob(id, jobDto, userEmail, enumRole);
+		
+		return ResponseEntity.ok(updateJob);
+				
+			}
+
+	//	Calling an deleting api on id 
+	@DeleteMapping("/{id}")
+	public ResponseEntity<JobDto> delete(@PathVariable long id,
+			@RequestHeader(value="X-User-Email",required=false)String userEmail,
+			@RequestHeader(value="x-User-Role",required=false)String userRole){
+		
+		UserRole enumRole=validateRole(userRole, UserRole.ALUMNI,UserRole.ADMIN);
+		jobService.delete(id, userEmail, enumRole);
+		return ResponseEntity.ok().build();
+	}
 	
 //	Validate UserRole
 	private UserRole validateRole(String userRoleStr, UserRole... allowedRoles) {
