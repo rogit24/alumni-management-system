@@ -83,10 +83,11 @@ public class ApplicationServiceImpl implements ApplicationService {
 	}
 
 	@Override
-	public List<ApplicationDto> getApplicationsForJob(Long jobId) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    public List<ApplicationDto> getApplicationsForJob(Long jobId) {
+        return applicationRepository.findByJobId(jobId).stream()
+                .map(app -> modelMapper.map(app, ApplicationDto.class))
+                .collect(Collectors.toList());
+    }
 
 	@Override
 	public ApplicationDto updateApplicationStatus(Long id, ApplicationStatus status, UserRole userRole) {

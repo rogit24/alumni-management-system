@@ -56,7 +56,7 @@ public class ApplicationController {
 		return new ResponseEntity<>(createdApplication,HttpStatus.CREATED);
 	}
 	
-	@GetMapping
+	@GetMapping("/my-applications")
      public ResponseEntity<List<ApplicationDto>> getApplications(
     		 @RequestHeader(value="X-User-email",required = false)String email,
     		 @RequestHeader(value="X-User-Role",required = false)String userRole){
@@ -69,8 +69,23 @@ public class ApplicationController {
 				return ResponseEntity.ok(applications);
 		
 	}
-    
-    
+  
+	
+	@GetMapping("/job/{jobId}")
+    public ResponseEntity<List<ApplicationDto>> getApplicationsForJob(
+            @PathVariable Long jobId,
+            @RequestHeader(value = "X-User-Email", required = false) String userEmail,
+            @RequestHeader(value = "X-User-Role", required = false) String userRole) {
+
+        validateRole(userRole, UserRole.ALUMNI, UserRole.ADMIN);
+        List<ApplicationDto> applications = applicationService.getApplicationsForJob(jobId);
+        return ResponseEntity.ok(applications);
+    }
+	
+	
+	
+	
+//	Validation of the UserRole
     private UserRole  validateRole(String userRoleStr, UserRole... allowedRoles) {
     	
     	if(userRoleStr==null) {
