@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 D:\alumni-management-system\ApiGateway\src\main\java\com\alumniconnect\gateway\security\AuthenticationFilter.java
 D:\alumni-management-system\ApiGateway\src\main\java\com\alumniconnect\gateway\config\OpenApiConfig.java
 D:\alumni-management-system\ApiGateway\src\main\java\com\alumniconnect\gateway\ApiGatewayApplication.java
 D:\alumni-management-system\ApiGateway\src\main\java\com\alumniconnect\gateway\security\JwtUtils.java
+=======
+/Users/naveen/alumni-management-system/ApiGateway/src/main/java/com/alumniconnect/gateway/ApiGatewayApplication.java
+/Users/naveen/alumni-management-system/ApiGateway/src/main/java/com/alumniconnect/gateway/security/AuthenticationFilter.java
+/Users/naveen/alumni-management-system/ApiGateway/src/main/java/com/alumniconnect/gateway/security/JwtUtils.java
+>>>>>>> origin/main

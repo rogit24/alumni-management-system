@@ -11,26 +11,26 @@ function Messages() {
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-  // Load list of alumni and active chat
+ 
   useEffect(() => {
     const allUsers = JSON.parse(localStorage.getItem("users")) || [];
     const filteredAlumni = allUsers.filter((u) => u && u.role === "alumni" && u.email !== currentUser?.email);
     setAlumniList(filteredAlumni);
 
-    // Check if an alumni was selected from the search page
+   
     const initiallySelected = JSON.parse(localStorage.getItem("selectedAlumni"));
     if (initiallySelected) {
-      // Find them in the list or set them directly
+      
       const found = filteredAlumni.find((a) => a.email === initiallySelected.email);
       setSelectedAlumni(found || initiallySelected);
-      // Clear it so it doesn't lock future navigation, or keep it
+     
     } else if (filteredAlumni.length > 0) {
-      // Default to first alumni
+    
       setSelectedAlumni(filteredAlumni[0]);
     }
   }, []);
 
-  // Sync selected alumni selection to localStorage for other pages
+ 
   useEffect(() => {
     if (selectedAlumni) {
       localStorage.setItem("selectedAlumni", JSON.stringify(selectedAlumni));

@@ -11,12 +11,20 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
+<<<<<<< HEAD
 			<name>org.springframework.ide.eclipse.boot.validation.springbootbuilder</name>
+=======
+			<name>org.eclipse.m2e.core.maven2Builder</name>
+>>>>>>> origin/main
 			<arguments>
 			</arguments>
 		</buildCommand>
 		<buildCommand>
+<<<<<<< HEAD
 			<name>org.eclipse.m2e.core.maven2Builder</name>
+=======
+			<name>org.springframework.ide.eclipse.boot.validation.springbootbuilder</name>
+>>>>>>> origin/main
 			<arguments>
 			</arguments>
 		</buildCommand>
