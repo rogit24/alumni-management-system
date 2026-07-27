@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import AlumniLayout from "../../layouts/AlumniLayout";
 import { toast } from "react-toastify";
+import { applications as applicationsApi, jobs as jobsService, auth } from "../../services/api";
 
 function Applications() {
   const [applications, setApplications] =
@@ -11,43 +12,65 @@ function Applications() {
 
     const interval = setInterval(() => {
       loadApplications();
-    }, 2000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
-  const loadApplications = () => {
-    const savedApplications =
-      JSON.parse(
-        localStorage.getItem("applications")
-      ) || [];
+  const loadApplications = async () => {
+    try {
+      const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+      if (!currentUser) return;
 
-    setApplications(savedApplications);
+      const jobsList = await jobsService.getAll();
+      const myJobs = jobsList.filter(j => j.postedByEmail === currentUser.email);
+      const allUsers = await auth.getAllUsers();
+
+      let resolvedApps = [];
+      for (const job of myJobs) {
+        try {
+          const apps = await applicationsApi.getApplicationsForJob(job.id);
+          const mapped = apps.map(app => {
+            const studentUser = allUsers.find(u => u.email === app.studentEmail);
+            let displayStatus = "Pending";
+            if (app.status === "ACCEPTED") {
+              displayStatus = "Approved";
+            } else if (app.status === "REJECTED") {
+              displayStatus = "Rejected";
+            }
+            return {
+              id: app.id,
+              jobId: job.id,
+              jobTitle: job.title,
+              company: job.company,
+              salary: job.salary,
+              studentName: studentUser ? studentUser.name : app.studentEmail,
+              studentEmail: app.studentEmail,
+              status: displayStatus,
+              appliedDate: app.appliedDate || "N/A"
+            };
+          });
+          resolvedApps = [...resolvedApps, ...mapped];
+        } catch (err) {
+          console.error("Failed to load applications for job", job.id);
+        }
+      }
+
+      setApplications(resolvedApps);
+    } catch (error) {
+      console.error("Failed to load applications", error);
+    }
   };
 
-  const updateStatus = (id, status) => {
-    const updatedApplications =
-      applications.map((app) =>
-        app.id === id
-          ? {
-              ...app,
-              status,
-              updatedDate:
-                new Date().toLocaleString(),
-            }
-          : app
-      );
-
-    setApplications(updatedApplications);
-
-    localStorage.setItem(
-      "applications",
-      JSON.stringify(updatedApplications)
-    );
-
-    toast.success(
-      `Application ${status} Successfully`
-    );
+  const updateStatus = async (id, status) => {
+    try {
+      const backendStatus = status === "Approved" ? "ACCEPTED" : "REJECTED";
+      await applicationsApi.updateStatus(id, backendStatus);
+      toast.success(`Application ${status} Successfully 🎉`);
+      loadApplications();
+    } catch (error) {
+      toast.error(error.response?.data?.message || `Failed to update status ❌`);
+    }
   };
 
   return (
@@ -153,6 +176,7 @@ function Applications() {
                       )
                     }
                   >
+                    Reject
                   </button>
 
                 </div>

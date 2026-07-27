@@ -1,3 +1,11 @@
-/Users/naveen/alumni-management-system/ApplicationMS/src/main/java/com/alumniconnect/application/ApplicationServiceApplication.java
-/Users/naveen/alumni-management-system/ApplicationMS/src/main/java/com/alumniconnect/application/controller/ApplicationController.java
-/Users/naveen/alumni-management-system/ApplicationMS/src/main/java/com/alumniconnect/application/exception/GlobalExceptionHandler.java
+E:\alumni-management-system\ApplicationMS\src\main\java\com\alumniconnect\application\ApplicationServiceApplication.java
+E:\alumni-management-system\ApplicationMS\src\main\java\com\alumniconnect\application\client\JobServiceClient.java
+E:\alumni-management-system\ApplicationMS\src\main\java\com\alumniconnect\application\controller\ApplicationController.java
+E:\alumni-management-system\ApplicationMS\src\main\java\com\alumniconnect\application\dto\ApplicationDto.java
+E:\alumni-management-system\ApplicationMS\src\main\java\com\alumniconnect\application\entity\Application.java
+E:\alumni-management-system\ApplicationMS\src\main\java\com\alumniconnect\application\entity\ApplicationStatus.java
+E:\alumni-management-system\ApplicationMS\src\main\java\com\alumniconnect\application\entity\UserRole.java
+E:\alumni-management-system\ApplicationMS\src\main\java\com\alumniconnect\application\exception\GlobalExceptionHandler.java
+E:\alumni-management-system\ApplicationMS\src\main\java\com\alumniconnect\application\repository\ApplicationRepository.java
+E:\alumni-management-system\ApplicationMS\src\main\java\com\alumniconnect\application\service\ApplicationService.java
+E:\alumni-management-system\ApplicationMS\src\main\java\com\alumniconnect\application\service\ApplicationServiceImpl.java

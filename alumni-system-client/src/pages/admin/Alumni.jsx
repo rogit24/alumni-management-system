@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AdminLayout from "../../layouts/AdminLayout";
+import { auth, jobs as jobsApi } from "../../services/api";
 
 function Alumni() {
   const [alumni, setAlumni] = useState([]);
@@ -7,14 +8,21 @@ function Alumni() {
   const [referrals, setReferrals] = useState([]);
 
   useEffect(() => {
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    const filteredAlumni = users.filter(
-      (user) => user && user.role?.toLowerCase() === "alumni"
-    );
-    setAlumni(filteredAlumni);
+    const loadData = async () => {
+      try {
+        const users = await auth.getAllUsers();
+        const filteredAlumni = users.filter(
+          (user) => user && user.role?.toLowerCase() === "alumni"
+        );
+        setAlumni(filteredAlumni);
 
-    const allJobs = JSON.parse(localStorage.getItem("jobs")) || [];
-    setJobs(allJobs);
+        const allJobs = await jobsApi.getAll();
+        setJobs(allJobs);
+      } catch (err) {
+        console.error("Error loading data:", err);
+      }
+    };
+    loadData();
 
     const allReferrals = JSON.parse(localStorage.getItem("referrals")) || [];
     setReferrals(allReferrals);

@@ -25,9 +25,18 @@ public class AuthController {
         return ResponseEntity.ok(response);
     }
 
+//    @PostMapping("/login")
+//    public ResponseEntity<AuthResponse> login(@Valid @RequestBody LoginRequest request) {
+//        AuthResponse response = authService.login(request);
+//        return ResponseEntity.ok(response);
+//    }
     @PostMapping("/login")
     public ResponseEntity<AuthResponse> login(@Valid @RequestBody LoginRequest request) {
+
         AuthResponse response = authService.login(request);
+
+        System.out.println("LOGIN RESPONSE = " + response);
+
         return ResponseEntity.ok(response);
     }
 
@@ -35,5 +44,24 @@ public class AuthController {
     public ResponseEntity<UserDto> getUserById(@PathVariable("id") Long id) {
         UserDto userDto = authService.getUserById(id);
         return ResponseEntity.ok(userDto);
+    }
+
+    @GetMapping("/users")
+    public ResponseEntity<java.util.List<UserDto>> getAllUsers() {
+        return ResponseEntity.ok(authService.getAllUsers());
+    }
+
+    @PutMapping("/users/{id}/status")
+    public ResponseEntity<UserDto> updateUserStatus(
+            @PathVariable("id") Long id,
+            @RequestParam("status") String status) {
+        UserDto updated = authService.updateUserStatus(id, status);
+        return ResponseEntity.ok(updated);
+    }
+
+    @DeleteMapping("/users/{id}")
+    public ResponseEntity<Void> deleteUser(@PathVariable("id") Long id) {
+        authService.deleteUser(id);
+        return ResponseEntity.ok().build();
     }
 }

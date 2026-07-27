@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import StudentLayout from "../../layouts/StudentLayout";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { auth, referrals as referralsApi, profiles } from "../../services/api";
 
 function AlumniSearch() {
   const [alumni, setAlumni] = useState([]);
@@ -10,64 +11,63 @@ function AlumniSearch() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    //  Read directly from the consolidated "users" local storage key
-    const allUsers = JSON.parse(localStorage.getItem("users")) || [];
-
-    // Filter down to pull out ONLY profiles whose role is designated as alumni
-    const alumniProfiles = allUsers.filter((u) => u && u.role === "alumni");
-
-    // Map fallback IDs cleanly to ensure React lists remain stable
-    const alumniWithIds = alumniProfiles.map((item, index) => ({
-      ...item,
-      id: item.id || item.email || `alumni-${index}`,
-    }));
-
-    setAlumni(alumniWithIds);
+    const loadAlumni = async () => {
+      try {
+        const users = await auth.getAllUsers();
+        const alumniUsers = users.filter((u) => u && u.role?.toLowerCase() === "alumni");
+        
+        const resolvedAlumni = [];
+        for (const user of alumniUsers) {
+          try {
+            const profileData = await profiles.getByUserId(user.id);
+            resolvedAlumni.push({
+              id: user.id,
+              name: user.name || profileData.fullName || "Alumni",
+              email: user.email,
+              company: profileData.currentCompany || "N/A",
+              skills: profileData.skills || "N/A",
+              experience: profileData.designation || "",
+              location: profileData.location || "",
+            });
+          } catch (e) {
+            resolvedAlumni.push({
+              id: user.id,
+              name: user.name || "Alumni",
+              email: user.email,
+              company: "N/A",
+              skills: "N/A",
+              experience: "",
+              location: "",
+            });
+          }
+        }
+        setAlumni(resolvedAlumni);
+      } catch (error) {
+        toast.error("Failed to load alumni list ❌");
+      }
+    };
+    loadAlumni();
   }, []);
 
-  const requestReferral = (alumniData) => {
+  const requestReferral = async (alumniData) => {
     const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-    const referrals = JSON.parse(localStorage.getItem("referrals")) || [];
+    if (!currentUser) return;
 
-    const alreadyRequested = referrals.find(
-      (ref) =>
-        ref.alumniEmail?.toLowerCase() === alumniData.email?.toLowerCase() &&
-        ref.studentEmail?.toLowerCase() === currentUser?.email?.toLowerCase()
-    );
+    try {
+      const payload = {
+        studentId: currentUser.id,
+        alumniId: alumniData.id,
+        company: alumniData.company,
+        jobRole: "Software Engineer",
+        message: `Hello, I'm requesting a referral for ${alumniData.company}.`,
+        requestDate: new Date().toLocaleDateString(),
+      };
 
-    if (alreadyRequested) {
-      toast.warning("Referral already requested");
-      return;
+      await referralsApi.create(payload);
+      toast.success("Referral Request Sent Successfully 🎉");
+    } catch (error) {
+      toast.error(error.response?.data?.message || "Failed to send referral request ❌");
     }
-
-    const newReferral = {
-      id: Date.now(),
-      alumniId: alumniData.id || alumniData.email,
-      alumniName: alumniData.name,
-      alumniEmail: alumniData.email,
-      company: alumniData.company || "N/A",
-      studentName: currentUser?.name,
-      studentEmail: currentUser?.email,
-      status: "Pending",
-      requestDate: new Date().toLocaleDateString(),
-    };
-
-    referrals.push(newReferral);
-    localStorage.setItem("referrals", JSON.stringify(referrals));
-
-    // Alumni Notification
-    const notifications = JSON.parse(localStorage.getItem("notifications")) || [];
-    notifications.push({
-      id: Date.now() + Math.random(),
-      userEmail: alumniData.email?.trim().toLowerCase(),
-      message: `${currentUser?.name} requested a referral from you`,
-      date: new Date().toLocaleString(),
-      type: "referral",
-      read: false,
-    });
-
-    localStorage.setItem("notifications", JSON.stringify(notifications));
-    toast.success("Referral Request Sent Successfully 🎉");
   };
 
   const filteredAlumni = alumni.filter(

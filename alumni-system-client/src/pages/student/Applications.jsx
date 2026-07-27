@@ -1,58 +1,52 @@
 import { useEffect, useState } from "react";
 import StudentLayout from "../../layouts/StudentLayout";
 import { toast } from "react-toastify";
+import { applications as applicationsApi, jobs as jobsService } from "../../services/api";
 
 function Applications() {
   const [applications, setApplications] = useState([]);
 
-  const loadApplications = () => {
-    const currentUser =
-      JSON.parse(localStorage.getItem("currentUser"));
+  const loadApplications = async () => {
+    try {
+      const apps = await applicationsApi.getMyApplications();
+      const jobsList = await jobsService.getAll();
+      
+      const resolvedApps = apps.map(app => {
+        const matchingJob = jobsList.find(j => j.id === app.jobId);
+        return {
+          id: app.id,
+          jobTitle: matchingJob ? matchingJob.title : `Job #${app.jobId}`,
+          company: matchingJob ? matchingJob.company : "N/A",
+          salary: matchingJob ? matchingJob.salary : "N/A",
+          status: app.status ? (app.status.charAt(0).toUpperCase() + app.status.slice(1).toLowerCase()) : "Pending",
+          appliedDate: app.appliedDate || "N/A",
+        };
+      });
 
-    const allApplications =
-      JSON.parse(localStorage.getItem("applications")) || [];
-
-    const myApplications = allApplications.filter(
-      (app) =>
-        app.studentEmail === currentUser?.email
-    );
-
-    setApplications(myApplications);
+      setApplications(resolvedApps);
+    } catch (error) {
+      toast.error("Failed to load applications from backend ❌");
+    }
   };
 
   useEffect(() => {
     loadApplications();
   }, []);
 
-  const withdrawApplication = (id) => {
+  const withdrawApplication = async (id) => {
     const confirmDelete = window.confirm(
       "Are you sure you want to withdraw this application?"
     );
 
     if (!confirmDelete) return;
 
-    const allApplications =
-      JSON.parse(localStorage.getItem("applications")) || [];
-
-    const updatedApplications =
-      allApplications.filter(
-        (app) => app.id !== id
-      );
-
-    localStorage.setItem(
-      "applications",
-      JSON.stringify(updatedApplications)
-    );
-
-    setApplications(
-      applications.filter(
-        (app) => app.id !== id
-      )
-    );
-
-    toast.success(
-      "Application Withdrawn Successfully"
-    );
+    try {
+      await applicationsApi.withdraw(id);
+      toast.success("Application Withdrawn Successfully 🎉");
+      loadApplications();
+    } catch (error) {
+      toast.error("Failed to withdraw application ❌");
+    }
   };
 
   return (

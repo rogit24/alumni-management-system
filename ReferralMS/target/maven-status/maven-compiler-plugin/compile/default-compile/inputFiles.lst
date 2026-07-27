@@ -1,0 +1,12 @@
+E:\alumni-management-system\ReferralMS\src\main\java\com\alumniconnect\template\client\NotificationClient.java
+E:\alumni-management-system\ReferralMS\src\main\java\com\alumniconnect\template\client\UserServiceClient.java
+E:\alumni-management-system\ReferralMS\src\main\java\com\alumniconnect\template\controller\ReferralController.java
+E:\alumni-management-system\ReferralMS\src\main\java\com\alumniconnect\template\dto\NotificationDto.java
+E:\alumni-management-system\ReferralMS\src\main\java\com\alumniconnect\template\dto\ReferralRequestDto.java
+E:\alumni-management-system\ReferralMS\src\main\java\com\alumniconnect\template\entity\ReferralRequest.java
+E:\alumni-management-system\ReferralMS\src\main\java\com\alumniconnect\template\enums\ReferralStatus.java
+E:\alumni-management-system\ReferralMS\src\main\java\com\alumniconnect\template\exception\GlobalExceptionHandler.java
+E:\alumni-management-system\ReferralMS\src\main\java\com\alumniconnect\template\exception\ResourceNotFoundException.java
+E:\alumni-management-system\ReferralMS\src\main\java\com\alumniconnect\template\ReferralApplication.java
+E:\alumni-management-system\ReferralMS\src\main\java\com\alumniconnect\template\repository\ReferralRepository.java
+E:\alumni-management-system\ReferralMS\src\main\java\com\alumniconnect\template\service\ReferralService.java

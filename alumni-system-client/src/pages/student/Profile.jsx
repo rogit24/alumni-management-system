@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import StudentLayout from "../../layouts/StudentLayout";
 import { toast } from "react-toastify";
+import { profiles } from "../../services/api";
 
 function Profile() {
   const [profile, setProfile] = useState({
+    id: "",
     name: "",
     email: "",
     skills: "",
@@ -12,31 +14,32 @@ function Profile() {
   });
 
   useEffect(() => {
-    const currentUser = JSON.parse(
-      localStorage.getItem("currentUser")
-    );
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (!currentUser) return;
 
-    const profiles =
-      JSON.parse(
-        localStorage.getItem("studentProfiles")
-      ) || {};
-
-    if (
-      currentUser &&
-      profiles[currentUser.email]
-    ) {
-      setProfile(
-        profiles[currentUser.email]
-      );
-    } else if (currentUser) {
-      setProfile({
-        name: currentUser.name || "",
-        email: currentUser.email || "",
-        skills: "",
-        education: "",
-        profileImage: "",
+    profiles.getMe()
+      .then((data) => {
+        if (data) {
+          setProfile({
+            id: data.id,
+            name: data.fullName || "",
+            email: data.email || "",
+            skills: data.skills || "",
+            education: data.education || "",
+            profileImage: data.profilePicture || "",
+          });
+        }
+      })
+      .catch((err) => {
+        setProfile({
+          id: "",
+          name: currentUser.name || "",
+          email: currentUser.email || "",
+          skills: "",
+          education: "",
+          profileImage: "",
+        });
       });
-    }
   }, []);
 
   const handleChange = (e) => {
@@ -74,33 +77,41 @@ function Profile() {
     reader.readAsDataURL(file);
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (!profile.name || !profile.email) {
-      toast.error(
-        "Name and Email are required"
-      );
+      toast.error("Name and Email are required");
       return;
     }
 
-    const currentUser = JSON.parse(
-      localStorage.getItem("currentUser")
-    );
+    try {
+      const payload = {
+        fullName: profile.name,
+        email: profile.email,
+        skills: profile.skills,
+        education: profile.education,
+        profilePicture: profile.profileImage || "",
+      };
 
-    const profiles =
-      JSON.parse(
-        localStorage.getItem("studentProfiles")
-      ) || {};
+      let updated;
+      if (profile.id) {
+        updated = await profiles.update(profile.id, payload);
+      } else {
+        updated = await profiles.create(payload);
+      }
 
-    profiles[currentUser.email] = profile;
+      setProfile({
+        id: updated.id,
+        name: updated.fullName || "",
+        email: updated.email || "",
+        skills: updated.skills || "",
+        education: updated.education || "",
+        profileImage: updated.profilePicture || "",
+      });
 
-    localStorage.setItem(
-      "studentProfiles",
-      JSON.stringify(profiles)
-    );
-
-    toast.success(
-      "Profile Updated Successfully"
-    );
+      toast.success("Profile Saved Successfully 🎉");
+    } catch (error) {
+      toast.error(error.response?.data?.message || "Failed to save profile ❌");
+    }
   };
 
   return (

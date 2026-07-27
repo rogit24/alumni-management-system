@@ -34,5 +34,7 @@ public class JobDto {
 
     private String postedByEmail;
 
+    private com.alumniconnect.job.entity.Jobtype jobType;
+
     private UserRole userRole;
 }

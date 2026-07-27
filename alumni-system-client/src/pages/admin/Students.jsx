@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AdminLayout from "../../layouts/AdminLayout";
+import { auth } from "../../services/api";
 
 function Students() {
   const [students, setStudents] = useState([]);
@@ -7,11 +8,18 @@ function Students() {
   const [referrals, setReferrals] = useState([]);
 
   useEffect(() => {
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    const filteredStudents = users.filter(
-      (user) => user && user.role?.toLowerCase() === "student"
-    );
-    setStudents(filteredStudents);
+    const loadData = async () => {
+      try {
+        const users = await auth.getAllUsers();
+        const filteredStudents = users.filter(
+          (user) => user && user.role?.toLowerCase() === "student"
+        );
+        setStudents(filteredStudents);
+      } catch (err) {
+        console.error("Error loading users:", err);
+      }
+    };
+    loadData();
 
     const apps = JSON.parse(localStorage.getItem("applications")) || [];
     setApplications(apps);

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import AlumniLayout from "../../layouts/AlumniLayout";
 import { toast } from "react-toastify";
+import { profiles } from "../../services/api";
 
 function Profile() {
   const [profile, setProfile] = useState({
@@ -16,36 +17,38 @@ function Profile() {
   });
 
   useEffect(() => {
-    const currentUser = JSON.parse(
-      localStorage.getItem("currentUser")
-    );
-
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
     if (!currentUser) return;
 
-    const savedProfiles =
-      JSON.parse(
-        localStorage.getItem("alumniProfiles")
-      ) || [];
-
-    const existingProfile = savedProfiles.find(
-      (p) => p.email === currentUser.email
-    );
-
-    if (existingProfile) {
-      setProfile(existingProfile);
-    } else {
-      setProfile({
-        id: Date.now(),
-        name: currentUser.name || "",
-        email: currentUser.email || "",
-        company: "",
-        experience: "",
-        skills: "",
-        location: "",
-        about: "",
-        photo: "",
+    profiles.getMe()
+      .then((data) => {
+        if (data) {
+          setProfile({
+            id: data.id,
+            name: data.fullName || "",
+            email: data.email || "",
+            company: data.currentCompany || "",
+            experience: data.designation || "",
+            skills: data.skills || "",
+            location: data.location || "",
+            about: data.bio || "",
+            photo: data.profilePicture || "",
+          });
+        }
+      })
+      .catch((err) => {
+        setProfile({
+          id: "",
+          name: currentUser.name || "",
+          email: currentUser.email || "",
+          company: "",
+          experience: "",
+          skills: "",
+          location: "",
+          about: "",
+          photo: "",
+        });
       });
-    }
   }, []);
 
   const handleChange = (e) => {
@@ -83,85 +86,64 @@ function Profile() {
     reader.readAsDataURL(file);
   };
 
-  const saveProfile = () => {
+  const saveProfile = async () => {
     if (
       !profile.name ||
       !profile.email ||
       !profile.company ||
       !profile.skills
     ) {
-      toast.error(
-        "Please fill all required fields"
-      );
+      toast.error("Please fill all required fields");
       return;
     }
 
-    const allProfiles =
-      JSON.parse(
-        localStorage.getItem("alumniProfiles")
-      ) || [];
-
-    const existingIndex =
-      allProfiles.findIndex(
-        (p) => p.email === profile.email
-      );
-
-    if (existingIndex !== -1) {
-      allProfiles[existingIndex] = profile;
-    } else {
-      allProfiles.push(profile);
-    }
-
-    localStorage.setItem(
-      "alumniProfiles",
-      JSON.stringify(allProfiles)
-    );
-
-    // Used in Student Alumni Search
-    localStorage.setItem(
-      "alumni",
-      JSON.stringify(allProfiles)
-    );
-
-    // Update the user details in the main "users" collection so it reflects in student search
-    const allUsers = JSON.parse(localStorage.getItem("users")) || [];
-    const userIndex = allUsers.findIndex((u) => u.email === profile.email);
-    if (userIndex !== -1) {
-      allUsers[userIndex] = {
-        ...allUsers[userIndex],
-        name: profile.name,
-        company: profile.company,
+    try {
+      const payload = {
+        fullName: profile.name,
+        email: profile.email,
+        currentCompany: profile.company,
+        designation: profile.experience,
         skills: profile.skills,
-        experience: profile.experience,
         location: profile.location,
-        about: profile.about,
-        photo: profile.photo,
+        bio: profile.about,
+        profilePicture: profile.photo || "",
       };
-      localStorage.setItem("users", JSON.stringify(allUsers));
+
+      let updated;
+      if (profile.id) {
+        updated = await profiles.update(profile.id, payload);
+      } else {
+        updated = await profiles.create(payload);
+      }
+
+      setProfile({
+        id: updated.id,
+        name: updated.fullName || "",
+        email: updated.email || "",
+        company: updated.currentCompany || "",
+        experience: updated.designation || "",
+        skills: updated.skills || "",
+        location: updated.location || "",
+        about: updated.bio || "",
+        photo: updated.profilePicture || "",
+      });
+
+      // Update current logged-in user details in localStorage session context
+      const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+      if (currentUser) {
+        currentUser.name = updated.fullName;
+        currentUser.email = updated.email;
+        currentUser.company = updated.currentCompany;
+        currentUser.skills = updated.skills;
+        currentUser.experience = updated.designation;
+        currentUser.location = updated.location;
+        localStorage.setItem("currentUser", JSON.stringify(currentUser));
+      }
+
+      toast.success("Profile Updated Successfully 🎉");
+    } catch (error) {
+      toast.error(error.response?.data?.message || "Failed to save profile ❌");
     }
-
-    // Update current logged-in user
-    const currentUser = JSON.parse(
-      localStorage.getItem("currentUser")
-    );
-
-    if (currentUser) {
-      currentUser.name = profile.name;
-      currentUser.email = profile.email;
-      currentUser.company = profile.company;
-      currentUser.skills = profile.skills;
-      currentUser.experience = profile.experience;
-      currentUser.location = profile.location;
-
-      localStorage.setItem(
-        "currentUser",
-        JSON.stringify(currentUser)
-      );
-    }
-
-    toast.success(
-      "Profile Updated Successfully 🎉"
-    );
   };
 
   return (

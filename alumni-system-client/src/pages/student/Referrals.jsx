@@ -1,23 +1,35 @@
 import { useEffect, useState } from "react";
 import StudentLayout from "../../layouts/StudentLayout";
 import { toast } from "react-toastify";
+import { referrals as referralsApi, auth } from "../../services/api";
 
 function Referrals() {
   const [referrals, setReferrals] = useState([]);
 
-  const loadReferrals = () => {
-    const savedReferrals =
-      JSON.parse(localStorage.getItem("referrals")) || [];
+  const loadReferrals = async () => {
+    try {
+      const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+      if (!currentUser) return;
 
-    const currentUser =
-      JSON.parse(localStorage.getItem("currentUser"));
+      const refs = await referralsApi.getStudentReferrals(currentUser.id);
+      const allUsers = await auth.getAllUsers();
 
-    const myReferrals = savedReferrals.filter(
-      (ref) =>
-        ref.studentEmail === currentUser?.email
-    );
+      const resolvedRefs = refs.map(ref => {
+        const alumniUser = allUsers.find(u => u.id === ref.alumniId);
+        return {
+          id: ref.id,
+          alumniName: alumniUser ? alumniUser.name : `Alumni #${ref.alumniId}`,
+          company: ref.company || "N/A",
+          jobRole: ref.jobRole || "N/A",
+          requestDate: ref.requestDate || "N/A",
+          status: ref.status ? (ref.status.charAt(0).toUpperCase() + ref.status.slice(1).toLowerCase()) : "Pending",
+        };
+      });
 
-    setReferrals(myReferrals);
+      setReferrals(resolvedRefs);
+    } catch (error) {
+      console.error("Failed to load referrals", error);
+    }
   };
 
   useEffect(() => {
@@ -25,32 +37,25 @@ function Referrals() {
 
     const interval = setInterval(() => {
       loadReferrals();
-    }, 2000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
-  const deleteReferral = (id) => {
+  const deleteReferral = async (id) => {
     const confirmDelete = window.confirm(
       "Are you sure you want to delete this referral request?"
     );
 
     if (!confirmDelete) return;
 
-    const allReferrals =
-      JSON.parse(localStorage.getItem("referrals")) || [];
-
-    const updatedReferrals =
-      allReferrals.filter((ref) => ref.id !== id);
-
-    localStorage.setItem(
-      "referrals",
-      JSON.stringify(updatedReferrals)
-    );
-
-    loadReferrals();
-
-    toast.error("Referral Request Deleted");
+    try {
+      await referralsApi.delete(id);
+      toast.error("Referral Request Deleted");
+      loadReferrals();
+    } catch (error) {
+      toast.error("Failed to delete referral request ❌");
+    }
   };
 
   const getBadgeClass = (status) => {

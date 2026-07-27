@@ -73,7 +73,7 @@ public class AuthService {
             throw new RuntimeException("Your alumni account is pending Admin approval! ❌");
         }
 
-        String token = jwtUtils.generateToken(user.getEmail(), user.getRole().name());
+        String token = jwtUtils.generateToken(user.getId(), user.getEmail(), user.getRole().name());
 
         return AuthResponse.builder()
                 .token(token)
@@ -95,5 +95,42 @@ public class AuthService {
                 .role(user.getRole().name())
                 .status(user.getStatus().name())
                 .build();
+    }
+
+    public java.util.List<UserDto> getAllUsers() {
+        return userRepository.findAll().stream()
+                .map(user -> UserDto.builder()
+                        .id(user.getId())
+                        .name(user.getName())
+                        .email(user.getEmail())
+                        .role(user.getRole().name())
+                        .status(user.getStatus().name())
+                        .build())
+                .collect(java.util.stream.Collectors.toList());
+    }
+
+    public UserDto updateUserStatus(Long id, String statusStr) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
+        try {
+            User.Status status = User.Status.valueOf(statusStr.toUpperCase());
+            user.setStatus(status);
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("Invalid status: " + statusStr);
+        }
+        userRepository.save(user);
+        return UserDto.builder()
+                .id(user.getId())
+                .name(user.getName())
+                .email(user.getEmail())
+                .role(user.getRole().name())
+                .status(user.getStatus().name())
+                .build();
+    }
+
+    public void deleteUser(Long id) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
+        userRepository.delete(user);
     }
 }

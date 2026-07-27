@@ -1,69 +1,31 @@
 import { useEffect, useState } from "react";
 import StudentLayout from "../../layouts/StudentLayout";
 import { toast } from "react-toastify";
+import { jobs as jobsService, applications } from "../../services/api";
 
 function Jobs() {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    const savedJobs =
-      JSON.parse(localStorage.getItem("jobs")) || [];
-
-    setJobs(savedJobs);
+    const fetchJobs = async () => {
+      try {
+        const data = await jobsService.getAll();
+        setJobs(data);
+      } catch (error) {
+        toast.error("Failed to load jobs from backend ❌");
+      }
+    };
+    fetchJobs();
   }, []);
 
-  const applyJob = (job) => {
-    const currentUser =
-      JSON.parse(localStorage.getItem("currentUser"));
-
-    const applications =
-      JSON.parse(localStorage.getItem("applications")) || [];
-
-    const alreadyApplied = applications.find(
-      (app) =>
-        app.jobId === job.id &&
-        app.studentEmail === currentUser?.email
-    );
-
-    if (alreadyApplied) {
-      toast.warning(
-        "You have already applied for this job"
-      );
-      return;
+  const applyJob = async (job) => {
+    try {
+      await applications.submit({ jobId: job.id });
+      toast.success(`Successfully applied for ${job.title} 🎉`);
+    } catch (error) {
+      const errMsg = error.response?.data?.message || `Failed to apply for ${job.title} ❌`;
+      toast.error(errMsg);
     }
-
-    const newApplication = {
-      id: Date.now(),
-      jobId: job.id,
-      jobTitle: job.title,
-      company: job.company,
-      salary: job.salary,
-
-      studentName:
-        currentUser?.name || "Student",
-
-      studentEmail:
-        currentUser?.email || "",
-
-      status: "Pending",
-
-      appliedDate:
-        new Date().toLocaleDateString(),
-    };
-
-    const updatedApplications = [
-      ...applications,
-      newApplication,
-    ];
-
-    localStorage.setItem(
-      "applications",
-      JSON.stringify(updatedApplications)
-    );
-
-    toast.success(
-      `Successfully applied for ${job.title}`
-    );
   };
 
   return (

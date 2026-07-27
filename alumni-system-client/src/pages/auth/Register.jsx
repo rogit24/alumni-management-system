@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { auth } from "../../services/api";
 
 function Register() {
   const navigate = useNavigate();
@@ -19,33 +20,25 @@ function Register() {
     });
   };
 
-  const handleRegister = () => {
-    const users =
-      JSON.parse(localStorage.getItem("users")) || [];
-
-    const existingUser = users.find(
-      (u) => u.email === formData.email
-    );
-
-    if (existingUser) {
-     toast.warning("User already exists");
+  const handleRegister = async () => {
+    if (!formData.name || !formData.email || !formData.password || !formData.role) {
+      toast.warning("Please fill all fields");
       return;
     }
 
-    users.push({
-      id: Date.now(),
-      ...formData,
-      status: formData.role === "alumni" ? "Pending Approval" : "Active",
-    });
-
-    localStorage.setItem(
-      "users",
-      JSON.stringify(users)
-    );
-
-   toast.success("Registration Successful");
-
-    navigate("/login");
+    try {
+      await auth.register(
+        formData.name,
+        formData.email,
+        formData.password,
+        formData.role.toLowerCase()
+      );
+      toast.success("Registration Successful");
+      navigate("/login");
+    } catch (error) {
+      const errMsg = error.response?.data?.message || "Registration Failed ❌";
+      toast.error(errMsg);
+    }
   };
 
   return (

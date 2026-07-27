@@ -58,9 +58,12 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
                 Claims claims = jwtUtils.getClaims(token);
                 String email = claims.getSubject();
                 String role = claims.get("role", String.class);
+                Object userIdObj = claims.get("userId");
+                String userIdStr = userIdObj != null ? String.valueOf(userIdObj) : "";
 
                 // Re-write the request headers before sending it to target microservice
                 ServerHttpRequest mutatedRequest = request.mutate()
+                        .header("X-User-Id", userIdStr)
                         .header("X-User-Email", email)
                         .header("X-User-Role", role)
                         .build();
@@ -75,8 +78,10 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
     private Mono<Void> onError(ServerWebExchange exchange, String err, HttpStatus httpStatus) {
         ServerHttpResponse response = exchange.getResponse();
         response.setStatusCode(httpStatus);
-        // Add error info in header or body
+        response.getHeaders().setContentType(org.springframework.http.MediaType.APPLICATION_JSON);
         response.getHeaders().add("X-Gateway-Auth-Error", err);
-        return response.setComplete();
+        String body = "{\"message\":\"" + err + "\"}";
+        org.springframework.core.io.buffer.DataBuffer buffer = response.bufferFactory().wrap(body.getBytes(java.nio.charset.StandardCharsets.UTF_8));
+        return response.writeWith(Mono.just(buffer));
     }
 }

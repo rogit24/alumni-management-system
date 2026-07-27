@@ -1,70 +1,59 @@
 import { useEffect, useState } from "react";
 import AlumniLayout from "../../layouts/AlumniLayout";
 import { toast } from "react-toastify";
+import { referrals as referralsApi, auth } from "../../services/api";
 
 function Referrals() {
   const [referrals, setReferrals] = useState([]);
 
   useEffect(() => {
     loadReferrals();
+
+    const interval = setInterval(() => {
+      loadReferrals();
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, []);
 
-  const loadReferrals = () => {
-    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-    const allReferrals = JSON.parse(localStorage.getItem("referrals")) || [];
+  const loadReferrals = async () => {
+    try {
+      const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+      if (!currentUser) return;
 
-    const myReferrals = allReferrals.filter(
-      (ref) =>
-        ref &&
-        ref.alumniEmail?.trim().toLowerCase() ===
-          currentUser?.email?.trim().toLowerCase()
-    );
+      const refs = await referralsApi.getAlumniReferrals(currentUser.id);
+      const allUsers = await auth.getAllUsers();
 
-    setReferrals(myReferrals);
+      const resolvedRefs = refs.map(ref => {
+        const studentUser = allUsers.find(u => u.id === ref.studentId);
+        return {
+          id: ref.id,
+          studentName: studentUser ? studentUser.name : `Student #${ref.studentId}`,
+          studentEmail: studentUser ? studentUser.email : "N/A",
+          company: ref.company || "N/A",
+          requestDate: ref.requestDate || "N/A",
+          status: ref.status ? (ref.status.charAt(0).toUpperCase() + ref.status.slice(1).toLowerCase()) : "Pending"
+        };
+      });
+
+      setReferrals(resolvedRefs);
+    } catch (error) {
+      console.error("Failed to load referrals", error);
+    }
   };
 
-  const updateStatus = (id, status) => {
-    const allReferrals = JSON.parse(localStorage.getItem("referrals")) || [];
-
-    const updatedReferrals = allReferrals.map((ref) =>
-      ref.id === id
-        ? {
-            ...ref,
-            status,
-            updatedDate: new Date().toLocaleString(),
-          }
-        : ref
-    );
-
-    localStorage.setItem("referrals", JSON.stringify(updatedReferrals));
-
-    const selectedReferral = updatedReferrals.find(
-      (ref) => ref.id === id
-    );
-
-    if (!selectedReferral) {
-      toast.error("Referral Not Found");
-      return;
+  const updateStatus = async (id, status) => {
+    try {
+      if (status === "Approved") {
+        await referralsApi.approve(id);
+      } else {
+        await referralsApi.reject(id);
+      }
+      toast.success(`Referral ${status} Successfully 🎉`);
+      loadReferrals();
+    } catch (error) {
+      toast.error(error.response?.data?.message || `Failed to update referral ❌`);
     }
-
-    // Create Notification for Student
-    const notifications =
-      JSON.parse(localStorage.getItem("notifications")) || [];
-
-    notifications.push({
-      id: Date.now(),
-      userEmail: selectedReferral.studentEmail,
-      message:
-        status === "Approved"
-          ? `🎉 Your referral request for ${selectedReferral.company} has been approved.`
-          : `❌ Your referral request for ${selectedReferral.company} has been rejected.`,
-      date: new Date().toLocaleString(),
-    });
-
-    localStorage.setItem("notifications", JSON.stringify(notifications));
-
-    toast.success(`Referral ${status} Successfully`);
-    loadReferrals();
   };
 
   return (

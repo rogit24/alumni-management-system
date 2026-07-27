@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import StudentLayout from "../../layouts/StudentLayout";
 import { toast } from "react-toastify";
+import { auth, messages as messagesApi } from "../../services/api";
 
 function Messages() {
   const [alumniList, setAlumniList] = useState([]);
@@ -11,43 +12,51 @@ function Messages() {
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
- 
   useEffect(() => {
-    const allUsers = JSON.parse(localStorage.getItem("users")) || [];
-    const filteredAlumni = allUsers.filter((u) => u && u.role === "alumni" && u.email !== currentUser?.email);
-    setAlumniList(filteredAlumni);
+    const fetchDirectory = async () => {
+      try {
+        const users = await auth.getAllUsers();
+        const filteredAlumni = users.filter((u) => u && u.role?.toLowerCase() === "alumni" && u.email !== currentUser?.email);
+        setAlumniList(filteredAlumni);
 
-   
-    const initiallySelected = JSON.parse(localStorage.getItem("selectedAlumni"));
-    if (initiallySelected) {
-      
-      const found = filteredAlumni.find((a) => a.email === initiallySelected.email);
-      setSelectedAlumni(found || initiallySelected);
-     
-    } else if (filteredAlumni.length > 0) {
-    
-      setSelectedAlumni(filteredAlumni[0]);
-    }
+        const initiallySelected = JSON.parse(localStorage.getItem("selectedAlumni"));
+        if (initiallySelected) {
+          const found = filteredAlumni.find((a) => a.email === initiallySelected.email);
+          setSelectedAlumni(found || initiallySelected);
+        } else if (filteredAlumni.length > 0) {
+          setSelectedAlumni(filteredAlumni[0]);
+        }
+      } catch (err) {
+        toast.error("Failed to load alumni directory ❌");
+      }
+    };
+    fetchDirectory();
   }, []);
 
- 
   useEffect(() => {
     if (selectedAlumni) {
       localStorage.setItem("selectedAlumni", JSON.stringify(selectedAlumni));
     }
   }, [selectedAlumni]);
 
-  const loadMessages = () => {
+  const loadMessages = async () => {
     if (!selectedAlumni) return;
 
-    const allMessages = JSON.parse(localStorage.getItem("messages")) || [];
-    const conversation = allMessages.filter(
-      (msg) =>
-        (msg.senderEmail === currentUser?.email && msg.receiverEmail === selectedAlumni?.email) ||
-        (msg.senderEmail === selectedAlumni?.email && msg.receiverEmail === currentUser?.email)
-    ).sort((a, b) => new Date(a.date) - new Date(b.date));
-
-    setMessages(conversation);
+    try {
+      const res = await messagesApi.getConversation(selectedAlumni.id);
+      const resolvedMsgs = res.map((msg) => ({
+        id: msg.id,
+        senderName: msg.senderId === currentUser.id ? currentUser.name : selectedAlumni.name,
+        senderEmail: msg.senderEmail,
+        receiverName: msg.senderId === currentUser.id ? selectedAlumni.name : currentUser.name,
+        receiverEmail: msg.receiverEmail,
+        message: msg.messageContent,
+        date: msg.sentAt ? new Date(msg.sentAt).toLocaleString() : "Just now",
+      }));
+      setMessages(resolvedMsgs);
+    } catch (err) {
+      console.error("Failed to load messages", err);
+    }
   };
 
   useEffect(() => {
@@ -55,12 +64,12 @@ function Messages() {
 
     const interval = setInterval(() => {
       loadMessages();
-    }, 1000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [selectedAlumni]);
 
-  const sendMessage = () => {
+  const sendMessage = async () => {
     if (!selectedAlumni) {
       toast.warning("Please select a recipient");
       return;
@@ -71,33 +80,18 @@ function Messages() {
       return;
     }
 
-    const allMessages = JSON.parse(localStorage.getItem("messages")) || [];
+    try {
+      const payload = {
+        receiverId: selectedAlumni.id,
+        messageContent: messageText,
+      };
 
-    const newMessage = {
-      id: Date.now(),
-      senderName: currentUser.name,
-      senderEmail: currentUser.email,
-      receiverName: selectedAlumni.name,
-      receiverEmail: selectedAlumni.email,
-      message: messageText,
-      date: new Date().toLocaleString(),
-    };
-
-    allMessages.push(newMessage);
-    localStorage.setItem("messages", JSON.stringify(allMessages));
-
-    // Create notification entry for the alumni
-    const allNotifications = JSON.parse(localStorage.getItem("notifications")) || [];
-    allNotifications.push({
-      id: Date.now() + 1,
-      userEmail: selectedAlumni.email,
-      message: `📩 New message from student ${currentUser.name}: "${messageText.length > 40 ? messageText.substring(0, 40) + '...' : messageText}"`,
-      date: new Date().toLocaleString(),
-    });
-    localStorage.setItem("notifications", JSON.stringify(allNotifications));
-
-    setMessageText("");
-    loadMessages();
+      await messagesApi.sendMessage(payload);
+      setMessageText("");
+      loadMessages();
+    } catch (err) {
+      toast.error(err.response?.data?.message || "Failed to send message ❌");
+    }
   };
 
   const filteredAlumniList = alumniList.filter((a) =>
