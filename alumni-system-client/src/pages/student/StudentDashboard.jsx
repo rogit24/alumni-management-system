@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import StudentLayout from "../../layouts/StudentLayout";
+import { jobs as jobsService, applications, referrals, messages } from "../../services/api";
 
 function StudentDashboard() {
   const [stats, setStats] = useState({
@@ -13,46 +14,30 @@ function StudentDashboard() {
     useState("");
 
   useEffect(() => {
-    const jobs =
-      JSON.parse(localStorage.getItem("jobs")) || [];
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (!currentUser) return;
 
-    const applications =
-      JSON.parse(
-        localStorage.getItem("applications")
-      ) || [];
+    setUserName(currentUser.name || "Student");
 
-    const referrals =
-      JSON.parse(
-        localStorage.getItem("referrals")
-      ) || [];
+    const fetchStats = async () => {
+      try {
+        const jobsList = await jobsService.getAll();
+        const appsList = await applications.getMyApplications();
+        const refsList = await referrals.getStudentReferrals(currentUser.id);
+        const inboxList = await messages.getMyInbox();
 
-    const messages =
-      JSON.parse(
-        localStorage.getItem("messages")
-      ) || [];
+        setStats({
+          jobs: jobsList.length,
+          applications: appsList.length,
+          referrals: refsList.length,
+          messages: inboxList.length,
+        });
+      } catch (error) {
+        console.error("Failed to load dashboard metrics", error);
+      }
+    };
 
-    const currentUser =
-      JSON.parse(
-        localStorage.getItem("currentUser")
-      );
-
-    setUserName(
-      currentUser?.name || "Student"
-    );
-
-    const myMessages = messages.filter(
-      (msg) =>
-        msg &&
-        (msg.senderEmail === currentUser?.email ||
-          msg.receiverEmail === currentUser?.email)
-    );
-
-    setStats({
-      jobs: jobs.length,
-      applications: applications.length,
-      referrals: referrals.length,
-      messages: myMessages.length,
-    });
+    fetchStats();
   }, []);
 
    return (

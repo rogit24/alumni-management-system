@@ -48,7 +48,7 @@ public class ApplicationServiceImpl implements ApplicationService {
 		
 //		Validating the feign client 
 		try {
-			 jobServiceClient.getJobById(dto.getJobId());
+			 jobServiceClient.getJobById(dto.getJobId(), studentEmail, "STUDENT");
 		}catch(FeignClientException.NotFound e) {
 			throw new RuntimeException("Job not found with id :"+dto.getJobId());
 		}

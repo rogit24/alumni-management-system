@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AlumniLayout from "../../layouts/AlumniLayout";
+import { jobs as jobsService, applications, referrals, messages } from "../../services/api";
 
 function AlumniDashboard() {
   const [stats, setStats] = useState({
@@ -13,46 +14,39 @@ function AlumniDashboard() {
     useState("");
 
   useEffect(() => {
-    const jobs =
-      JSON.parse(localStorage.getItem("jobs")) || [];
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (!currentUser) return;
 
-    const applications =
-      JSON.parse(
-        localStorage.getItem("applications")
-      ) || [];
+    setUserName(currentUser.name || "Alumni");
 
-    const referrals =
-      JSON.parse(
-        localStorage.getItem("referrals")
-      ) || [];
+    const fetchStats = async () => {
+      try {
+        const jobsList = await jobsService.getAll();
+        const myJobs = jobsList.filter(j => j.postedByEmail === currentUser.email);
 
-    const messages =
-      JSON.parse(
-        localStorage.getItem("messages")
-      ) || [];
+        let appCount = 0;
+        for (const job of myJobs) {
+          try {
+            const apps = await applications.getApplicationsForJob(job.id);
+            appCount += apps.length;
+          } catch (e) {}
+        }
 
-    const currentUser =
-      JSON.parse(
-        localStorage.getItem("currentUser")
-      );
+        const refsList = await referrals.getAlumniReferrals(currentUser.id);
+        const inboxList = await messages.getMyInbox();
 
-    setUserName(
-      currentUser?.name || "Alumni"
-    );
+        setStats({
+          jobs: myJobs.length,
+          applications: appCount,
+          referrals: refsList.length,
+          messages: inboxList.length,
+        });
+      } catch (error) {
+        console.error("Failed to load dashboard metrics", error);
+      }
+    };
 
-    const myMessages = messages.filter(
-      (msg) =>
-        msg &&
-        (msg.senderEmail === currentUser?.email ||
-          msg.receiverEmail === currentUser?.email)
-    );
-
-    setStats({
-      jobs: jobs.length,
-      applications: applications.length,
-      referrals: referrals.length,
-      messages: myMessages.length,
-    });
+    fetchStats();
   }, []);
 
   return (

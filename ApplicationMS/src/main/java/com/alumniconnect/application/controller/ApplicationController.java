@@ -45,7 +45,7 @@ public class ApplicationController {
 	public ResponseEntity<ApplicationDto> submit(
 			@Valid @RequestBody ApplicationDto applicationDto,
 			@RequestHeader(value="X-User-Email",required = false)String userEmail,
-			@RequestHeader(value = "X-User_Role",required= false)String userRole)
+			@RequestHeader(value = "X-User-Role",required= false)String userRole)
 			{
 		
 		validateRole(userRole, UserRole.STUDENT);
