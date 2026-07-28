@@ -48,6 +48,14 @@ public class User {
     @Column(nullable = false)
     private Status status;
 
+    @Column(name = "email_verified", nullable = false)
+    private boolean emailVerified = false;
+
+    private String otp;
+
+    @Column(name = "otp_expiry")
+    private LocalDateTime otpExpiry;
+
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
@@ -68,6 +76,12 @@ public class User {
     public void setRole(Role role) { this.role = role; }
     public Status getStatus() { return status; }
     public void setStatus(Status status) { this.status = status; }
+    public boolean isEmailVerified() { return emailVerified; }
+    public void setEmailVerified(boolean emailVerified) { this.emailVerified = emailVerified; }
+    public String getOtp() { return otp; }
+    public void setOtp(String otp) { this.otp = otp; }
+    public LocalDateTime getOtpExpiry() { return otpExpiry; }
+    public void setOtpExpiry(LocalDateTime otpExpiry) { this.otpExpiry = otpExpiry; }
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 
@@ -82,6 +96,9 @@ public class User {
         private String password;
         private Role role;
         private Status status;
+        private boolean emailVerified;
+        private String otp;
+        private LocalDateTime otpExpiry;
         private LocalDateTime createdAt;
 
         public UserBuilder id(Long id) { this.id = id; return this; }
@@ -90,6 +107,9 @@ public class User {
         public UserBuilder password(String password) { this.password = password; return this; }
         public UserBuilder role(Role role) { this.role = role; return this; }
         public UserBuilder status(Status status) { this.status = status; return this; }
+        public UserBuilder emailVerified(boolean emailVerified) { this.emailVerified = emailVerified; return this; }
+        public UserBuilder otp(String otp) { this.otp = otp; return this; }
+        public UserBuilder otpExpiry(LocalDateTime otpExpiry) { this.otpExpiry = otpExpiry; return this; }
         public UserBuilder createdAt(LocalDateTime createdAt) { this.createdAt = createdAt; return this; }
 
         public User build() {
@@ -100,6 +120,9 @@ public class User {
             u.setPassword(this.password);
             u.setRole(this.role);
             u.setStatus(this.status);
+            u.setEmailVerified(this.emailVerified);
+            u.setOtp(this.otp);
+            u.setOtpExpiry(this.otpExpiry);
             u.setCreatedAt(this.createdAt);
             return u;
         }

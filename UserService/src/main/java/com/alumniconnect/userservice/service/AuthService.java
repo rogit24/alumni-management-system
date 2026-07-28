@@ -16,11 +16,13 @@ public class AuthService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final JwtUtils jwtUtils;
+    private final EmailService emailService;
 
-    public AuthService(UserRepository userRepository, PasswordEncoder passwordEncoder, JwtUtils jwtUtils) {
+    public AuthService(UserRepository userRepository, PasswordEncoder passwordEncoder, JwtUtils jwtUtils, EmailService emailService) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.jwtUtils = jwtUtils;
+        this.emailService = emailService;
     }
 
     public AuthResponse register(RegisterRequest request) {
@@ -38,15 +40,23 @@ public class AuthService {
         // Default statuses: STUDENT -> ACTIVE, ALUMNI -> PENDING, ADMIN -> ACTIVE
         User.Status resolvedStatus = resolvedRole == User.Role.ALUMNI ? User.Status.PENDING : User.Status.ACTIVE;
 
+        String generatedOtp = String.format("%06d", new java.util.Random().nextInt(1000000));
+
         User user = User.builder()
                 .name(request.getName())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .role(resolvedRole)
                 .status(resolvedStatus)
+                .emailVerified(false)
+                .otp(generatedOtp)
+                .otpExpiry(java.time.LocalDateTime.now().plusMinutes(10))
                 .build();
 
         userRepository.save(user);
+
+        // Send OTP email
+        emailService.sendOtpEmail(user.getEmail(), generatedOtp);
 
         return AuthResponse.builder()
                 .id(user.getId())
@@ -63,6 +73,10 @@ public class AuthService {
 
         if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
             throw new RuntimeException("Invalid email or password");
+        }
+
+        if (!user.isEmailVerified()) {
+            throw new RuntimeException("Your email is not verified yet! Please check your email for the verification OTP code. ❌");
         }
 
         if (user.getStatus() == User.Status.BANNED) {
@@ -132,5 +146,40 @@ public class AuthService {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
         userRepository.delete(user);
+    }
+
+    public void verifyOtp(String email, String otp) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found with email: " + email));
+
+        if (user.isEmailVerified()) {
+            return;
+        }
+
+        if (user.getOtp() != null && user.getOtp().equals(otp) &&
+                user.getOtpExpiry() != null && user.getOtpExpiry().isAfter(java.time.LocalDateTime.now())) {
+            user.setEmailVerified(true);
+            user.setOtp(null);
+            user.setOtpExpiry(null);
+            userRepository.save(user);
+        } else {
+            throw new RuntimeException("Invalid or expired OTP verification code! ❌");
+        }
+    }
+
+    public void resendOtp(String email) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found with email: " + email));
+
+        if (user.isEmailVerified()) {
+            throw new RuntimeException("Email is already verified! ❌");
+        }
+
+        String generatedOtp = String.format("%06d", new java.util.Random().nextInt(1000000));
+        user.setOtp(generatedOtp);
+        user.setOtpExpiry(java.time.LocalDateTime.now().plusMinutes(10));
+        userRepository.save(user);
+
+        emailService.sendOtpEmail(user.getEmail(), generatedOtp);
     }
 }

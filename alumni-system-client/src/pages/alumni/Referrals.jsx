@@ -1,13 +1,18 @@
 import { useEffect, useState } from "react";
 import AlumniLayout from "../../layouts/AlumniLayout";
 import { toast } from "react-toastify";
-import { referrals as referralsApi, auth, profiles, notifications as notificationsApi } from "../../services/api";
+import { referrals as referralsApi, auth, profiles, notifications as notificationsApi, messages as messagesApi } from "../../services/api";
 
 function Referrals() {
   const [referrals, setReferrals] = useState([]);
   const [selectedProfile, setSelectedProfile] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoadingProfile, setIsLoadingProfile] = useState(false);
+
+  const [isApproveModalOpen, setIsApproveModalOpen] = useState(false);
+  const [selectedRefForApprove, setSelectedRefForApprove] = useState(null);
+  const [approvalMessage, setApprovalMessage] = useState("");
+  const [isSubmittingApproval, setIsSubmittingApproval] = useState(false);
 
   useEffect(() => {
     loadReferrals();
@@ -51,31 +56,82 @@ function Referrals() {
   const updateStatus = async (id, status) => {
     try {
       const ref = referrals.find(r => r.id === id);
-      if (status === "Approved") {
-        await referralsApi.approve(id);
-      } else {
+      if (status === "Rejected") {
         await referralsApi.reject(id);
-      }
-      toast.success(`Referral ${status} Successfully 🎉`);
-
-      // Trigger status update notification
-      if (ref && ref.studentId) {
-        try {
-          const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-          await notificationsApi.createNotification({
-            userId: ref.studentId,
-            title: `Referral Request ${status}`,
-            message: `Your referral request to ${currentUser.name} has been ${status.toLowerCase()}.`,
-            type: "REFERRAL"
-          });
-        } catch (notifErr) {
-          console.error("Failed to send referral status notification", notifErr);
+        toast.success(`Referral Rejected Successfully 🎉`);
+        
+        // Trigger status update notification
+        if (ref && ref.studentId) {
+          try {
+            const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            await notificationsApi.createNotification({
+              userId: ref.studentId,
+              title: `Referral Request Rejected`,
+              message: `Your referral request to ${currentUser.name} has been rejected.`,
+              type: "REFERRAL"
+            });
+          } catch (notifErr) {
+            console.error("Failed to send referral status notification", notifErr);
+          }
         }
       }
-
       loadReferrals();
     } catch (error) {
       toast.error(error.response?.data?.message || `Failed to update referral ❌`);
+    }
+  };
+
+  const handleApproveClick = (ref) => {
+    setSelectedRefForApprove(ref);
+    setApprovalMessage(`Hi ${ref.studentName || "there"}, I have approved your referral request for ${ref.company} (${ref.jobRole}). Good luck!`);
+    setIsApproveModalOpen(true);
+  };
+
+  const handleConfirmApprove = async () => {
+    if (!selectedRefForApprove) return;
+    setIsSubmittingApproval(true);
+    try {
+      const refId = selectedRefForApprove.id;
+      const studentId = selectedRefForApprove.studentId;
+      
+      // 1. Approve referral in backend
+      await referralsApi.approve(refId);
+      
+      // 2. Send direct chat message if message is not empty
+      if (approvalMessage.trim()) {
+        try {
+          await messagesApi.sendMessage({
+            receiverId: studentId,
+            messageContent: approvalMessage
+          });
+        } catch (msgErr) {
+          console.error("Failed to send approval chat message", msgErr);
+        }
+      }
+      
+      toast.success(`Referral Approved Successfully 🎉`);
+
+      // 3. Trigger status update notification
+      try {
+        const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+        await notificationsApi.createNotification({
+          userId: studentId,
+          title: "Referral Approved",
+          message: `Your referral request to ${currentUser.name} has been approved.`,
+          type: "REFERRAL"
+        });
+      } catch (notifErr) {
+        console.error("Failed to send referral status notification", notifErr);
+      }
+
+      setIsApproveModalOpen(false);
+      setSelectedRefForApprove(null);
+      setApprovalMessage("");
+      loadReferrals();
+    } catch (error) {
+      toast.error(error.response?.data?.message || `Failed to approve referral ❌`);
+    } finally {
+      setIsSubmittingApproval(false);
     }
   };
 
@@ -176,7 +232,7 @@ function Referrals() {
                         <>
                           <button
                             className="btn btn-success px-4"
-                            onClick={() => updateStatus(ref.id, "Approved")}
+                            onClick={() => handleApproveClick(ref)}
                           >
                             Approve
                           </button>
@@ -327,6 +383,92 @@ function Referrals() {
                   }}
                 >
                   Close Preview
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Custom Approval Message Modal */}
+        {isApproveModalOpen && (
+          <div
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              background: "rgba(0, 0, 0, 0.5)",
+              backdropFilter: "blur(4px)",
+              zIndex: 1050,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "20px"
+            }}
+          >
+            <div
+              className="card border-0 text-dark shadow-lg"
+              style={{
+                width: "100%",
+                maxWidth: "550px",
+                background: "#ffffff",
+                border: "1px solid #e2e8f0",
+                borderRadius: "12px",
+                display: "flex",
+                flexDirection: "column"
+              }}
+            >
+              {/* Modal Header */}
+              <div className="card-header d-flex justify-content-between align-items-center py-3 border-bottom border-light-subtle" style={{ background: "#f8fafc" }}>
+                <h5 className="fw-bold mb-0 text-dark">✍️ Add Approval Message</h5>
+                <button
+                  className="btn-close"
+                  onClick={() => {
+                    setIsApproveModalOpen(false);
+                    setSelectedRefForApprove(null);
+                    setApprovalMessage("");
+                  }}
+                ></button>
+              </div>
+
+              {/* Modal Body */}
+              <div className="card-body p-4">
+                <p className="text-secondary" style={{ fontSize: "0.9rem" }}>
+                  Write a note for <strong>{selectedRefForApprove?.studentName}</strong>. This will be sent as a direct message in their chat inbox.
+                </p>
+                <div className="mb-3">
+                  <label className="form-label fw-semibold text-secondary" style={{ fontSize: "0.85rem" }}>Message Content</label>
+                  <textarea
+                    rows={4}
+                    className="form-control"
+                    placeholder="Enter message for the student..."
+                    value={approvalMessage}
+                    onChange={(e) => setApprovalMessage(e.target.value)}
+                    style={{ fontSize: "0.9rem", resize: "none" }}
+                  />
+                </div>
+              </div>
+
+              {/* Modal Footer */}
+              <div className="card-footer py-3 border-top border-light-subtle d-flex justify-content-end gap-2" style={{ background: "#f8fafc" }}>
+                <button
+                  className="btn btn-secondary px-4"
+                  onClick={() => {
+                    setIsApproveModalOpen(false);
+                    setSelectedRefForApprove(null);
+                    setApprovalMessage("");
+                  }}
+                  disabled={isSubmittingApproval}
+                >
+                  Cancel
+                </button>
+                <button
+                  className="btn btn-success px-4"
+                  onClick={handleConfirmApprove}
+                  disabled={isSubmittingApproval}
+                >
+                  {isSubmittingApproval ? "Approving..." : "Confirm & Approve"}
                 </button>
               </div>
             </div>

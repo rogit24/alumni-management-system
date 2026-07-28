@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import AlumniLayout from "../../layouts/AlumniLayout";
 import { toast } from "react-toastify";
-import { applications as applicationsApi, jobs as jobsService, auth, profiles, notifications as notificationsApi } from "../../services/api";
+import { applications as applicationsApi, jobs as jobsService, auth, profiles, notifications as notificationsApi, messages as messagesApi } from "../../services/api";
 
 function Applications() {
   const [applications, setApplications] = useState([]);
@@ -10,6 +10,11 @@ function Applications() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoadingProfile, setIsLoadingProfile] = useState(false);
   const [selectedApplication, setSelectedApplication] = useState(null);
+
+  const [isApproveModalOpen, setIsApproveModalOpen] = useState(false);
+  const [selectedAppForApprove, setSelectedAppForApprove] = useState(null);
+  const [approvalMessage, setApprovalMessage] = useState("");
+  const [isSubmittingApproval, setIsSubmittingApproval] = useState(false);
 
   const openResumeModal = async (app) => {
     setSelectedApplication(app);
@@ -100,13 +105,23 @@ function Applications() {
   };
 
   const updateStatus = async (id, status) => {
+    const app = applications.find(a => a.id === id);
+    if (!app) return;
+
+    if (status === "ACCEPTED") {
+      // Open approval message modal
+      setSelectedAppForApprove(app);
+      setApprovalMessage(`Hi ${app.studentName || "there"}, I have approved your application for ${app.jobTitle} at ${app.company}. Congratulations!`);
+      setIsApproveModalOpen(true);
+      return;
+    }
+
     try {
-      const app = applications.find(a => a.id === id);
       await applicationsApi.updateStatus(id, status);
       toast.success(`Application updated to ${status} Successfully 🎉`);
 
       // Trigger status update notification
-      if (app && app.studentId) {
+      if (app.studentId) {
         try {
           const currentUser = JSON.parse(localStorage.getItem("currentUser"));
           await notificationsApi.createNotification({
@@ -123,6 +138,56 @@ function Applications() {
       loadApplications();
     } catch (error) {
       toast.error(error.response?.data?.message || `Failed to update status ❌`);
+    }
+  };
+
+  const handleConfirmApprove = async () => {
+    if (!selectedAppForApprove) return;
+    setIsSubmittingApproval(true);
+    try {
+      const appId = selectedAppForApprove.id;
+      const studentId = selectedAppForApprove.studentId;
+      
+      // 1. Update application status to ACCEPTED
+      await applicationsApi.updateStatus(appId, "ACCEPTED");
+      
+      // 2. Send direct chat message if message is not empty
+      if (approvalMessage.trim() && studentId) {
+        try {
+          await messagesApi.sendMessage({
+            receiverId: studentId,
+            messageContent: approvalMessage
+          });
+        } catch (msgErr) {
+          console.error("Failed to send approval chat message", msgErr);
+        }
+      }
+      
+      toast.success(`Application approved successfully 🎉`);
+
+      // 3. Trigger status update notification
+      if (studentId) {
+        try {
+          const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+          await notificationsApi.createNotification({
+            userId: studentId,
+            title: "Application Approved",
+            message: `Your application for ${selectedAppForApprove.jobTitle} at ${selectedAppForApprove.company} has been approved by ${currentUser.name}.`,
+            type: "JOB"
+          });
+        } catch (notifErr) {
+          console.error("Failed to send application status notification", notifErr);
+        }
+      }
+
+      setIsApproveModalOpen(false);
+      setSelectedAppForApprove(null);
+      setApprovalMessage("");
+      loadApplications();
+    } catch (error) {
+      toast.error(error.response?.data?.message || `Failed to approve application ❌`);
+    } finally {
+      setIsSubmittingApproval(false);
     }
   };
 
@@ -436,6 +501,92 @@ function Applications() {
                   }}
                 >
                   Close Preview
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Custom Approval Message Modal */}
+        {isApproveModalOpen && (
+          <div
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              background: "rgba(0, 0, 0, 0.5)",
+              backdropFilter: "blur(4px)",
+              zIndex: 1050,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "20px"
+            }}
+          >
+            <div
+              className="card border-0 text-dark shadow-lg"
+              style={{
+                width: "100%",
+                maxWidth: "550px",
+                background: "#ffffff",
+                border: "1px solid #e2e8f0",
+                borderRadius: "12px",
+                display: "flex",
+                flexDirection: "column"
+              }}
+            >
+              {/* Modal Header */}
+              <div className="card-header d-flex justify-content-between align-items-center py-3 border-bottom border-light-subtle" style={{ background: "#f8fafc" }}>
+                <h5 className="fw-bold mb-0 text-dark">✍️ Add Approval Message</h5>
+                <button
+                  className="btn-close"
+                  onClick={() => {
+                    setIsApproveModalOpen(false);
+                    setSelectedAppForApprove(null);
+                    setApprovalMessage("");
+                  }}
+                ></button>
+              </div>
+
+              {/* Modal Body */}
+              <div className="card-body p-4">
+                <p className="text-secondary" style={{ fontSize: "0.9rem" }}>
+                  Write a note for <strong>{selectedAppForApprove?.studentName}</strong>. This will be sent as a direct message in their chat inbox.
+                </p>
+                <div className="mb-3">
+                  <label className="form-label fw-semibold text-secondary" style={{ fontSize: "0.85rem" }}>Message Content</label>
+                  <textarea
+                    rows={4}
+                    className="form-control"
+                    placeholder="Enter message for the student..."
+                    value={approvalMessage}
+                    onChange={(e) => setApprovalMessage(e.target.value)}
+                    style={{ fontSize: "0.9rem", resize: "none" }}
+                  />
+                </div>
+              </div>
+
+              {/* Modal Footer */}
+              <div className="card-footer py-3 border-top border-light-subtle d-flex justify-content-end gap-2" style={{ background: "#f8fafc" }}>
+                <button
+                  className="btn btn-secondary px-4"
+                  onClick={() => {
+                    setIsApproveModalOpen(false);
+                    setSelectedAppForApprove(null);
+                    setApprovalMessage("");
+                  }}
+                  disabled={isSubmittingApproval}
+                >
+                  Cancel
+                </button>
+                <button
+                  className="btn btn-success px-4"
+                  onClick={handleConfirmApprove}
+                  disabled={isSubmittingApproval}
+                >
+                  {isSubmittingApproval ? "Approving..." : "Confirm & Approve"}
                 </button>
               </div>
             </div>

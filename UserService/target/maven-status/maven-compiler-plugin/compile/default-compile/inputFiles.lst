@@ -9,4 +9,5 @@ E:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userserv
 E:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\repository\UserRepository.java
 E:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\security\JwtUtils.java
 E:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\service\AuthService.java
+E:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\service\EmailService.java
 E:\alumni-management-system\UserService\src\main\java\com\alumniconnect\userservice\UserServiceApplication.java

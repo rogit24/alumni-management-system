@@ -43,6 +43,14 @@ export const auth = {
     const response = await api.post('/api/v1/auth/register', { name, email, password, role });
     return response.data;
   },
+  verifyOtp: async (email, otp) => {
+    const response = await api.post('/api/v1/auth/verify-otp', { email, otp });
+    return response.data;
+  },
+  resendOtp: async (email) => {
+    const response = await api.post('/api/v1/auth/resend-otp', { email });
+    return response.data;
+  },
   getAllUsers: async () => {
     const response = await api.get('/api/v1/auth/users');
     return response.data.map(user => {
