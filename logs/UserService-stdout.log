@@ -880,3 +880,1898 @@ Hibernate:
     from
         users u1_0
 2026-07-28T14:00:25.270+05:30  INFO 10784 --- [USER-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+LOGIN RESPONSE = AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXZpQGdtYWlsLmNvbSIsInVzZXJJZCI6Mywicm9sZSI6IkFMVU1OSSIsImlhdCI6MTc4NTIyNzY3NCwiZXhwIjoxNzg1MzE0MDc0fQ.MrxeBIVVGkpSNxmmo_Jh7vXQiZEx7Rcm_MYLXo8iu3M, id=3, name=Ravi, email=ravi@gmail.com, role=ALUMNI, status=ACTIVE)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+LOGIN RESPONSE = AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWh1bEBnbWFpbC5jb20iLCJ1c2VySWQiOjIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzg1MjI3NjkzLCJleHAiOjE3ODUzMTQwOTN9.o9MvNq0ubl5igNLG3TezLnrIV4noZQYeVPSBG0v9FSA, id=2, name=Rahul Sharma, email=rahul@gmail.com, role=STUDENT, status=ACTIVE)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+LOGIN RESPONSE = AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXZpQGdtYWlsLmNvbSIsInVzZXJJZCI6Mywicm9sZSI6IkFMVU1OSSIsImlhdCI6MTc4NTIyNzcyMywiZXhwIjoxNzg1MzE0MTIzfQ.vu4qtFrqlCFui_VRnOCrGh3J2L0ZR27SihAh-8gLwwg, id=3, name=Ravi, email=ravi@gmail.com, role=ALUMNI, status=ACTIVE)
+2026-07-28T14:05:25.283+05:30  INFO 10784 --- [USER-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+LOGIN RESPONSE = AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWh1bEBnbWFpbC5jb20iLCJ1c2VySWQiOjIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzg1MjI3Nzg3LCJleHAiOjE3ODUzMTQxODd9.A16c8DGsxvDFu2flxT9jhI3m53LYSO6_NYmlWOwyUgg, id=2, name=Rahul Sharma, email=rahul@gmail.com, role=STUDENT, status=ACTIVE)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+2026-07-28T14:10:25.284+05:30  INFO 10784 --- [USER-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+LOGIN RESPONSE = AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXZpQGdtYWlsLmNvbSIsInVzZXJJZCI6Mywicm9sZSI6IkFMVU1OSSIsImlhdCI6MTc4NTIyODE2MSwiZXhwIjoxNzg1MzE0NTYxfQ.Vuy7oAC2_rZDAOgLMKItCaVpy-3U4xLGg82pxlY-iik, id=3, name=Ravi, email=ravi@gmail.com, role=ALUMNI, status=ACTIVE)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+LOGIN RESPONSE = AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWh1bEBnbWFpbC5jb20iLCJ1c2VySWQiOjIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzg1MjI4Mjc1LCJleHAiOjE3ODUzMTQ2NzV9.f25vPsFIC6PYCo_9T_PajSllKdJfIbu5KmCJd8UAFpY, id=2, name=Rahul Sharma, email=rahul@gmail.com, role=STUDENT, status=ACTIVE)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+LOGIN RESPONSE = AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXZpQGdtYWlsLmNvbSIsInVzZXJJZCI6Mywicm9sZSI6IkFMVU1OSSIsImlhdCI6MTc4NTIyODI5MywiZXhwIjoxNzg1MzE0NjkzfQ.1d8l64f5wY5e3vP4dTaaqEWcg_kD76EYqarFry_dx8A, id=3, name=Ravi, email=ravi@gmail.com, role=ALUMNI, status=ACTIVE)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+LOGIN RESPONSE = AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWh1bEBnbWFpbC5jb20iLCJ1c2VySWQiOjIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzg1MjI4MzA0LCJleHAiOjE3ODUzMTQ3MDR9._kNH-jJh5_7a-o1pHO1GKFucU-9DiQqt4kO4nyaJ2Vg, id=2, name=Rahul Sharma, email=rahul@gmail.com, role=STUDENT, status=ACTIVE)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+2026-07-28T14:15:25.306+05:30  INFO 10784 --- [USER-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+LOGIN RESPONSE = AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXZpQGdtYWlsLmNvbSIsInVzZXJJZCI6Mywicm9sZSI6IkFMVU1OSSIsImlhdCI6MTc4NTIyODM1NSwiZXhwIjoxNzg1MzE0NzU1fQ.OwKj6SOhWIkhJlu3VxvLbQiCZXYcCBOhG7ok7Cz_DC0, id=3, name=Ravi, email=ravi@gmail.com, role=ALUMNI, status=ACTIVE)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+LOGIN RESPONSE = AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWh1bEBnbWFpbC5jb20iLCJ1c2VySWQiOjIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzg1MjI4NDIzLCJleHAiOjE3ODUzMTQ4MjN9.21i2eag5RARLvQwmxJ-0g51px-csZ2Dewi60AmGnkgw, id=2, name=Rahul Sharma, email=rahul@gmail.com, role=STUDENT, status=ACTIVE)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+LOGIN RESPONSE = AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXZpQGdtYWlsLmNvbSIsInVzZXJJZCI6Mywicm9sZSI6IkFMVU1OSSIsImlhdCI6MTc4NTIyODQ1MSwiZXhwIjoxNzg1MzE0ODUxfQ.Jy2ZzJQ9we_V_zTMh-XCtBALHRNJRDbELuVu_0cUVIE, id=3, name=Ravi, email=ravi@gmail.com, role=ALUMNI, status=ACTIVE)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+2026-07-28T14:20:25.326+05:30  INFO 10784 --- [USER-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+LOGIN RESPONSE = AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXZpQGdtYWlsLmNvbSIsInVzZXJJZCI6Mywicm9sZSI6IkFMVU1OSSIsImlhdCI6MTc4NTIyODc1MiwiZXhwIjoxNzg1MzE1MTUyfQ.zGRZF1ldzMFYN2ldHeHQ-UgFq-6tfoWtx10gwdoIcHM, id=3, name=Ravi, email=ravi@gmail.com, role=ALUMNI, status=ACTIVE)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+LOGIN RESPONSE = AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWh1bEBnbWFpbC5jb20iLCJ1c2VySWQiOjIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzg1MjI4Nzk0LCJleHAiOjE3ODUzMTUxOTR9.ZlDJIvLw7_zRX3NeRzZlM4WeRuRdYG5Ww9_aVjG56Zk, id=2, name=Rahul Sharma, email=rahul@gmail.com, role=STUDENT, status=ACTIVE)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+2026-07-28T14:25:25.339+05:30  INFO 10784 --- [USER-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+LOGIN RESPONSE = AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXZpQGdtYWlsLmNvbSIsInVzZXJJZCI6Mywicm9sZSI6IkFMVU1OSSIsImlhdCI6MTc4NTIyODk5OCwiZXhwIjoxNzg1MzE1Mzk4fQ.R_fehEsVnvLP6-oOnYMjSq7Nk4VupZ3QcPQbYZqw-Nc, id=3, name=Ravi, email=ravi@gmail.com, role=ALUMNI, status=ACTIVE)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0

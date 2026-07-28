@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import AlumniLayout from "../../layouts/AlumniLayout";
 import { jobs as jobsService, applications, referrals, messages } from "../../services/api";
 
@@ -68,61 +69,69 @@ function AlumniDashboard() {
         <div className="row g-4">
 
           <div className="col-md-3">
-            <div className="alumni-card alumni-card-blue p-4 position-relative">
+            <Link to="/alumni/jobs" style={{ textDecoration: "none" }}>
+              <div className="alumni-card alumni-card-blue p-4 position-relative" style={{ cursor: "pointer" }}>
 
-              <div className="card-icon">
-                💼
+                <div className="card-icon">
+                  💼
+                </div>
+
+                <h2>{stats.jobs}</h2>
+
+                <p>Posted Jobs</p>
+
               </div>
-
-              <h2>{stats.jobs}</h2>
-
-              <p>Posted Jobs</p>
-
-            </div>
+            </Link>
           </div>
 
           <div className="col-md-3">
-            <div className="alumni-card alumni-card-green p-4 position-relative">
+            <Link to="/alumni/applications" style={{ textDecoration: "none" }}>
+              <div className="alumni-card alumni-card-green p-4 position-relative" style={{ cursor: "pointer" }}>
 
-              <div className="card-icon">
-                📄
+                <div className="card-icon">
+                  📄
+                </div>
+
+                <h2>
+                  {stats.applications}
+                </h2>
+
+                <p>Applications</p>
+
               </div>
-
-              <h2>
-                {stats.applications}
-              </h2>
-
-              <p>Applications</p>
-
-            </div>
+            </Link>
           </div>
 
           <div className="col-md-3">
-            <div className="alumni-card alumni-card-orange p-4 position-relative">
+            <Link to="/alumni/referrals" style={{ textDecoration: "none" }}>
+              <div className="alumni-card alumni-card-orange p-4 position-relative" style={{ cursor: "pointer" }}>
 
-              <div className="card-icon">
-                🤝
+                <div className="card-icon">
+                  🤝
+                </div>
+
+                <h2>{stats.referrals}</h2>
+
+                <p>Referral Requests</p>
+
               </div>
-
-              <h2>{stats.referrals}</h2>
-
-              <p>Referral Requests</p>
-
-            </div>
+            </Link>
           </div>
 
           <div className="col-md-3">
-            <div className="alumni-card alumni-card-purple p-4 position-relative">
+            <Link to="/alumni/messages" style={{ textDecoration: "none" }}>
+              <div className="alumni-card alumni-card-purple p-4 position-relative" style={{ cursor: "pointer" }}>
 
-              <div className="card-icon">
-                💬
+                <div className="card-icon">
+                  💬
+                </div>
+
+                <h2>{stats.messages}</h2>
+
+                <p>Messages</p>
+
               </div>
-
-              <h2>{stats.messages}</h2>
-
-              <p>Messages</p>
-
-            </div>
+            </Link>
           </div>
 
         </div>

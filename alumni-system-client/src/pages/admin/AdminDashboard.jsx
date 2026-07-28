@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import AdminLayout from "../../layouts/AdminLayout";
 import { auth, jobs as jobsApi } from "../../services/api";
 
@@ -61,74 +62,90 @@ function AdminDashboard() {
         <div className="row g-4">
           
           <div className="col-md-3">
-            <div className="dashboard-card card-blue p-4 shadow-sm rounded">
-              <div className="card-icon">👥</div>
-              <div className="card-number">{stats.users}</div>
-              <div className="card-title">Total Users</div>
-            </div>
+            <Link to="/admin/users" style={{ textDecoration: "none" }}>
+              <div className="dashboard-card card-blue p-4 shadow-sm rounded" style={{ cursor: "pointer" }}>
+                <div className="card-icon">👥</div>
+                <div className="card-number">{stats.users}</div>
+                <div className="card-title">Total Users</div>
+              </div>
+            </Link>
           </div>
 
           
           <div className="col-md-3">
-            <div className="dashboard-card card-green p-4 shadow-sm rounded">
-              <div className="card-icon">🎓</div>
-              <div className="card-number">{stats.students}</div>
-              <div className="card-title">Students</div>
-            </div>
+            <Link to="/admin/students" style={{ textDecoration: "none" }}>
+              <div className="dashboard-card card-green p-4 shadow-sm rounded" style={{ cursor: "pointer" }}>
+                <div className="card-icon">🎓</div>
+                <div className="card-number">{stats.students}</div>
+                <div className="card-title">Students</div>
+              </div>
+            </Link>
           </div>
 
          
           <div className="col-md-3">
-            <div className="dashboard-card card-purple p-4 shadow-sm rounded">
-              <div className="card-icon">🏆</div>
-              <div className="card-number">{stats.alumni}</div>
-              <div className="card-title">Alumni</div>
-            </div>
+            <Link to="/admin/alumni" style={{ textDecoration: "none" }}>
+              <div className="dashboard-card card-purple p-4 shadow-sm rounded" style={{ cursor: "pointer" }}>
+                <div className="card-icon">🏆</div>
+                <div className="card-number">{stats.alumni}</div>
+                <div className="card-title">Alumni</div>
+              </div>
+            </Link>
           </div>
 
           
           <div className="col-md-3">
-            <div className="dashboard-card card-orange p-4 shadow-sm rounded">
-              <div className="card-icon">🛡️</div>
-              <div className="card-number">{stats.admins}</div>
-              <div className="card-title">Admins</div>
-            </div>
+            <Link to="/admin/users" style={{ textDecoration: "none" }}>
+              <div className="dashboard-card card-orange p-4 shadow-sm rounded" style={{ cursor: "pointer" }}>
+                <div className="card-icon">🛡️</div>
+                <div className="card-number">{stats.admins}</div>
+                <div className="card-title">Admins</div>
+              </div>
+            </Link>
           </div>
 
           
           <div className="col-md-3">
-            <div className="dashboard-card card-cyan p-4 shadow-sm rounded">
-              <div className="card-icon">💼</div>
-              <div className="card-number">{stats.jobs}</div>
-              <div className="card-title">Jobs Posted</div>
-            </div>
+            <Link to="/admin/reports" style={{ textDecoration: "none" }}>
+              <div className="dashboard-card card-cyan p-4 shadow-sm rounded" style={{ cursor: "pointer" }}>
+                <div className="card-icon">💼</div>
+                <div className="card-number">{stats.jobs}</div>
+                <div className="card-title">Jobs Posted</div>
+              </div>
+            </Link>
           </div>
 
           
           <div className="col-md-3">
-            <div className="dashboard-card card-red p-4 shadow-sm rounded">
-              <div className="card-icon">📄</div>
-              <div className="card-number">{stats.applications}</div>
-              <div className="card-title">Applications</div>
-            </div>
+            <Link to="/admin/reports" style={{ textDecoration: "none" }}>
+              <div className="dashboard-card card-red p-4 shadow-sm rounded" style={{ cursor: "pointer" }}>
+                <div className="card-icon">📄</div>
+                <div className="card-number">{stats.applications}</div>
+                <div className="card-title">Applications</div>
+              </div>
+            </Link>
           </div>
 
          
           <div className="col-md-3">
-            <div className="dashboard-card card-green p-4 shadow-sm rounded">
-              <div className="card-icon">🤝</div>
-              <div className="card-number">{stats.referrals}</div>
-              <div className="card-title">Referrals</div>
-            </div>
+            <Link to="/admin/reports" style={{ textDecoration: "none" }}>
+              <div className="dashboard-card card-green p-4 shadow-sm rounded" style={{ cursor: "pointer" }}>
+                <div className="card-icon">🤝</div>
+                <div className="card-number">{stats.referrals}</div>
+                <div className="card-title">Referrals</div>
+              </div>
+            </Link>
           </div>
 
           
           <div className="col-md-3">
-            <div className="dashboard-card card-purple p-4 shadow-sm rounded">
-              <div className="card-icon">💬</div>
-              <div className="card-number">{stats.messages}</div>
-              <div className="card-title">Messages</div>
-            </div>
+            <Link to="/admin/reports" style={{ textDecoration: "none" }}>
+              <div className="dashboard-card card-purple p-4 shadow-sm rounded" style={{ cursor: "pointer" }}>
+                <div className="card-icon">💬</div>
+                <div className="card-number">{stats.messages}</div>
+                <div className="card-title">Messages</div>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

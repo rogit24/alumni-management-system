@@ -67,3 +67,35 @@
 2026-07-28T13:59:55.991+05:30  WARN 15572 --- [service-registry] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
 2026-07-28T13:59:57.742+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
 2026-07-28T14:00:57.743+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-07-28T14:01:57.743+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-07-28T14:02:57.744+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-07-28T14:03:57.744+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-07-28T14:04:57.233+05:30  INFO 15572 --- [service-registry] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 15
+2026-07-28T14:04:57.749+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-07-28T14:05:57.763+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-07-28T14:06:57.769+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-07-28T14:07:57.773+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-07-28T14:08:57.774+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-07-28T14:09:56.003+05:30  WARN 15572 --- [service-registry] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-07-28T14:09:57.774+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-07-28T14:10:57.774+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-07-28T14:11:57.775+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-07-28T14:12:57.776+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-07-28T14:13:57.792+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2026-07-28T14:14:57.797+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-07-28T14:15:57.798+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-07-28T14:16:57.809+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2026-07-28T14:17:57.820+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2026-07-28T14:18:57.820+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-07-28T14:19:56.005+05:30  WARN 15572 --- [service-registry] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-07-28T14:19:57.233+05:30  INFO 15572 --- [service-registry] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 15
+2026-07-28T14:19:57.821+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-07-28T14:20:57.821+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-07-28T14:21:57.822+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-07-28T14:22:57.822+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-07-28T14:23:57.826+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-07-28T14:24:57.832+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-07-28T14:25:57.833+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-07-28T14:26:57.836+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-07-28T14:27:57.840+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-07-28T14:28:57.852+05:30  INFO 15572 --- [service-registry] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms

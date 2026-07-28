@@ -164,3 +164,9014 @@ Hibernate:
     where
         n1_0.user_id=?
 2026-07-28T14:00:49.450+05:30  INFO 24244 --- [NOTIFICATION-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    insert 
+    into
+        notifications
+        (created_at, is_read, message, title, type, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    update
+        notifications 
+    set
+        created_at=?,
+        is_read=?,
+        message=?,
+        title=?,
+        type=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+2026-07-28T14:05:49.459+05:30  INFO 24244 --- [NOTIFICATION-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    update
+        notifications 
+    set
+        created_at=?,
+        is_read=?,
+        message=?,
+        title=?,
+        type=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+2026-07-28T14:10:49.461+05:30  INFO 24244 --- [NOTIFICATION-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    insert 
+    into
+        notifications
+        (created_at, is_read, message, title, type, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    insert 
+    into
+        notifications
+        (created_at, is_read, message, title, type, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    update
+        notifications 
+    set
+        created_at=?,
+        is_read=?,
+        message=?,
+        title=?,
+        type=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    delete 
+    from
+        notifications 
+    where
+        id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    update
+        notifications 
+    set
+        created_at=?,
+        is_read=?,
+        message=?,
+        title=?,
+        type=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    update
+        notifications 
+    set
+        created_at=?,
+        is_read=?,
+        message=?,
+        title=?,
+        type=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    insert 
+    into
+        notifications
+        (created_at, is_read, message, title, type, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    insert 
+    into
+        notifications
+        (created_at, is_read, message, title, type, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    insert 
+    into
+        notifications
+        (created_at, is_read, message, title, type, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    insert 
+    into
+        notifications
+        (created_at, is_read, message, title, type, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    update
+        notifications 
+    set
+        created_at=?,
+        is_read=?,
+        message=?,
+        title=?,
+        type=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+2026-07-28T14:15:49.477+05:30  INFO 24244 --- [NOTIFICATION-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    update
+        notifications 
+    set
+        created_at=?,
+        is_read=?,
+        message=?,
+        title=?,
+        type=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    update
+        notifications 
+    set
+        created_at=?,
+        is_read=?,
+        message=?,
+        title=?,
+        type=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    update
+        notifications 
+    set
+        created_at=?,
+        is_read=?,
+        message=?,
+        title=?,
+        type=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+2026-07-28T14:20:49.502+05:30  INFO 24244 --- [NOTIFICATION-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    delete 
+    from
+        notifications 
+    where
+        id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    delete 
+    from
+        notifications 
+    where
+        id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    delete 
+    from
+        notifications 
+    where
+        id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+2026-07-28T14:25:49.516+05:30  INFO 24244 --- [NOTIFICATION-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    insert 
+    into
+        notifications
+        (created_at, is_read, message, title, type, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    insert 
+    into
+        notifications
+        (created_at, is_read, message, title, type, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    insert 
+    into
+        notifications
+        (created_at, is_read, message, title, type, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    insert 
+    into
+        notifications
+        (created_at, is_read, message, title, type, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    update
+        notifications 
+    set
+        created_at=?,
+        is_read=?,
+        message=?,
+        title=?,
+        type=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.id=?
+Hibernate: 
+    update
+        notifications 
+    set
+        created_at=?,
+        is_read=?,
+        message=?,
+        title=?,
+        type=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    update
+        notifications 
+    set
+        created_at=?,
+        is_read=?,
+        message=?,
+        title=?,
+        type=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    update
+        notifications 
+    set
+        created_at=?,
+        is_read=?,
+        message=?,
+        title=?,
+        type=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
+Hibernate: 
+    select
+        n1_0.id,
+        n1_0.created_at,
+        n1_0.is_read,
+        n1_0.message,
+        n1_0.title,
+        n1_0.type,
+        n1_0.user_id 
+    from
+        notifications n1_0 
+    where
+        n1_0.user_id=?
