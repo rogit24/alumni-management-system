@@ -1,10 +1,20 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import { 
+  notifications as notificationsApi, 
+  messages as messagesApi, 
+  referrals as referralsApi, 
+  applications as applicationsApi, 
+  jobs as jobsService 
+} from "../services/api";
 
 function Sidebar() {
   const navigate = useNavigate();
   const location = useLocation();
   const [notificationCount, setNotificationCount] = useState(0);
+  const [messageCount, setMessageCount] = useState(0);
+  const [referralCount, setReferralCount] = useState(0);
+  const [applicationCount, setApplicationCount] = useState(0);
 
   const user = JSON.parse(localStorage.getItem("currentUser"));
 
@@ -17,21 +27,74 @@ function Sidebar() {
     return location.pathname === path ? "active" : "";
   };
 
-  const updateNotificationCount = () => {
+  const updateBadges = async () => {
     const activeUser = JSON.parse(localStorage.getItem("currentUser"));
     if (!activeUser) return;
-    const allNotifications = JSON.parse(localStorage.getItem("notifications")) || [];
-    const myNotifications = allNotifications.filter(
-      (n) =>
-        n &&
-        n.userEmail?.trim().toLowerCase() === activeUser.email?.trim().toLowerCase()
-    );
-    setNotificationCount(myNotifications.length);
+
+    try {
+      // 1. Get Unread Notifications
+      const notifs = await notificationsApi.getUserNotifications(activeUser.id);
+      setNotificationCount(notifs.filter((n) => !n.isRead).length);
+    } catch (e) {
+      console.error("Failed to update notification count", e);
+    }
+
+    try {
+      // 2. Get Unread Messages
+      const inbox = await messagesApi.getMyInbox();
+      setMessageCount(inbox.filter((m) => !m.readStatus).length);
+    } catch (e) {
+      console.error("Failed to update message count", e);
+    }
+
+    if (activeUser.role?.toLowerCase() === "student") {
+      try {
+        // 3. Get Student Referrals (pending requests)
+        const refs = await referralsApi.getStudentReferrals(activeUser.id);
+        setReferralCount(refs.filter((r) => r.status?.toLowerCase() === "pending").length);
+      } catch (e) {
+        console.error("Failed to update student referral count", e);
+      }
+
+      try {
+        // 4. Get Student Applications
+        const apps = await applicationsApi.getMyApplications();
+        setApplicationCount(apps.filter((a) => a.status?.toLowerCase() === "pending").length);
+      } catch (e) {
+        console.error("Failed to update student application count", e);
+      }
+    } else if (activeUser.role?.toLowerCase() === "alumni") {
+      try {
+        // 3. Get Alumni Referrals (pending requests)
+        const refs = await referralsApi.getAlumniReferrals(activeUser.id);
+        setReferralCount(refs.filter((r) => r.status?.toLowerCase() === "pending").length);
+      } catch (e) {
+        console.error("Failed to update alumni referral count", e);
+      }
+
+      try {
+        // 4. Get Alumni Job Applications (pending ones on their posted jobs)
+        const jobsList = await jobsService.getAll();
+        const myJobs = jobsList.filter((j) => j.postedByEmail === activeUser.email);
+        let pendingAppsCount = 0;
+        for (const job of myJobs) {
+          try {
+            const apps = await applicationsApi.getApplicationsForJob(job.id);
+            pendingAppsCount += apps.filter((a) => a.status?.toLowerCase() === "pending").length;
+          } catch (err) {
+            console.error(err);
+          }
+        }
+        setApplicationCount(pendingAppsCount);
+      } catch (e) {
+        console.error("Failed to update alumni application count", e);
+      }
+    }
   };
 
   useEffect(() => {
-    updateNotificationCount();
-    const interval = setInterval(updateNotificationCount, 2000);
+    updateBadges();
+    const interval = setInterval(updateBadges, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -64,14 +127,23 @@ function Sidebar() {
 
             <Link className={`sidebar-link ${isActive("/student/applications")}`} to="/student/applications">
               <i className="bi bi-file-earmark-text me-2"></i> Applications
+              {applicationCount > 0 && (
+                <span className="badge bg-primary rounded-pill ms-auto px-2 py-0.5 small" style={{ fontSize: '11px' }}>{applicationCount}</span>
+              )}
             </Link>
 
             <Link className={`sidebar-link ${isActive("/student/referrals")}`} to="/student/referrals">
               <i className="bi bi-award me-2"></i> Referrals
+              {referralCount > 0 && (
+                <span className="badge bg-warning text-dark rounded-pill ms-auto px-2 py-0.5 small" style={{ fontSize: '11px' }}>{referralCount}</span>
+              )}
             </Link>
 
             <Link className={`sidebar-link ${isActive("/student/messages")}`} to="/student/messages">
               <i className="bi bi-chat-left-text me-2"></i> Messages
+              {messageCount > 0 && (
+                <span className="badge bg-info text-dark rounded-pill ms-auto px-2 py-0.5 small" style={{ fontSize: '11px' }}>{messageCount}</span>
+              )}
             </Link>
 
             <Link className={`sidebar-link ${isActive("/student/notifications")}`} to="/student/notifications">
@@ -99,14 +171,23 @@ function Sidebar() {
 
             <Link className={`sidebar-link ${isActive("/alumni/applications")}`} to="/alumni/applications">
               <i className="bi bi-file-earmark-text me-2"></i> Applications
+              {applicationCount > 0 && (
+                <span className="badge bg-primary rounded-pill ms-auto px-2 py-0.5 small" style={{ fontSize: '11px' }}>{applicationCount}</span>
+              )}
             </Link>
 
             <Link className={`sidebar-link ${isActive("/alumni/referrals")}`} to="/alumni/referrals">
               <i className="bi bi-award me-2"></i> Referrals
+              {referralCount > 0 && (
+                <span className="badge bg-warning text-dark rounded-pill ms-auto px-2 py-0.5 small" style={{ fontSize: '11px' }}>{referralCount}</span>
+              )}
             </Link>
 
             <Link className={`sidebar-link ${isActive("/alumni/messages")}`} to="/alumni/messages">
               <i className="bi bi-chat-left-text me-2"></i> Messages
+              {messageCount > 0 && (
+                <span className="badge bg-info text-dark rounded-pill ms-auto px-2 py-0.5 small" style={{ fontSize: '11px' }}>{messageCount}</span>
+              )}
             </Link>
 
             <Link className={`sidebar-link ${isActive("/alumni/notifications")}`} to="/alumni/notifications">

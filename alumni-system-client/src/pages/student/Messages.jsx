@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import StudentLayout from "../../layouts/StudentLayout";
 import { toast } from "react-toastify";
-import { auth, messages as messagesApi } from "../../services/api";
+import { auth, messages as messagesApi, notifications as notificationsApi } from "../../services/api";
 
 function Messages() {
   const [alumniList, setAlumniList] = useState([]);
@@ -54,6 +54,17 @@ function Messages() {
         date: msg.sentAt ? new Date(msg.sentAt).toLocaleString() : "Just now",
       }));
       setMessages(resolvedMsgs);
+
+      // Mark received unread messages as read
+      res.forEach(async (msg) => {
+        if (msg.receiverId === currentUser.id && !msg.readStatus) {
+          try {
+            await messagesApi.markAsRead(msg.id);
+          } catch (e) {
+            console.error("Failed to mark message as read", e);
+          }
+        }
+      });
     } catch (err) {
       console.error("Failed to load messages", err);
     }
@@ -87,6 +98,19 @@ function Messages() {
       };
 
       await messagesApi.sendMessage(payload);
+
+      // Trigger notification
+      try {
+        await notificationsApi.createNotification({
+          userId: selectedAlumni.id,
+          title: "New Message Received",
+          message: `You received a new message from ${currentUser.name}: "${messageText.substring(0, 30)}${messageText.length > 30 ? '...' : ''}"`,
+          type: "MESSAGE"
+        });
+      } catch (notifErr) {
+        console.error("Failed to send message notification", notifErr);
+      }
+
       setMessageText("");
       loadMessages();
     } catch (err) {

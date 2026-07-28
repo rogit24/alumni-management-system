@@ -1,0 +1,73 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-07-28T13:49:35.704+05:30  INFO 9956 --- [api-gateway] [           main] c.a.gateway.ApiGatewayApplication        : Starting ApiGatewayApplication v1.0.0 using Java 24.0.1 with PID 9956 (E:\alumni-management-system\ApiGateway\target\ApiGateway-1.0.0.jar started by ROHIT SINGH in E:\alumni-management-system)
+2026-07-28T13:49:35.750+05:30  INFO 9956 --- [api-gateway] [           main] c.a.gateway.ApiGatewayApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T13:49:41.647+05:30  INFO 9956 --- [api-gateway] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ce44ee2f-63a1-31bd-965e-6378b31393c5
+2026-07-28T13:49:42.726+05:30  WARN 9956 --- [api-gateway] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-07-28T13:49:42.739+05:30  WARN 9956 --- [api-gateway] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-07-28T13:49:42.747+05:30  WARN 9956 --- [api-gateway] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-07-28T13:49:42.755+05:30  WARN 9956 --- [api-gateway] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-07-28T13:49:42.758+05:30  WARN 9956 --- [api-gateway] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-07-28T13:49:49.983+05:30  INFO 9956 --- [api-gateway] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T13:49:53.378+05:30  INFO 9956 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-07-28T13:49:53.386+05:30  INFO 9956 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-07-28T13:49:53.386+05:30  INFO 9956 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-07-28T13:49:53.387+05:30  INFO 9956 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-07-28T13:49:53.391+05:30  INFO 9956 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-07-28T13:49:53.423+05:30  INFO 9956 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-07-28T13:49:53.440+05:30  INFO 9956 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-07-28T13:49:53.461+05:30  INFO 9956 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-07-28T13:49:53.465+05:30  INFO 9956 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-07-28T13:49:53.473+05:30  INFO 9956 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-07-28T13:49:53.480+05:30  INFO 9956 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-07-28T13:49:53.481+05:30  INFO 9956 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-07-28T13:49:53.482+05:30  INFO 9956 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-07-28T13:49:53.485+05:30  INFO 9956 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-07-28T13:50:00.832+05:30  INFO 9956 --- [api-gateway] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T13:50:00.970+05:30  INFO 9956 --- [api-gateway] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-07-28T13:50:03.238+05:30  INFO 9956 --- [api-gateway] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T13:50:03.578+05:30  WARN 9956 --- [api-gateway] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-07-28T13:50:04.105+05:30  INFO 9956 --- [api-gateway] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-07-28T13:50:04.964+05:30  INFO 9956 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-07-28T13:50:04.998+05:30  INFO 9956 --- [api-gateway] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-07-28T13:50:05.106+05:30  INFO 9956 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-07-28T13:50:05.111+05:30  INFO 9956 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-07-28T13:50:05.116+05:30  INFO 9956 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-07-28T13:50:05.120+05:30  INFO 9956 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-07-28T13:50:05.122+05:30  INFO 9956 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-07-28T13:50:05.122+05:30  INFO 9956 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-07-28T13:50:05.123+05:30  INFO 9956 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-07-28T13:50:07.984+05:30  INFO 9956 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-07-28T13:50:07.990+05:30  INFO 9956 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-07-28T13:50:07.997+05:30  INFO 9956 --- [api-gateway] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-07-28T13:50:08.013+05:30  INFO 9956 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1785226808012 with initial instances count: 0
+2026-07-28T13:50:08.019+05:30  INFO 9956 --- [api-gateway] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY with eureka with status UP
+2026-07-28T13:50:08.028+05:30  INFO 9956 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1785226808028, current=UP, previous=STARTING]
+2026-07-28T13:50:08.032+05:30  INFO 9956 --- [api-gateway] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/localhost:api-gateway:9191: registering service...
+2026-07-28T13:50:08.639+05:30  INFO 9956 --- [api-gateway] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/localhost:api-gateway:9191 - registration status: 204
+2026-07-28T13:50:12.800+05:30  INFO 9956 --- [api-gateway] [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 9191
+2026-07-28T13:50:12.805+05:30  INFO 9956 --- [api-gateway] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9191
+2026-07-28T13:50:16.947+05:30  INFO 9956 --- [api-gateway] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T13:50:18.246+05:30  INFO 9956 --- [api-gateway] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T13:50:18.341+05:30  INFO 9956 --- [api-gateway] [           main] c.a.gateway.ApiGatewayApplication        : Started ApiGatewayApplication in 45.552 seconds (process running for 47.836)
+2026-07-28T13:50:38.060+05:30  INFO 9956 --- [api-gateway] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-07-28T13:50:38.061+05:30  INFO 9956 --- [api-gateway] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-07-28T13:50:38.061+05:30  INFO 9956 --- [api-gateway] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-07-28T13:50:38.061+05:30  INFO 9956 --- [api-gateway] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-07-28T13:50:38.062+05:30  INFO 9956 --- [api-gateway] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-07-28T13:50:38.062+05:30  INFO 9956 --- [api-gateway] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-07-28T13:50:38.063+05:30  INFO 9956 --- [api-gateway] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-07-28T13:50:38.108+05:30  INFO 9956 --- [api-gateway] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-07-28T13:55:05.128+05:30  INFO 9956 --- [api-gateway] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-07-28T14:00:05.130+05:30  INFO 9956 --- [api-gateway] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-07-28T14:05:05.146+05:30  INFO 9956 --- [api-gateway] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-07-28T14:10:05.148+05:30  INFO 9956 --- [api-gateway] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-07-28T14:15:05.170+05:30  INFO 9956 --- [api-gateway] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-07-28T14:20:05.184+05:30  INFO 9956 --- [api-gateway] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

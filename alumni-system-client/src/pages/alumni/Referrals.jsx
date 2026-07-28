@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import AlumniLayout from "../../layouts/AlumniLayout";
 import { toast } from "react-toastify";
-import { referrals as referralsApi, auth, profiles } from "../../services/api";
+import { referrals as referralsApi, auth, profiles, notifications as notificationsApi } from "../../services/api";
 
 function Referrals() {
   const [referrals, setReferrals] = useState([]);
@@ -50,12 +50,29 @@ function Referrals() {
 
   const updateStatus = async (id, status) => {
     try {
+      const ref = referrals.find(r => r.id === id);
       if (status === "Approved") {
         await referralsApi.approve(id);
       } else {
         await referralsApi.reject(id);
       }
       toast.success(`Referral ${status} Successfully 🎉`);
+
+      // Trigger status update notification
+      if (ref && ref.studentId) {
+        try {
+          const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+          await notificationsApi.createNotification({
+            userId: ref.studentId,
+            title: `Referral Request ${status}`,
+            message: `Your referral request to ${currentUser.name} has been ${status.toLowerCase()}.`,
+            type: "REFERRAL"
+          });
+        } catch (notifErr) {
+          console.error("Failed to send referral status notification", notifErr);
+        }
+      }
+
       loadReferrals();
     } catch (error) {
       toast.error(error.response?.data?.message || `Failed to update referral ❌`);

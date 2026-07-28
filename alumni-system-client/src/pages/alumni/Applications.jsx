@@ -1,11 +1,53 @@
 import { useEffect, useState } from "react";
 import AlumniLayout from "../../layouts/AlumniLayout";
 import { toast } from "react-toastify";
-import { applications as applicationsApi, jobs as jobsService, auth } from "../../services/api";
+import { applications as applicationsApi, jobs as jobsService, auth, profiles, notifications as notificationsApi } from "../../services/api";
 
 function Applications() {
   const [applications, setApplications] = useState([]);
   const [draggedOverCol, setDraggedOverCol] = useState(null);
+  const [selectedProfile, setSelectedProfile] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoadingProfile, setIsLoadingProfile] = useState(false);
+  const [selectedApplication, setSelectedApplication] = useState(null);
+
+  const openResumeModal = async (app) => {
+    setSelectedApplication(app);
+    setIsLoadingProfile(true);
+    setIsModalOpen(true);
+    try {
+      const profileData = await profiles.getByUserId(app.studentId);
+      setSelectedProfile(profileData);
+    } catch (error) {
+      toast.error("This student has not created a detailed profile yet ❌");
+      setIsModalOpen(false);
+    } finally {
+      setIsLoadingProfile(false);
+    }
+  };
+
+  const downloadApplicationPDF = () => {
+    const element = document.getElementById("downloadable-application-content");
+    if (!element) {
+      toast.error("Application content not found! ❌");
+      return;
+    }
+
+    const opt = {
+      margin:       [12, 12, 12, 12],
+      filename:     `${selectedProfile.fullName.replace(/\s+/g, "_")}_Job_Application.pdf`,
+      image:        { type: "jpeg", quality: 0.98 },
+      html2canvas:  { scale: 2, useCORS: true },
+      jsPDF:        { unit: "mm", format: "a4", orientation: "portrait" }
+    };
+
+    if (window.html2pdf) {
+      window.html2pdf().set(opt).from(element).save();
+      toast.success("Application details downloaded successfully! 📄");
+    } else {
+      toast.error("PDF generation library is loading. Please try again in a moment. ❌");
+    }
+  };
 
   useEffect(() => {
     loadApplications();
@@ -40,6 +82,7 @@ function Applications() {
               salary: job.salary,
               studentName: studentUser ? studentUser.name : app.studentEmail,
               studentEmail: app.studentEmail,
+              studentId: studentUser ? studentUser.id : null,
               status: app.status || "PENDING",
               appliedDate: app.appliedDate || "N/A"
             };
@@ -58,8 +101,25 @@ function Applications() {
 
   const updateStatus = async (id, status) => {
     try {
+      const app = applications.find(a => a.id === id);
       await applicationsApi.updateStatus(id, status);
       toast.success(`Application updated to ${status} Successfully 🎉`);
+
+      // Trigger status update notification
+      if (app && app.studentId) {
+        try {
+          const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+          await notificationsApi.createNotification({
+            userId: app.studentId,
+            title: "Application Status Updated",
+            message: `Your application for ${app.jobTitle} at ${app.company} has been updated to ${status.toLowerCase()} by ${currentUser.name}.`,
+            type: "JOB"
+          });
+        } catch (notifErr) {
+          console.error("Failed to send application status notification", notifErr);
+        }
+      }
+
       loadApplications();
     } catch (error) {
       toast.error(error.response?.data?.message || `Failed to update status ❌`);
@@ -197,7 +257,20 @@ function Applications() {
                             <div className="p-2.5 rounded bg-white" style={{ fontSize: "0.8rem", border: "1px solid rgba(14, 165, 233, 0.1)" }}>
                               <p className="mb-1 text-dark">👤 {app.studentName}</p>
                               <p className="mb-1 text-muted text-truncate">✉️ {app.studentEmail}</p>
-                              <p className="mb-0 text-secondary" style={{ fontSize: "0.75rem" }}>📅 {app.appliedDate}</p>
+                              <p className="mb-2 text-secondary" style={{ fontSize: "0.75rem" }}>📅 {app.appliedDate}</p>
+                              {app.studentId ? (
+                                <button
+                                  className="btn btn-sm btn-outline-info w-100"
+                                  onClick={() => openResumeModal(app)}
+                                  style={{ fontSize: "0.75rem" }}
+                                >
+                                  📄 View Resume
+                                </button>
+                              ) : (
+                                <span className="text-muted d-block text-center" style={{ fontSize: "0.7rem" }}>
+                                  No Profile Available
+                                </span>
+                              )}
                             </div>
                           </div>
                         ))
@@ -207,6 +280,165 @@ function Applications() {
                 </div>
               );
             })}
+          </div>
+        )}
+
+        {/* Resume Viewer Modal */}
+        {isModalOpen && (
+          <div
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              background: "rgba(0, 0, 0, 0.5)",
+              backdropFilter: "blur(4px)",
+              zIndex: 1050,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "20px"
+            }}
+          >
+            <div
+              className="card border-0 text-dark shadow-lg"
+              style={{
+                width: "100%",
+                maxWidth: "750px",
+                maxHeight: "90vh",
+                background: "#ffffff",
+                border: "1px solid #e2e8f0",
+                display: "flex",
+                flexDirection: "column"
+              }}
+            >
+              {/* Modal Header */}
+              <div className="card-header d-flex justify-content-between align-items-center py-3 border-bottom border-light-subtle" style={{ background: "#f8fafc" }}>
+                <h5 className="fw-bold mb-0 text-dark">📄 Student Resume View</h5>
+                <button
+                  className="btn-close"
+                  onClick={() => {
+                    setIsModalOpen(false);
+                    setSelectedProfile(null);
+                  }}
+                ></button>
+              </div>
+
+              {/* Modal Body */}
+              <div className="card-body p-4" style={{ overflowY: "auto" }}>
+                {isLoadingProfile ? (
+                  <div className="text-center py-5">
+                    <div className="spinner-border text-primary" role="status"></div>
+                    <p className="mt-3 text-muted">Retrieving verified Student Profile...</p>
+                  </div>
+                ) : (
+                  selectedProfile && (
+                    <div id="downloadable-application-content" className="bg-light text-dark p-4 rounded border" style={{ fontFamily: "'Inter', sans-serif", background: "#ffffff", borderColor: "#e2e8f0" }}>
+                      {/* Job Application Details Header */}
+                      <div className="mb-4 pb-3 border-bottom border-secondary text-dark" style={{ borderColor: "#dee2e6" }}>
+                        <h5 className="fw-bold text-primary mb-2">💼 Job Application Information</h5>
+                        <div className="row g-2" style={{ fontSize: "0.88rem" }}>
+                          <div className="col-sm-6">
+                            <p className="mb-1"><strong>Position Applied:</strong> <span className="text-secondary">{selectedApplication?.jobTitle}</span></p>
+                            <p className="mb-1"><strong>Company:</strong> <span className="text-secondary">{selectedApplication?.company}</span></p>
+                          </div>
+                          <div className="col-sm-6">
+                            <p className="mb-1"><strong>Recruitment Status:</strong> <span className="badge bg-primary text-white">{selectedApplication?.status}</span></p>
+                            <p className="mb-0"><strong>Applied Date:</strong> <span className="text-secondary">{selectedApplication?.appliedDate}</span></p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Name / Contact Header */}
+                      <div className="text-center border-bottom pb-3 mb-3" style={{ borderColor: "#dee2e6" }}>
+                        <h3 className="fw-bold text-uppercase text-dark mb-1">{selectedProfile.fullName}</h3>
+                        <p className="fw-semibold text-primary mb-2" style={{ fontSize: "1rem" }}>
+                          {selectedProfile.designation || "Student"}
+                          {selectedProfile.currentCompany ? ` @ ${selectedProfile.currentCompany}` : ""}
+                        </p>
+                        <div className="d-flex justify-content-center flex-wrap gap-3 text-muted" style={{ fontSize: "0.85rem" }}>
+                          <span>✉️ {selectedProfile.email}</span>
+                          {selectedProfile.phone && <span>📞 {selectedProfile.phone}</span>}
+                          {selectedProfile.location && <span>📍 {selectedProfile.location}</span>}
+                        </div>
+                      </div>
+
+                      {/* Summary Section */}
+                      {selectedProfile.bio && (
+                        <div className="mb-3">
+                          <h6 className="fw-bold text-uppercase border-bottom pb-1 text-dark" style={{ fontSize: "0.85rem", borderColor: "#dee2e6" }}>
+                            Professional Summary
+                          </h6>
+                          <p className="text-secondary" style={{ fontSize: "0.88rem", textAlign: "justify", marginBottom: 0 }}>
+                            {selectedProfile.bio}
+                          </p>
+                        </div>
+                      )}
+
+                      {/* Education Section */}
+                      {selectedProfile.education && (
+                        <div className="mb-3">
+                          <h6 className="fw-bold text-uppercase border-bottom pb-1 text-dark" style={{ fontSize: "0.85rem", borderColor: "#dee2e6" }}>
+                            Education
+                          </h6>
+                          <div className="d-flex justify-content-between align-items-baseline">
+                            <p className="text-dark fw-semibold mb-0" style={{ whiteSpace: "pre-line", fontSize: "0.88rem" }}>
+                              {selectedProfile.education}
+                            </p>
+                            {selectedProfile.graduationYear && (
+                              <span className="text-muted" style={{ fontSize: "0.85rem" }}>
+                                Class of {selectedProfile.graduationYear}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Skills Section */}
+                      {selectedProfile.skills && (
+                        <div>
+                          <h6 className="fw-bold text-uppercase border-bottom pb-1 text-dark" style={{ fontSize: "0.85rem", borderColor: "#dee2e6" }}>
+                            Skills & Expertise
+                          </h6>
+                          <div className="d-flex flex-wrap gap-1.5 pt-1">
+                            {selectedProfile.skills.split(",").map((skill, index) => (
+                              <span
+                                key={index}
+                                className="badge bg-light text-dark border px-2.5 py-1.5 rounded-1"
+                                style={{ fontSize: "0.78rem", fontWeight: "500" }}
+                              >
+                                {skill.trim()}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )
+                )}
+              </div>
+
+              {/* Modal Footer */}
+              <div className="card-footer py-3 border-top border-light-subtle d-flex justify-content-end gap-2" style={{ background: "#f8fafc" }}>
+                <button
+                  className="btn btn-success"
+                  onClick={downloadApplicationPDF}
+                  disabled={isLoadingProfile || !selectedProfile}
+                >
+                  📥 Download Application PDF
+                </button>
+                <button
+                  className="btn btn-secondary"
+                  onClick={() => {
+                    setIsModalOpen(false);
+                    setSelectedProfile(null);
+                  }}
+                >
+                  Close Preview
+                </button>
+              </div>
+            </div>
           </div>
         )}
       </div>

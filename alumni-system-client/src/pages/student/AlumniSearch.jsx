@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import StudentLayout from "../../layouts/StudentLayout";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { auth, referrals as referralsApi, profiles } from "../../services/api";
+import { auth, referrals as referralsApi, profiles, notifications as notificationsApi } from "../../services/api";
 
 function AlumniSearch() {
   const [alumni, setAlumni] = useState([]);
@@ -64,6 +64,19 @@ function AlumniSearch() {
       };
 
       await referralsApi.create(payload);
+
+      // Trigger notification
+      try {
+        await notificationsApi.createNotification({
+          userId: alumniData.id,
+          title: "New Referral Request",
+          message: `${currentUser.name} has requested a referral for ${alumniData.company}.`,
+          type: "REFERRAL"
+        });
+      } catch (notifErr) {
+        console.error("Failed to send referral notification", notifErr);
+      }
+
       toast.success("Referral Request Sent Successfully 🎉");
     } catch (error) {
       toast.error(error.response?.data?.message || "Failed to send referral request ❌");

@@ -7,651 +7,61 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.5)
 
-2026-07-27T19:59:31.582+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] c.a.template.ReferralApplication         : Starting ReferralApplication v1.0.0 using Java 24.0.1 with PID 29744 (E:\alumni-management-system\ReferralMS\target\ReferralMS-1.0.0.jar started by ROHIT SINGH in E:\alumni-management-system)
-2026-07-27T19:59:31.598+05:30 DEBUG 29744 --- [REFERRAL-SERVICE] [           main] c.a.template.ReferralApplication         : Running with Spring Boot v3.2.5, Spring v6.1.6
-2026-07-27T19:59:31.604+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] c.a.template.ReferralApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-07-27T19:59:36.217+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-07-27T19:59:36.559+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 288 ms. Found 1 JPA repository interface.
-2026-07-27T19:59:37.204+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=efa2c82f-0b84-35c6-b836-8f7860ef4925
-2026-07-27T19:59:37.725+05:30  WARN 29744 --- [REFERRAL-SERVICE] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-07-27T19:59:37.731+05:30  WARN 29744 --- [REFERRAL-SERVICE] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-07-27T19:59:39.324+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-07-27T19:59:39.363+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-07-27T19:59:39.366+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2026-07-27T19:59:39.540+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-07-27T19:59:39.589+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7608 ms
-2026-07-27T19:59:40.705+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-07-27T19:59:41.116+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-07-27T19:59:41.359+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-07-27T19:59:41.896+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-07-27T19:59:41.983+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-07-27T19:59:42.389+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50b4364
-2026-07-27T19:59:42.432+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-07-27T19:59:42.582+05:30  WARN 29744 --- [REFERRAL-SERVICE] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-07-27T19:59:45.685+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-07-27T19:59:45.871+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-07-27T19:59:47.890+05:30  WARN 29744 --- [REFERRAL-SERVICE] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-07-27T19:59:49.029+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-07-27T19:59:49.210+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'USER-SERVICE' URL not provided. Will try picking an instance via load-balancing.
-2026-07-27T19:59:49.387+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'NOTIFICATION-SERVICE' URL not provided. Will try picking an instance via load-balancing.
-2026-07-27T19:59:51.565+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-07-27T19:59:51.659+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-07-27T19:59:51.704+05:30  WARN 29744 --- [REFERRAL-SERVICE] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-07-27T19:59:51.782+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-07-27T19:59:52.098+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-07-27T19:59:52.149+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-07-27T19:59:52.217+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-07-27T19:59:52.218+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-07-27T19:59:52.218+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-07-27T19:59:52.219+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-07-27T19:59:52.219+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-07-27T19:59:52.220+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-07-27T19:59:52.221+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-07-27T19:59:53.290+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-07-27T19:59:53.334+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-07-27T19:59:53.341+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-07-27T19:59:53.354+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1785162593353 with initial instances count: 2
-2026-07-27T19:59:53.361+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application REFERRAL-SERVICE with eureka with status UP
-2026-07-27T19:59:53.364+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1785162593364, current=UP, previous=STARTING]
-2026-07-27T19:59:53.368+05:30  INFO 29744 --- [REFERRAL-SERVICE] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REFERRAL-SERVICE/localhost:REFERRAL-SERVICE:8085: registering service...
-2026-07-27T19:59:53.424+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path ''
-2026-07-27T19:59:53.427+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
-2026-07-27T19:59:53.478+05:30  INFO 29744 --- [REFERRAL-SERVICE] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REFERRAL-SERVICE/localhost:REFERRAL-SERVICE:8085 - registration status: 204
-2026-07-27T19:59:54.481+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-07-27T19:59:54.538+05:30  INFO 29744 --- [REFERRAL-SERVICE] [           main] c.a.template.ReferralApplication         : Started ReferralApplication in 25.585 seconds (process running for 27.717)
-2026-07-27T20:00:20.975+05:30  INFO 29744 --- [REFERRAL-SERVICE] [nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-07-27T20:00:20.977+05:30  INFO 29744 --- [REFERRAL-SERVICE] [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-07-27T20:00:20.981+05:30  INFO 29744 --- [REFERRAL-SERVICE] [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-2026-07-27T20:04:52.225+05:30  INFO 29744 --- [REFERRAL-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-2026-07-27T20:09:52.237+05:30  INFO 29744 --- [REFERRAL-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.student_id=?
+2026-07-28T13:50:05.600+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] c.a.template.ReferralApplication         : Starting ReferralApplication v1.0.0 using Java 24.0.1 with PID 23916 (E:\alumni-management-system\ReferralMS\target\ReferralMS-1.0.0.jar started by ROHIT SINGH in E:\alumni-management-system)
+2026-07-28T13:50:05.613+05:30 DEBUG 23916 --- [REFERRAL-SERVICE] [           main] c.a.template.ReferralApplication         : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-07-28T13:50:05.621+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] c.a.template.ReferralApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T13:50:11.716+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T13:50:12.732+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 991 ms. Found 1 JPA repository interface.
+2026-07-28T13:50:13.850+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=efa2c82f-0b84-35c6-b836-8f7860ef4925
+2026-07-28T13:50:14.380+05:30  WARN 23916 --- [REFERRAL-SERVICE] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-07-28T13:50:14.390+05:30  WARN 23916 --- [REFERRAL-SERVICE] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-07-28T13:50:15.381+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2026-07-28T13:50:15.414+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T13:50:15.415+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-07-28T13:50:15.563+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T13:50:15.565+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9367 ms
+2026-07-28T13:50:16.798+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T13:50:17.107+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-07-28T13:50:17.290+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T13:50:18.500+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T13:50:18.804+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T13:50:19.589+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79b7c350
+2026-07-28T13:50:19.596+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T13:50:19.788+05:30  WARN 23916 --- [REFERRAL-SERVICE] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T13:50:22.787+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T13:50:22.949+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T13:50:25.394+05:30  WARN 23916 --- [REFERRAL-SERVICE] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T13:50:26.497+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T13:50:26.673+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'USER-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2026-07-28T13:50:26.848+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'NOTIFICATION-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2026-07-28T13:50:29.560+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T13:50:29.682+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-07-28T13:50:29.801+05:30  WARN 23916 --- [REFERRAL-SERVICE] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-07-28T13:50:29.920+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-07-28T13:50:30.284+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-07-28T13:50:30.298+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-07-28T13:50:30.409+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-07-28T13:50:30.410+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-07-28T13:50:30.411+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-07-28T13:50:30.412+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-07-28T13:50:30.413+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-07-28T13:50:30.413+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-07-28T13:50:30.414+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-07-28T13:50:33.134+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-07-28T13:50:33.144+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-07-28T13:50:33.152+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-07-28T13:50:33.167+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1785226833165 with initial instances count: 2
+2026-07-28T13:50:33.179+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application REFERRAL-SERVICE with eureka with status UP
+2026-07-28T13:50:33.185+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1785226833185, current=UP, previous=STARTING]
+2026-07-28T13:50:33.225+05:30  INFO 23916 --- [REFERRAL-SERVICE] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REFERRAL-SERVICE/localhost:REFERRAL-SERVICE:8085: registering service...
+2026-07-28T13:50:33.479+05:30  INFO 23916 --- [REFERRAL-SERVICE] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REFERRAL-SERVICE/localhost:REFERRAL-SERVICE:8085 - registration status: 204
+2026-07-28T13:50:33.608+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path ''
+2026-07-28T13:50:33.611+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2026-07-28T13:50:34.624+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T13:50:34.653+05:30  INFO 23916 --- [REFERRAL-SERVICE] [           main] c.a.template.ReferralApplication         : Started ReferralApplication in 33.08 seconds (process running for 35.554)
+2026-07-28T13:51:45.053+05:30  INFO 23916 --- [REFERRAL-SERVICE] [nio-8085-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28T13:51:45.054+05:30  INFO 23916 --- [REFERRAL-SERVICE] [nio-8085-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-28T13:51:45.057+05:30  INFO 23916 --- [REFERRAL-SERVICE] [nio-8085-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
 Hibernate: 
     select
         rr1_0.id,
@@ -890,7 +300,77 @@ Hibernate:
         referral_request rr1_0 
     where
         rr1_0.alumni_id=?
-2026-07-27T20:14:52.247+05:30  INFO 29744 --- [REFERRAL-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+2026-07-28T13:55:30.418+05:30  INFO 23916 --- [REFERRAL-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 Hibernate: 
     select
         rr1_0.id,
@@ -1030,7 +510,7 @@ Hibernate:
     from
         referral_request rr1_0 
     where
-        rr1_0.alumni_id=?
+        rr1_0.student_id=?
 Hibernate: 
     select
         rr1_0.id,
@@ -1044,7 +524,7 @@ Hibernate:
     from
         referral_request rr1_0 
     where
-        rr1_0.alumni_id=?
+        rr1_0.student_id=?
 Hibernate: 
     select
         rr1_0.id,
@@ -1058,7 +538,7 @@ Hibernate:
     from
         referral_request rr1_0 
     where
-        rr1_0.alumni_id=?
+        rr1_0.student_id=?
 Hibernate: 
     select
         rr1_0.id,
@@ -1072,244 +552,5 @@ Hibernate:
     from
         referral_request rr1_0 
     where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-2026-07-27T20:19:52.295+05:30  INFO 29744 --- [REFERRAL-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-2026-07-27T20:24:52.345+05:30  INFO 29744 --- [REFERRAL-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
-Hibernate: 
-    select
-        rr1_0.id,
-        rr1_0.alumni_id,
-        rr1_0.company,
-        rr1_0.job_role,
-        rr1_0.message,
-        rr1_0.request_date,
-        rr1_0.status,
-        rr1_0.student_id 
-    from
-        referral_request rr1_0 
-    where
-        rr1_0.alumni_id=?
+        rr1_0.student_id=?
+2026-07-28T14:00:30.420+05:30  INFO 23916 --- [REFERRAL-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

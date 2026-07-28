@@ -21,6 +21,17 @@ function Notifications() {
       }));
       
       setNotifications(mapped);
+
+      // Auto mark unread notifications as read when page is visited
+      res.forEach(async (n) => {
+        if (!n.isRead) {
+          try {
+            await notificationsApi.markAsRead(n.id);
+          } catch (e) {
+            console.error("Failed to mark notification as read", e);
+          }
+        }
+      });
     } catch (error) {
       console.error("Failed to load notifications", error);
     }
