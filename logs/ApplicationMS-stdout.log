@@ -12579,3 +12579,1611 @@ Hibernate:
         applications a1_0 
     where
         a1_0.job_id=?
+2026-07-28T14:30:42.153+05:30  INFO 23108 --- [APPLICATION-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+2026-07-28T14:35:42.179+05:30  INFO 23108 --- [APPLICATION-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.applied_date,
+        a1_0.job_id,
+        a1_0.status,
+        a1_0.student_email 
+    from
+        applications a1_0 
+    where
+        a1_0.student_email=?

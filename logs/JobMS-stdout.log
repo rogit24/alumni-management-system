@@ -7585,3 +7585,943 @@ Hibernate:
         j1_0.user_role 
     from
         jobs j1_0
+2026-07-28T14:30:38.379+05:30  INFO 17932 --- [JOB-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+2026-07-28T14:35:38.387+05:30  INFO 17932 --- [JOB-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.company,
+        j1_0.description,
+        j1_0.job_type,
+        j1_0.location,
+        j1_0.posted_by_email,
+        j1_0.posted_date,
+        j1_0.salary,
+        j1_0.title,
+        j1_0.user_role 
+    from
+        jobs j1_0

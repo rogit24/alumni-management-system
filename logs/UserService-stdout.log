@@ -2775,3 +2775,136 @@ Hibernate:
         u1_0.status 
     from
         users u1_0
+2026-07-28T14:30:25.351+05:30  INFO 10784 --- [USER-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+LOGIN RESPONSE = AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXZpQGdtYWlsLmNvbSIsInVzZXJJZCI6Mywicm9sZSI6IkFMVU1OSSIsImlhdCI6MTc4NTIyOTM3NywiZXhwIjoxNzg1MzE1Nzc3fQ.AbklYlb6okuTv-BFomb4csosWROuTKAaFuYB5xgsBVk, id=3, name=Ravi, email=ravi@gmail.com, role=ALUMNI, status=ACTIVE)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+2026-07-28T14:35:25.376+05:30  INFO 10784 --- [USER-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+LOGIN RESPONSE = AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXZpQGdtYWlsLmNvbSIsInVzZXJJZCI6Mywicm9sZSI6IkFMVU1OSSIsImlhdCI6MTc4NTIyOTY4OSwiZXhwIjoxNzg1MzE2MDg5fQ.iIX_grj8ra1gFLsYQR9xEPiNgeNTTc95ZDvHcVhhtSk, id=3, name=Ravi, email=ravi@gmail.com, role=ALUMNI, status=ACTIVE)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+LOGIN RESPONSE = AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWh1bEBnbWFpbC5jb20iLCJ1c2VySWQiOjIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzg1MjI5NzE3LCJleHAiOjE3ODUzMTYxMTd9.vfJZ5g5OI6TNXK8a_TkIM1AxwwjUezO3B-7Bm1lQBzs, id=2, name=Rahul Sharma, email=rahul@gmail.com, role=STUDENT, status=ACTIVE)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status 
+    from
+        users u1_0
+2026-07-28T14:40:25.378+05:30  INFO 10784 --- [USER-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

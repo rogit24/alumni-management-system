@@ -10715,3 +10715,1392 @@ Hibernate:
         referral_request rr1_0 
     where
         rr1_0.alumni_id=?
+2026-07-28T14:30:30.485+05:30  INFO 23916 --- [REFERRAL-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+2026-07-28T14:35:30.499+05:30  INFO 23916 --- [REFERRAL-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.alumni_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+Hibernate: 
+    select
+        rr1_0.id,
+        rr1_0.alumni_id,
+        rr1_0.company,
+        rr1_0.job_role,
+        rr1_0.message,
+        rr1_0.request_date,
+        rr1_0.status,
+        rr1_0.student_id 
+    from
+        referral_request rr1_0 
+    where
+        rr1_0.student_id=?
+2026-07-28T14:40:30.502+05:30  INFO 23916 --- [REFERRAL-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
