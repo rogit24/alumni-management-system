@@ -168,6 +168,10 @@ export const applications = {
   withdraw: async (id) => {
     const response = await api.delete(`/api/v1/applications/${id}`);
     return response.data;
+  },
+  getAll: async () => {
+    const response = await api.get('/api/v1/applications');
+    return response.data;
   }
 };
 

@@ -117,6 +117,14 @@ public class ApplicationController {
 		applicationService.deleteApplication(id);
 		return ResponseEntity.ok().build();
 	}
+
+	@GetMapping
+	public ResponseEntity<List<ApplicationDto>> getAllApplications(
+			@RequestHeader(value = "X-User-Role", required = false) String userRole) {
+		validateRole(userRole, UserRole.ADMIN);
+		List<ApplicationDto> applications = applicationService.getAllApplications();
+		return ResponseEntity.ok(applications);
+	}
 	
 //	Validation of the UserRole
     private UserRole  validateRole(String userRoleStr, UserRole... allowedRoles) {

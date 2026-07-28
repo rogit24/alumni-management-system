@@ -112,4 +112,11 @@ public class ApplicationServiceImpl implements ApplicationService {
 		new RuntimeException("Application not found with Id : " + id));
 		applicationRepository.delete(application);
 	}
+
+	@Override
+	public List<ApplicationDto> getAllApplications() {
+		return applicationRepository.findAll().stream()
+				.map(app -> modelMapper.map(app, ApplicationDto.class))
+				.collect(Collectors.toList());
+	}
 }

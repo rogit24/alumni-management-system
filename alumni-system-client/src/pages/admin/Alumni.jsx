@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 import AdminLayout from "../../layouts/AdminLayout";
-import { auth, jobs as jobsApi } from "../../services/api";
+import { auth, jobs as jobsApi, referrals as referralsApi } from "../../services/api";
 
 function Alumni() {
   const [alumni, setAlumni] = useState([]);
   const [jobs, setJobs] = useState([]);
   const [referrals, setReferrals] = useState([]);
+  const [usersList, setUsersList] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadData = async () => {
       try {
         const users = await auth.getAllUsers();
+        setUsersList(users);
         const filteredAlumni = users.filter(
           (user) => user && user.role?.toLowerCase() === "alumni"
         );
@@ -18,27 +21,38 @@ function Alumni() {
 
         const allJobs = await jobsApi.getAll();
         setJobs(allJobs);
+
+        try {
+          const allReferrals = await referralsApi.getAll();
+          setReferrals(allReferrals);
+        } catch (err) {
+          console.error("Error loading referrals:", err);
+        }
       } catch (err) {
         console.error("Error loading data:", err);
+      } finally {
+        setLoading(false);
       }
     };
     loadData();
-
-    const allReferrals = JSON.parse(localStorage.getItem("referrals")) || [];
-    setReferrals(allReferrals);
   }, []);
 
   return (
     <AdminLayout>
-      <div className="container-fluid py-2">
+      <div className="container-fluid py-4" style={{ fontFamily: "'Outfit', 'Inter', sans-serif" }}>
         <div className="mb-4">
           <h2 className="fw-bold text-dark">Alumni Registry</h2>
           <p className="text-muted">Manage registered alumni, track posted job listings, and monitor referrals provided</p>
         </div>
 
-        {alumni.length === 0 ? (
+        {loading ? (
+          <div className="text-center py-5">
+            <div className="spinner-border text-primary" role="status"></div>
+            <p className="mt-3 text-muted">Loading Alumni Registry...</p>
+          </div>
+        ) : alumni.length === 0 ? (
           <div className="card shadow-sm p-5 text-center bg-white" style={{ borderRadius: '20px' }}>
-            <i className="bi bi-award display-3 text-muted mb-3 d-block"></i>
+            <span className="fs-1 d-block mb-3">🏆</span>
             <h5>No Alumni Found</h5>
             <p className="text-muted mb-0">There are no alumni accounts registered in the database yet.</p>
           </div>
@@ -46,7 +60,7 @@ function Alumni() {
           <div className="row g-4">
             {alumni.map((alum) => {
               const myJobs = jobs.filter((job) => job.postedByEmail === alum.email);
-              const myRefs = referrals.filter((ref) => ref.alumniEmail === alum.email);
+              const myRefs = referrals.filter((ref) => ref.alumniId === alum.id);
 
               return (
                 <div className="col-12" key={alum.id || alum.email}>
@@ -56,7 +70,7 @@ function Alumni() {
                       <div>
                         <h4 className="fw-bold text-dark mb-1">{alum.name}</h4>
                         <div className="d-flex flex-wrap gap-2 align-items-center">
-                          <span className="text-muted small"><i className="bi bi-envelope me-1"></i> {alum.email}</span>
+                          <span className="text-slate-500 small"><i className="bi bi-envelope me-1"></i> {alum.email}</span>
                           {alum.company && (
                             <span className="badge bg-light text-dark border">
                               💼 {alum.company}
@@ -102,7 +116,7 @@ function Alumni() {
                         )}
                       </div>
 
-                      
+                      {/* Referrals Handled column */}
                       <div className="col-md-6">
                         <h6 className="fw-bold text-dark mb-3 d-flex justify-content-between align-items-center">
                           <span>🤝 Referrals Handled</span>
@@ -112,19 +126,23 @@ function Alumni() {
                           <p className="text-muted small mb-0 py-2">No referral requests handled yet.</p>
                         ) : (
                           <div className="list-group list-group-flush" style={{ maxHeight: "250px", overflowY: "auto" }}>
-                            {myRefs.map((ref) => (
-                              <div className="list-group-item bg-transparent px-0 py-2 border-0 d-flex justify-content-between align-items-center" key={ref.id}>
-                                <div>
-                                  <span className="fw-semibold text-dark d-block">{ref.company}</span>
-                                  <small className="text-muted">Student: {ref.studentName || ref.studentEmail}</small>
+                            {myRefs.map((ref) => {
+                              const studentUser = usersList.find(u => u.id === ref.studentId);
+                              const studentName = studentUser ? studentUser.name : `Student #${ref.studentId}`;
+                              return (
+                                <div className="list-group-item bg-transparent px-0 py-2 border-0 d-flex justify-content-between align-items-center" key={ref.id}>
+                                  <div>
+                                    <span className="fw-semibold text-dark d-block">{ref.company} - {ref.jobRole}</span>
+                                    <small className="text-muted">Student: {studentName}</small>
+                                  </div>
+                                  <span className={`badge px-2 py-1 ${
+                                    ref.status === 'Approved' || ref.status === 'Accepted' || ref.status === 'APPROVED' ? 'bg-success-subtle text-success' : 'bg-warning-subtle text-warning'
+                                  }`}>
+                                    {ref.status}
+                                  </span>
                                 </div>
-                                <span className={`badge px-2 py-1 ${
-                                  ref.status === 'Approved' || ref.status === 'Accepted' ? 'bg-success-subtle text-success' : 'bg-warning-subtle text-warning'
-                                }`}>
-                                  {ref.status}
-                                </span>
-                              </div>
-                            ))}
+                              );
+                            })}
                           </div>
                         )}
                       </div>

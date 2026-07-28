@@ -2339,3 +2339,2975 @@ Hibernate:
     order by
         m1_0.sent_at desc
 2026-07-28T15:32:34.230+05:30  INFO 15196 --- [MESSAGE-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-07-28T15:37:34.242+05:30  INFO 15196 --- [MESSAGE-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-07-28T15:42:34.243+05:30  INFO 15196 --- [MESSAGE-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    SELECT
+        COUNT(*) 
+    FROM
+        users 
+    WHERE
+        id = ?
+Hibernate: 
+    SELECT
+        email 
+    FROM
+        users 
+    WHERE
+        id = ?
+Hibernate: 
+    insert 
+    into
+        messages
+        (message_content, read_status, receiver_email, receiver_id, sender_email, sender_id, sent_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    SELECT
+        COUNT(*) 
+    FROM
+        users 
+    WHERE
+        id = ?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.sent_at
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    SELECT
+        COUNT(*) 
+    FROM
+        users 
+    WHERE
+        id = ?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.sent_at
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    SELECT
+        COUNT(*) 
+    FROM
+        users 
+    WHERE
+        id = ?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.sent_at
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    SELECT
+        COUNT(*) 
+    FROM
+        users 
+    WHERE
+        id = ?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.sent_at
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    SELECT
+        COUNT(*) 
+    FROM
+        users 
+    WHERE
+        id = ?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.sent_at
+Hibernate: 
+    SELECT
+        COUNT(*) 
+    FROM
+        users 
+    WHERE
+        id = ?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.sent_at
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    update
+        messages 
+    set
+        message_content=?,
+        read_status=?,
+        receiver_email=?,
+        receiver_id=?,
+        sender_email=?,
+        sender_id=? 
+    where
+        id=?
+Hibernate: 
+    update
+        messages 
+    set
+        message_content=?,
+        read_status=?,
+        receiver_email=?,
+        receiver_id=?,
+        sender_email=?,
+        sender_id=? 
+    where
+        id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    SELECT
+        COUNT(*) 
+    FROM
+        users 
+    WHERE
+        id = ?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.sent_at
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+2026-07-28T15:47:34.256+05:30  INFO 15196 --- [MESSAGE-SERVICE] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.message_content,
+        m1_0.read_status,
+        m1_0.receiver_email,
+        m1_0.receiver_id,
+        m1_0.sender_email,
+        m1_0.sender_id,
+        m1_0.sent_at 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        or m1_0.sender_id=? 
+    order by
+        m1_0.sent_at desc
