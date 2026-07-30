@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import StudentLayout from "../../layouts/StudentLayout";
 import { toast } from "react-toastify";
 import { profiles } from "../../services/api";
+import { convertToBase64, downloadBase64File } from "../../services/fileHelper";
 
 function Profile() {
   const [profile, setProfile] = useState({
@@ -11,6 +12,7 @@ function Profile() {
     skills: "",
     education: "",
     profileImage: "",
+    resume: "", // Added
     phone: "",
     bio: "",
     graduationYear: "",
@@ -35,6 +37,7 @@ function Profile() {
             skills: data.skills || "",
             education: data.education || "",
             profileImage: data.profilePicture || "",
+            resume: data.resume || "",
             phone: data.phone || "",
             bio: data.bio || "",
             graduationYear: data.graduationYear || "",
@@ -52,6 +55,7 @@ function Profile() {
           skills: "",
           education: "",
           profileImage: "",
+          resume: "",
           phone: "",
           bio: "",
           graduationYear: "",
@@ -69,9 +73,8 @@ function Profile() {
     });
   };
 
-  const handlePhotoUpload = (e) => {
+  const handlePhotoUpload = async (e) => {
     const file = e.target.files[0];
-
     if (!file) return;
 
     if (!file.type.startsWith("image/")) {
@@ -79,18 +82,39 @@ function Profile() {
       return;
     }
 
-    const reader = new FileReader();
-
-    reader.onloadend = () => {
+    try {
+      const base64 = await convertToBase64(file);
       setProfile((prev) => ({
         ...prev,
-        profileImage: reader.result,
+        profileImage: base64,
       }));
+      toast.success("Profile Photo Uploaded 📸");
+    } catch (err) {
+      console.error(err);
+      toast.error("Failed to read image file");
+    }
+  };
 
-      toast.success("Profile Photo Uploaded");
-    };
+  const handleResumeUpload = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
 
-    reader.readAsDataURL(file);
+    if (file.type !== "application/pdf") {
+      toast.error("Please select a valid PDF file 📄");
+      return;
+    }
+
+    try {
+      const base64 = await convertToBase64(file);
+      setProfile((prev) => ({
+        ...prev,
+        resume: base64,
+      }));
+      toast.success("Resume PDF Uploaded successfully! 📄");
+    } catch (err) {
+      console.error(err);
+      toast.error("Failed to read PDF file");
+    }
   };
 
   const handleSave = async () => {
@@ -106,6 +130,7 @@ function Profile() {
         skills: profile.skills,
         education: profile.education,
         profilePicture: profile.profileImage || "",
+        resume: profile.resume || "",
         phone: profile.phone,
         bio: profile.bio,
         graduationYear: profile.graduationYear ? parseInt(profile.graduationYear) : null,
@@ -128,6 +153,7 @@ function Profile() {
         skills: updated.skills || "",
         education: updated.education || "",
         profileImage: updated.profilePicture || "",
+        resume: updated.resume || "",
         phone: updated.phone || "",
         bio: updated.bio || "",
         graduationYear: updated.graduationYear || "",
@@ -165,15 +191,24 @@ function Profile() {
     }
   };
 
+  const handleDownloadUploadedResume = () => {
+    if (!profile.resume) {
+      toast.error("No resume uploaded yet!");
+      return;
+    }
+    downloadBase64File(profile.resume, `${profile.name.replace(/\s+/g, "_")}_Uploaded_Resume.pdf`);
+    toast.success("Uploaded resume downloaded! 📄");
+  };
+
   return (
     <StudentLayout>
-      <div className="container py-4">
+      <div className="container py-4" style={{ fontFamily: "'Outfit', 'Inter', sans-serif" }}>
         {/* Toggle Mode Navigation */}
-        <div className="d-flex justify-content-between align-items-center mb-4">
+        <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
           <h2 className="fw-bold mb-0">
             {isPreviewMode ? "📄 Professional Resume Builder" : "🎓 Edit Student Profile"}
           </h2>
-          <div className="btn-group">
+          <div className="btn-group shadow-sm">
             <button
               className={`btn ${!isPreviewMode ? "btn-primary" : "btn-outline-primary"}`}
               onClick={() => setIsPreviewMode(false)}
@@ -191,29 +226,58 @@ function Profile() {
 
         {!isPreviewMode ? (
           /* Profile Edit Card */
-          <div className="card card-dark shadow p-4">
-            {/* Profile Image */}
-            <div className="text-center mb-4">
-              <img
-                src={
-                  profile.profileImage ||
-                  "https://cdn-icons-png.flaticon.com/512/149/149071.png"
-                }
-                alt="Profile"
-                className="rounded-circle shadow border border-3 border-secondary"
-                style={{
-                  width: "140px",
-                  height: "140px",
-                  objectFit: "cover",
-                }}
-              />
-              <div className="d-flex justify-content-center">
-                <input
-                  type="file"
-                  accept="image/*"
-                  className="form-control mt-3 w-50"
-                  onChange={handlePhotoUpload}
+          <div className="card border-0 text-dark shadow p-4 rounded-4 bg-white">
+            
+            {/* Profile Image & Resume Upload Panel */}
+            <div className="row mb-4 align-items-center">
+              <div className="col-md-3 text-center mb-3 mb-md-0">
+                <img
+                  src={
+                    profile.profileImage ||
+                    "https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                  }
+                  alt="Profile"
+                  className="rounded-circle shadow-sm border border-3 border-light-subtle"
+                  style={{
+                    width: "130px",
+                    height: "130px",
+                    objectFit: "cover",
+                  }}
                 />
+              </div>
+              <div className="col-md-9">
+                <div className="row g-3">
+                  <div className="col-sm-6">
+                    <label className="form-label fw-semibold text-secondary" style={{ fontSize: "0.85rem" }}>📸 Profile Picture</label>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      className="form-control"
+                      onChange={handlePhotoUpload}
+                    />
+                  </div>
+                  <div className="col-sm-6">
+                    <label className="form-label fw-semibold text-secondary" style={{ fontSize: "0.85rem" }}>📄 Upload Resume PDF</label>
+                    <input
+                      type="file"
+                      accept="application/pdf"
+                      className="form-control"
+                      onChange={handleResumeUpload}
+                    />
+                    {profile.resume && (
+                      <div className="mt-2 d-flex align-items-center justify-content-between bg-light p-2 rounded border border-light-subtle">
+                        <span className="small text-success fw-bold">✓ Resume Uploaded</span>
+                        <button 
+                          className="btn btn-xs btn-outline-primary py-0.5 px-2 rounded-pill small" 
+                          style={{ fontSize: "0.75rem" }}
+                          onClick={handleDownloadUploadedResume}
+                        >
+                          📥 Download Uploaded Resume
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -235,7 +299,7 @@ function Profile() {
                   className="form-control"
                   name="email"
                   value={profile.email}
-                  onChange={handleChange}
+                  disabled
                 />
               </div>
             </div>
@@ -339,7 +403,7 @@ function Profile() {
               />
             </div>
 
-            <button className="btn gradient-btn" onClick={handleSave}>
+            <button className="btn gradient-btn mt-3" onClick={handleSave}>
               Save Profile Details 💾
             </button>
           </div>
@@ -347,7 +411,7 @@ function Profile() {
           /* Resume Preview Card */
           <div>
             <div className="d-flex justify-content-end mb-3">
-              <button className="btn btn-lg btn-success" onClick={downloadResumePDF}>
+              <button className="btn btn-lg btn-success shadow-sm" onClick={downloadResumePDF}>
                 📥 Download Resume PDF
               </button>
             </div>
@@ -355,7 +419,7 @@ function Profile() {
             {/* Structured Resume Template to convert to PDF */}
             <div
               id="student-resume-template"
-              className="bg-white text-dark p-5 rounded shadow mx-auto"
+              className="bg-white text-dark p-5 rounded-4 shadow mx-auto"
               style={{
                 fontFamily: "'Inter', system-ui, sans-serif",
                 maxWidth: "800px",

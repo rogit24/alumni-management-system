@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import AlumniLayout from "../../layouts/AlumniLayout";
 import { toast } from "react-toastify";
 import { applications as applicationsApi, jobs as jobsService, auth, profiles, notifications as notificationsApi, messages as messagesApi } from "../../services/api";
+import { downloadBase64File } from "../../services/fileHelper";
 
 function Applications() {
   const [applications, setApplications] = useState([]);
@@ -10,6 +11,7 @@ function Applications() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoadingProfile, setIsLoadingProfile] = useState(false);
   const [selectedApplication, setSelectedApplication] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const [isApproveModalOpen, setIsApproveModalOpen] = useState(false);
   const [selectedAppForApprove, setSelectedAppForApprove] = useState(null);
@@ -77,9 +79,19 @@ function Applications() {
       for (const job of myJobs) {
         try {
           const apps = await applicationsApi.getApplicationsForJob(job.id);
-          const mapped = apps.map(app => {
+          const mapped = [];
+          for (const app of apps) {
             const studentUser = allUsers.find(u => u.email === app.studentEmail);
-            return {
+            let profilePic = "";
+            if (studentUser) {
+              try {
+                const profileData = await profiles.getByUserId(studentUser.id);
+                profilePic = profileData.profilePicture || "";
+              } catch (e) {
+                // ignore
+              }
+            }
+            mapped.push({
               id: app.id,
               jobId: job.id,
               jobTitle: job.title,
@@ -89,9 +101,10 @@ function Applications() {
               studentEmail: app.studentEmail,
               studentId: studentUser ? studentUser.id : null,
               status: app.status || "PENDING",
-              appliedDate: app.appliedDate || "N/A"
-            };
-          });
+              appliedDate: app.appliedDate || "N/A",
+              studentPhoto: profilePic
+            });
+          }
           resolvedApps = [...resolvedApps, ...mapped];
         } catch (err) {
           console.error("Failed to load applications for job", job.id);
@@ -101,6 +114,8 @@ function Applications() {
       setApplications(resolvedApps);
     } catch (error) {
       console.error("Failed to load applications", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -148,10 +163,10 @@ function Applications() {
       const appId = selectedAppForApprove.id;
       const studentId = selectedAppForApprove.studentId;
       
-      // 1. Update application status to ACCEPTED
+      // 1. Approve Application in backend
       await applicationsApi.updateStatus(appId, "ACCEPTED");
-      
-      // 2. Send direct chat message if message is not empty
+
+      // 2. Send direct chat message if congrats is not empty
       if (approvalMessage.trim() && studentId) {
         try {
           await messagesApi.sendMessage({
@@ -159,11 +174,11 @@ function Applications() {
             messageContent: approvalMessage
           });
         } catch (msgErr) {
-          console.error("Failed to send approval chat message", msgErr);
+          console.error("Failed to send approval message", msgErr);
         }
       }
-      
-      toast.success(`Application approved successfully 🎉`);
+
+      toast.success(`Application Approved Successfully 🎉`);
 
       // 3. Trigger status update notification
       if (studentId) {
@@ -230,22 +245,22 @@ function Applications() {
 
   return (
     <AlumniLayout>
-      <div className="container-fluid py-4">
+      <div className="container-fluid py-4" style={{ fontFamily: "'Outfit', 'Inter', sans-serif" }}>
         <div className="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom border-light-subtle">
           <div>
             <h2 className="fw-bold mb-1 text-dark">💼 Job Recruitment Pipeline</h2>
             <p className="text-muted mb-0" style={{ fontSize: "0.9rem" }}>Drag and drop student application cards to instantly change recruitment statuses.</p>
           </div>
-          <button className="btn btn-outline-primary px-4 py-2 fw-semibold" onClick={loadApplications}>
-            🔄 Refresh Board
-          </button>
+         
         </div>
 
-        {applications.length === 0 ? (
-          <div className="card shadow p-5 text-center border-0 text-dark" style={{
-            background: "#ffffff",
-            border: "1px solid #e2e8f0"
-          }}>
+        {loading ? (
+          <div className="text-center py-5">
+            <div className="spinner-border text-primary" role="status"></div>
+            <p className="mt-3 text-muted">Loading pipeline cards...</p>
+          </div>
+        ) : applications.length === 0 ? (
+          <div className="card shadow-sm p-5 text-center border-0 text-dark rounded-4 bg-white">
             <h5 className="fw-bold mb-2">No Applications Received Yet</h5>
             <p className="text-secondary mb-0">Active job listings will populate applications dynamically here.</p>
           </div>
@@ -265,7 +280,6 @@ function Applications() {
                     style={{
                       background: "#f1f5f9",
                       border: isOver ? "2px dashed #0d6efd" : "1px solid #e2e8f0",
-                      // Dynamic height: collapses nicely when empty
                       minHeight: columnApps.length > 0 ? "auto" : "150px",
                       transition: "all 0.25s ease",
                       boxShadow: isOver ? `0 0 15px ${col.shadowColor}` : "none"
@@ -273,7 +287,7 @@ function Applications() {
                   >
                     {/* Column Header */}
                     <div
-                      className="card-header d-flex justify-content-between align-items-center border-bottom text-dark py-3 rounded-top"
+                      className="card-header d-flex justify-content-between align-items-center border-bottom text-dark py-3 rounded-top-4"
                       style={{
                         background: "#e2e8f0",
                         borderBottomColor: "#cbd5e1"
@@ -293,11 +307,11 @@ function Applications() {
                         </div>
                       ) : (
                         columnApps.map((app) => (
-                           <div
+                          <div
                             key={app.id}
                             draggable
                             onDragStart={(e) => handleDragStart(e, app.id)}
-                            className="card mb-2 p-3 text-dark border"
+                            className="card mb-2 p-3 text-dark border-0 shadow-sm rounded-3"
                             style={{
                               background: "#e0f2fe",
                               borderColor: "#bae6fd",
@@ -319,13 +333,21 @@ function Applications() {
                             <p className="text-secondary mb-2" style={{ fontSize: "0.8rem" }}>
                               🏢 {app.company}
                             </p>
-                            <div className="p-2.5 rounded bg-white" style={{ fontSize: "0.8rem", border: "1px solid rgba(14, 165, 233, 0.1)" }}>
-                              <p className="mb-1 text-dark">👤 {app.studentName}</p>
+                            <div className="p-2.5 rounded-3 bg-white" style={{ fontSize: "0.8rem" }}>
+                              <div className="d-flex align-items-center gap-2 mb-2 pb-2 border-bottom border-light-subtle">
+                                <img
+                                  src={app.studentPhoto || "https://cdn-icons-png.flaticon.com/512/149/149071.png"}
+                                  alt={app.studentName}
+                                  className="rounded-circle border"
+                                  style={{ width: "28px", height: "28px", objectFit: "cover" }}
+                                />
+                                <span className="fw-semibold text-dark text-truncate" style={{ maxWidth: "120px" }}>{app.studentName}</span>
+                              </div>
                               <p className="mb-1 text-muted text-truncate">✉️ {app.studentEmail}</p>
                               <p className="mb-2 text-secondary" style={{ fontSize: "0.75rem" }}>📅 {app.appliedDate}</p>
                               {app.studentId ? (
                                 <button
-                                  className="btn btn-sm btn-outline-info w-100"
+                                  className="btn btn-sm btn-outline-info w-100 rounded-pill fw-bold"
                                   onClick={() => openResumeModal(app)}
                                   style={{ fontSize: "0.75rem" }}
                                 >
@@ -367,19 +389,18 @@ function Applications() {
             }}
           >
             <div
-              className="card border-0 text-dark shadow-lg"
+              className="card border-0 text-dark shadow-lg rounded-4"
               style={{
                 width: "100%",
                 maxWidth: "750px",
                 maxHeight: "90vh",
                 background: "#ffffff",
-                border: "1px solid #e2e8f0",
                 display: "flex",
                 flexDirection: "column"
               }}
             >
               {/* Modal Header */}
-              <div className="card-header d-flex justify-content-between align-items-center py-3 border-bottom border-light-subtle" style={{ background: "#f8fafc" }}>
+              <div className="card-header d-flex justify-content-between align-items-center py-3 border-bottom border-light-subtle bg-white rounded-top-4">
                 <h5 className="fw-bold mb-0 text-dark">📄 Student Resume View</h5>
                 <button
                   className="btn-close"
@@ -399,7 +420,8 @@ function Applications() {
                   </div>
                 ) : (
                   selectedProfile && (
-                    <div id="downloadable-application-content" className="bg-light text-dark p-4 rounded border" style={{ fontFamily: "'Inter', sans-serif", background: "#ffffff", borderColor: "#e2e8f0" }}>
+                    <div id="downloadable-application-content" className="bg-light text-dark p-4 rounded-3 border" style={{ fontFamily: "'Inter', sans-serif", background: "#ffffff", borderColor: "#e2e8f0" }}>
+                      
                       {/* Job Application Details Header */}
                       <div className="mb-4 pb-3 border-bottom border-secondary text-dark" style={{ borderColor: "#dee2e6" }}>
                         <h5 className="fw-bold text-primary mb-2">💼 Job Application Information</h5>
@@ -415,8 +437,14 @@ function Applications() {
                         </div>
                       </div>
 
-                      {/* Name / Contact Header */}
+                      {/* Avatar Image + Details in Modal */}
                       <div className="text-center border-bottom pb-3 mb-3" style={{ borderColor: "#dee2e6" }}>
+                        <img
+                          src={selectedProfile.profilePicture || "https://cdn-icons-png.flaticon.com/512/149/149071.png"}
+                          alt={selectedProfile.fullName}
+                          className="rounded-circle shadow-sm border border-3 border-white mb-3"
+                          style={{ width: "90px", height: "90px", objectFit: "cover" }}
+                        />
                         <h3 className="fw-bold text-uppercase text-dark mb-1">{selectedProfile.fullName}</h3>
                         <p className="fw-semibold text-primary mb-2" style={{ fontSize: "1rem" }}>
                           {selectedProfile.designation || "Student"}
@@ -485,16 +513,26 @@ function Applications() {
               </div>
 
               {/* Modal Footer */}
-              <div className="card-footer py-3 border-top border-light-subtle d-flex justify-content-end gap-2" style={{ background: "#f8fafc" }}>
+              <div className="card-footer py-3 border-top border-light-subtle bg-white rounded-bottom-4 d-flex justify-content-end gap-2">
+                {selectedProfile && selectedProfile.resume && (
+                  <button
+                    className="btn btn-success fw-bold"
+                    onClick={() => {
+                      downloadBase64File(selectedProfile.resume, `${selectedProfile.fullName.replace(/\s+/g, "_")}_Resume.pdf`);
+                    }}
+                  >
+                    📥 Download Uploaded Resume
+                  </button>
+                )}
                 <button
-                  className="btn btn-success"
+                  className="btn btn-primary fw-bold"
                   onClick={downloadApplicationPDF}
                   disabled={isLoadingProfile || !selectedProfile}
                 >
                   📥 Download Application PDF
                 </button>
                 <button
-                  className="btn btn-secondary"
+                  className="btn btn-secondary fw-bold"
                   onClick={() => {
                     setIsModalOpen(false);
                     setSelectedProfile(null);
@@ -518,7 +556,7 @@ function Applications() {
               height: "100%",
               background: "rgba(0, 0, 0, 0.5)",
               backdropFilter: "blur(4px)",
-              zIndex: 1050,
+              zIndex: 1060,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -526,19 +564,16 @@ function Applications() {
             }}
           >
             <div
-              className="card border-0 text-dark shadow-lg"
+              className="card border-0 text-dark shadow-lg rounded-4 bg-white"
               style={{
                 width: "100%",
                 maxWidth: "550px",
-                background: "#ffffff",
-                border: "1px solid #e2e8f0",
-                borderRadius: "12px",
                 display: "flex",
                 flexDirection: "column"
               }}
             >
               {/* Modal Header */}
-              <div className="card-header d-flex justify-content-between align-items-center py-3 border-bottom border-light-subtle" style={{ background: "#f8fafc" }}>
+              <div className="card-header d-flex justify-content-between align-items-center py-3 border-bottom border-light-subtle bg-white rounded-top-4">
                 <h5 className="fw-bold mb-0 text-dark">✍️ Add Approval Message</h5>
                 <button
                   className="btn-close"
@@ -569,9 +604,9 @@ function Applications() {
               </div>
 
               {/* Modal Footer */}
-              <div className="card-footer py-3 border-top border-light-subtle d-flex justify-content-end gap-2" style={{ background: "#f8fafc" }}>
+              <div className="card-footer py-3 border-top border-light-subtle bg-white rounded-bottom-4 d-flex justify-content-end gap-2">
                 <button
-                  className="btn btn-secondary px-4"
+                  className="btn btn-secondary px-4 fw-bold rounded-pill"
                   onClick={() => {
                     setIsApproveModalOpen(false);
                     setSelectedAppForApprove(null);
@@ -582,7 +617,7 @@ function Applications() {
                   Cancel
                 </button>
                 <button
-                  className="btn btn-success px-4"
+                  className="btn btn-success px-4 fw-bold rounded-pill"
                   onClick={handleConfirmApprove}
                   disabled={isSubmittingApproval}
                 >

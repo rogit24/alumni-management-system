@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import AlumniLayout from "../../layouts/AlumniLayout";
 import { toast } from "react-toastify";
 import { referrals as referralsApi, auth, profiles, notifications as notificationsApi, messages as messagesApi } from "../../services/api";
+import { downloadBase64File } from "../../services/fileHelper";
 
 function Referrals() {
   const [referrals, setReferrals] = useState([]);
@@ -13,6 +14,7 @@ function Referrals() {
   const [selectedRefForApprove, setSelectedRefForApprove] = useState(null);
   const [approvalMessage, setApprovalMessage] = useState("");
   const [isSubmittingApproval, setIsSubmittingApproval] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     loadReferrals();
@@ -32,9 +34,17 @@ function Referrals() {
       const refs = await referralsApi.getAlumniReferrals(currentUser.id);
       const allUsers = await auth.getAllUsers();
 
-      const resolvedRefs = refs.map(ref => {
+      const resolvedRefs = [];
+      for (const ref of refs) {
         const studentUser = allUsers.find(u => u.id === ref.studentId);
-        return {
+        let profilePic = "";
+        try {
+          const profileData = await profiles.getByUserId(ref.studentId);
+          profilePic = profileData.profilePicture || "";
+        } catch (e) {
+          // ignore
+        }
+        resolvedRefs.push({
           id: ref.id,
           studentId: ref.studentId,
           studentName: studentUser ? studentUser.name : `Student #${ref.studentId}`,
@@ -43,13 +53,16 @@ function Referrals() {
           jobRole: ref.jobRole || "N/A",
           message: ref.message || "N/A",
           requestDate: ref.requestDate || "N/A",
-          status: ref.status ? (ref.status.charAt(0).toUpperCase() + ref.status.slice(1).toLowerCase()) : "Pending"
-        };
-      });
+          status: ref.status ? (ref.status.charAt(0).toUpperCase() + ref.status.slice(1).toLowerCase()) : "Pending",
+          studentPhoto: profilePic
+        });
+      }
 
       setReferrals(resolvedRefs);
     } catch (error) {
       console.error("Failed to load referrals", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -151,7 +164,7 @@ function Referrals() {
 
   return (
     <AlumniLayout>
-      <div className="container py-4">
+      <div className="container py-4" style={{ fontFamily: "'Outfit', 'Inter', sans-serif" }}>
         <div className="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom border-light-subtle">
           <div>
             <h2 className="fw-bold mb-1 text-dark">🤝 Referral Requests</h2>
@@ -162,11 +175,13 @@ function Referrals() {
           </span>
         </div>
 
-        {referrals.length === 0 ? (
-          <div className="card shadow p-5 text-center border-0 text-dark" style={{
-            background: "#ffffff",
-            border: "1px solid #e2e8f0"
-          }}>
+        {loading ? (
+          <div className="text-center py-5">
+            <div className="spinner-border text-primary" role="status"></div>
+            <p className="mt-3 text-muted">Loading endorsements board...</p>
+          </div>
+        ) : referrals.length === 0 ? (
+          <div className="card shadow-sm p-5 text-center border-0 text-dark rounded-4 bg-white">
             <h5 className="fw-bold mb-2">No Referral Requests Found</h5>
             <p className="text-secondary mb-0">Incoming requests from students will appear here dynamically.</p>
           </div>
@@ -174,26 +189,22 @@ function Referrals() {
           <div className="row g-3">
             {referrals.map((ref) => (
               <div key={ref.id} className="col-md-6">
-                <div className="card border-0 rounded-4 shadow-sm h-100" style={{
-                  background: "#e0f2fe",
-                  border: "1px solid #bae6fd",
-                  transition: "transform 0.2s ease, background 0.2s ease"
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = "translateY(-3px)";
-                  e.currentTarget.style.background = "#bae6fd";
-                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(14, 165, 233, 0.15)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = "none";
-                  e.currentTarget.style.background = "#e0f2fe";
-                  e.currentTarget.style.boxShadow = "none";
-                }}
-                >
+                <div className="card border-0 rounded-4 shadow-sm h-100 bg-white">
                   <div className="card-body p-4 text-dark">
-                    <div className="d-flex justify-content-between align-items-center mb-3">
-                      <h4 className="fw-bold mb-0 text-dark">{ref.studentName}</h4>
-                      <span className={`badge ${
+                    
+                    {/* Header: Student Profile Image + Name */}
+                    <div className="d-flex align-items-center gap-3 mb-3 pb-3 border-bottom border-light-subtle">
+                      <img
+                        src={ref.studentPhoto || "https://cdn-icons-png.flaticon.com/512/149/149071.png"}
+                        alt={ref.studentName}
+                        className="rounded-circle border shadow-sm"
+                        style={{ width: "52px", height: "52px", objectFit: "cover" }}
+                      />
+                      <div className="flex-grow-1">
+                        <h4 className="fw-bold mb-0 text-dark" style={{ fontSize: "1.1rem" }}>{ref.studentName}</h4>
+                        <small className="text-muted">{ref.studentEmail}</small>
+                      </div>
+                      <span className={`badge px-3 py-1.5 rounded-pill ${
                         ref.status === "Approved"
                           ? "bg-success"
                           : ref.status === "Rejected"
@@ -204,8 +215,7 @@ function Referrals() {
                       </span>
                     </div>
 
-                    <div className="p-3 mb-3 rounded bg-white text-dark" style={{ border: "1px solid rgba(14, 165, 233, 0.15)", fontSize: "0.9rem" }}>
-                      <p className="mb-2"><strong>✉️ Email:</strong> <span className="text-secondary">{ref.studentEmail}</span></p>
+                    <div className="p-3 mb-3 rounded-3 bg-light text-dark" style={{ fontSize: "0.9rem" }}>
                       <p className="mb-2"><strong>🏢 Target Company:</strong> <span className="text-secondary">{ref.company}</span></p>
                       <p className="mb-2"><strong>💼 Target Role:</strong> <span className="text-secondary">{ref.jobRole}</span></p>
                       <p className="mb-0"><strong>📅 Requested:</strong> <span className="text-secondary">{ref.requestDate}</span></p>
@@ -214,7 +224,7 @@ function Referrals() {
                     {ref.message && (
                       <div className="mb-3">
                         <strong className="d-block mb-1 text-secondary" style={{ fontSize: "0.85rem" }}>💬 Message from Student:</strong>
-                        <p className="mb-0 p-3 rounded bg-white text-dark" style={{ fontSize: "0.9rem", fontStyle: "italic", borderLeft: "3px solid #0d6efd", border: "1px solid rgba(14, 165, 233, 0.1)" }}>
+                        <p className="mb-0 p-3 rounded bg-light text-dark" style={{ fontSize: "0.9rem", fontStyle: "italic", borderLeft: "3px solid #0d6efd" }}>
                           "{ref.message}"
                         </p>
                       </div>
@@ -222,7 +232,7 @@ function Referrals() {
 
                     <div className="d-flex gap-2 mt-4 pt-2 border-top border-light-subtle">
                       <button
-                        className="btn btn-outline-info flex-grow-1"
+                        className="btn btn-outline-info flex-grow-1 fw-bold rounded-pill"
                         onClick={() => openResumeModal(ref.studentId)}
                       >
                         📄 View Profile & Resume
@@ -231,13 +241,13 @@ function Referrals() {
                       {ref.status === "Pending" && (
                         <>
                           <button
-                            className="btn btn-success px-4"
+                            className="btn btn-success px-4 rounded-pill fw-bold"
                             onClick={() => handleApproveClick(ref)}
                           >
                             Approve
                           </button>
                           <button
-                            className="btn btn-danger px-4"
+                            className="btn btn-outline-danger px-4 rounded-pill fw-bold"
                             onClick={() => updateStatus(ref.id, "Rejected")}
                           >
                             Reject
@@ -271,19 +281,18 @@ function Referrals() {
             }}
           >
             <div
-              className="card border-0 text-dark shadow-lg"
+              className="card border-0 text-dark shadow-lg rounded-4"
               style={{
                 width: "100%",
                 maxWidth: "750px",
                 maxHeight: "90vh",
                 background: "#ffffff",
-                border: "1px solid #e2e8f0",
                 display: "flex",
                 flexDirection: "column"
               }}
             >
               {/* Modal Header */}
-              <div className="card-header d-flex justify-content-between align-items-center py-3 border-bottom border-light-subtle" style={{ background: "#f8fafc" }}>
+              <div className="card-header d-flex justify-content-between align-items-center py-3 border-bottom border-light-subtle bg-white rounded-top-4">
                 <h5 className="fw-bold mb-0 text-dark">📄 Student Resume View</h5>
                 <button
                   className="btn-close"
@@ -303,9 +312,16 @@ function Referrals() {
                   </div>
                 ) : (
                   selectedProfile && (
-                    <div className="bg-light text-dark p-4 rounded border" style={{ fontFamily: "'Inter', sans-serif", background: "#f0f7ff", borderColor: "#bae6fd" }}>
-                      {/* Name / Contact Header */}
-                      <div className="text-center border-bottom pb-3 mb-3" style={{ borderColor: "#bae6fd" }}>
+                    <div className="bg-light text-dark p-4 rounded-3 border" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      
+                      {/* Avatar Image + Details in Modal */}
+                      <div className="text-center border-bottom pb-3 mb-3">
+                        <img
+                          src={selectedProfile.profilePicture || "https://cdn-icons-png.flaticon.com/512/149/149071.png"}
+                          alt={selectedProfile.fullName}
+                          className="rounded-circle shadow-sm border border-3 border-white mb-3"
+                          style={{ width: "90px", height: "90px", objectFit: "cover" }}
+                        />
                         <h3 className="fw-bold text-uppercase text-dark mb-1">{selectedProfile.fullName}</h3>
                         <p className="fw-semibold text-primary mb-2" style={{ fontSize: "1rem" }}>
                           {selectedProfile.designation || "Student"}
@@ -321,7 +337,7 @@ function Referrals() {
                       {/* Summary Section */}
                       {selectedProfile.bio && (
                         <div className="mb-3">
-                          <h6 className="fw-bold text-uppercase border-bottom pb-1 text-dark" style={{ fontSize: "0.85rem", borderColor: "#bae6fd" }}>
+                          <h6 className="fw-bold text-uppercase border-bottom pb-1 text-dark" style={{ fontSize: "0.85rem" }}>
                             Professional Summary
                           </h6>
                           <p className="text-secondary" style={{ fontSize: "0.88rem", textAlign: "justify", marginBottom: 0 }}>
@@ -333,7 +349,7 @@ function Referrals() {
                       {/* Education Section */}
                       {selectedProfile.education && (
                         <div className="mb-3">
-                          <h6 className="fw-bold text-uppercase border-bottom pb-1 text-dark" style={{ fontSize: "0.85rem", borderColor: "#bae6fd" }}>
+                          <h6 className="fw-bold text-uppercase border-bottom pb-1 text-dark" style={{ fontSize: "0.85rem" }}>
                             Education
                           </h6>
                           <div className="d-flex justify-content-between align-items-baseline">
@@ -352,15 +368,15 @@ function Referrals() {
                       {/* Skills Section */}
                       {selectedProfile.skills && (
                         <div>
-                          <h6 className="fw-bold text-uppercase border-bottom pb-1 text-dark" style={{ fontSize: "0.85rem", borderColor: "#bae6fd" }}>
+                          <h6 className="fw-bold text-uppercase border-bottom pb-1 text-dark" style={{ fontSize: "0.85rem" }}>
                             Skills & Expertise
                           </h6>
                           <div className="d-flex flex-wrap gap-1.5 pt-1">
                             {selectedProfile.skills.split(",").map((skill, index) => (
                               <span
                                 key={index}
-                                className="badge bg-white text-dark border border-secondary px-2.5 py-1.5 rounded-1"
-                                style={{ fontSize: "0.78rem", fontWeight: "500", borderColor: "#bae6fd !important" }}
+                                className="badge bg-white text-dark border px-2.5 py-1.5 rounded-1"
+                                style={{ fontSize: "0.78rem", fontWeight: "500" }}
                               >
                                 {skill.trim()}
                               </span>
@@ -374,22 +390,32 @@ function Referrals() {
               </div>
 
               {/* Modal Footer */}
-              <div className="card-footer py-3 border-top border-light-subtle d-flex justify-content-end" style={{ background: "#f8fafc" }}>
+              <div className="card-footer py-3 border-top border-light-subtle d-flex justify-content-end bg-white rounded-bottom-4">
+                {selectedProfile && selectedProfile.resume && (
+                  <button
+                    className="btn btn-success me-2 fw-bold"
+                    onClick={() => {
+                      downloadBase64File(selectedProfile.resume, `${selectedProfile.fullName.replace(/\s+/g, "_")}_Resume.pdf`);
+                    }}
+                  >
+                    📥 Download Uploaded Resume
+                  </button>
+                )}
                 <button
-                  className="btn btn-secondary"
+                  className="btn btn-secondary fw-bold"
                   onClick={() => {
                     setIsModalOpen(false);
                     setSelectedProfile(null);
                   }}
                 >
-                  Close Preview
+                  Close
                 </button>
               </div>
             </div>
           </div>
         )}
 
-        {/* Custom Approval Message Modal */}
+        {/* Custom approval overlay */}
         {isApproveModalOpen && (
           <div
             style={{
@@ -400,75 +426,31 @@ function Referrals() {
               height: "100%",
               background: "rgba(0, 0, 0, 0.5)",
               backdropFilter: "blur(4px)",
-              zIndex: 1050,
+              zIndex: 1060,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               padding: "20px"
             }}
           >
-            <div
-              className="card border-0 text-dark shadow-lg"
-              style={{
-                width: "100%",
-                maxWidth: "550px",
-                background: "#ffffff",
-                border: "1px solid #e2e8f0",
-                borderRadius: "12px",
-                display: "flex",
-                flexDirection: "column"
-              }}
-            >
-              {/* Modal Header */}
-              <div className="card-header d-flex justify-content-between align-items-center py-3 border-bottom border-light-subtle" style={{ background: "#f8fafc" }}>
-                <h5 className="fw-bold mb-0 text-dark">✍️ Add Approval Message</h5>
-                <button
-                  className="btn-close"
-                  onClick={() => {
-                    setIsApproveModalOpen(false);
-                    setSelectedRefForApprove(null);
-                    setApprovalMessage("");
-                  }}
-                ></button>
+            <div className="card border-0 text-dark shadow-lg rounded-4" style={{ width: "100%", maxWidth: "550px", background: "#ffffff" }}>
+              <div className="card-header bg-white py-3 border-bottom border-light-subtle rounded-top-4">
+                <h5 className="fw-bold mb-0 text-dark">✍️ Approval Direct Message</h5>
               </div>
-
-              {/* Modal Body */}
               <div className="card-body p-4">
-                <p className="text-secondary" style={{ fontSize: "0.9rem" }}>
-                  Write a note for <strong>{selectedRefForApprove?.studentName}</strong>. This will be sent as a direct message in their chat inbox.
-                </p>
-                <div className="mb-3">
-                  <label className="form-label fw-semibold text-secondary" style={{ fontSize: "0.85rem" }}>Message Content</label>
-                  <textarea
-                    rows={4}
-                    className="form-control"
-                    placeholder="Enter message for the student..."
-                    value={approvalMessage}
-                    onChange={(e) => setApprovalMessage(e.target.value)}
-                    style={{ fontSize: "0.9rem", resize: "none" }}
-                  />
-                </div>
+                <p className="text-secondary small mb-3">Include an optional congrats note or referral instructions. This will be automatically sent as a direct message to the student.</p>
+                <textarea
+                  className="form-control"
+                  rows="4"
+                  value={approvalMessage}
+                  onChange={(e) => setApprovalMessage(e.target.value)}
+                  placeholder="Enter congrats note here..."
+                />
               </div>
-
-              {/* Modal Footer */}
-              <div className="card-footer py-3 border-top border-light-subtle d-flex justify-content-end gap-2" style={{ background: "#f8fafc" }}>
-                <button
-                  className="btn btn-secondary px-4"
-                  onClick={() => {
-                    setIsApproveModalOpen(false);
-                    setSelectedRefForApprove(null);
-                    setApprovalMessage("");
-                  }}
-                  disabled={isSubmittingApproval}
-                >
-                  Cancel
-                </button>
-                <button
-                  className="btn btn-success px-4"
-                  onClick={handleConfirmApprove}
-                  disabled={isSubmittingApproval}
-                >
-                  {isSubmittingApproval ? "Approving..." : "Confirm & Approve"}
+              <div className="card-footer py-3 border-top border-light-subtle bg-white rounded-bottom-4 d-flex justify-content-end gap-2">
+                <button className="btn btn-secondary fw-bold" disabled={isSubmittingApproval} onClick={() => setIsApproveModalOpen(false)}>Cancel</button>
+                <button className="btn btn-success fw-bold" disabled={isSubmittingApproval} onClick={handleConfirmApprove}>
+                  {isSubmittingApproval ? "Processing..." : "Confirm & Send"}
                 </button>
               </div>
             </div>

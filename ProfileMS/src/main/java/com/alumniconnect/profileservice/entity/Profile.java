@@ -32,8 +32,11 @@ public class Profile {
     @Column(name = "phone")
     private String phone;
 
-    @Column(name = "profile_picture", length = 500)
+    @Column(name = "profile_picture", columnDefinition = "LONGTEXT")
     private String profilePicture;
+
+    @Column(name = "resume", columnDefinition = "LONGTEXT")
+    private String resume;
 
     @Column(name = "bio", columnDefinition = "TEXT")
     private String bio;
@@ -85,6 +88,8 @@ public class Profile {
     public void setPhone(String phone) { this.phone = phone; }
     public String getProfilePicture() { return profilePicture; }
     public void setProfilePicture(String profilePicture) { this.profilePicture = profilePicture; }
+    public String getResume() { return resume; }
+    public void setResume(String resume) { this.resume = resume; }
     public String getBio() { return bio; }
     public void setBio(String bio) { this.bio = bio; }
     public String getSkills() { return skills; }
@@ -113,6 +118,7 @@ public class Profile {
         private String email;
         private String phone;
         private String profilePicture;
+        private String resume;
         private String bio;
         private String skills;
         private String education;
@@ -129,6 +135,7 @@ public class Profile {
         public ProfileBuilder email(String email) { this.email = email; return this; }
         public ProfileBuilder phone(String phone) { this.phone = phone; return this; }
         public ProfileBuilder profilePicture(String profilePicture) { this.profilePicture = profilePicture; return this; }
+        public ProfileBuilder resume(String resume) { this.resume = resume; return this; }
         public ProfileBuilder bio(String bio) { this.bio = bio; return this; }
         public ProfileBuilder skills(String skills) { this.skills = skills; return this; }
         public ProfileBuilder education(String education) { this.education = education; return this; }
@@ -147,6 +154,7 @@ public class Profile {
             p.setEmail(this.email);
             p.setPhone(this.phone);
             p.setProfilePicture(this.profilePicture);
+            p.setResume(this.resume);
             p.setBio(this.bio);
             p.setSkills(this.skills);
             p.setEducation(this.education);
