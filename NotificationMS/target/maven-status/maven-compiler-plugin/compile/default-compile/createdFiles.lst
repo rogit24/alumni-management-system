@@ -1,9 +1,0 @@
-com\alumniconnect\notification\entity\Notification.class
-com\alumniconnect\notification\dto\NotificationDto.class
-com\alumniconnect\notification\repository\NotificationRepository.class
-com\alumniconnect\notification\NotificationApplication.class
-com\alumniconnect\notification\controller\NotificationController.class
-com\alumniconnect\notification\exception\GlobalExceptionHandler.class
-com\alumniconnect\notification\enums\NotificationType.class
-com\alumniconnect\notification\service\NotificationService.class
-com\alumniconnect\notification\exception\ResourceNotFoundException.class
