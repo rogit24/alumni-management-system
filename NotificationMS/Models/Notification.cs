@@ -33,9 +33,14 @@ namespace NotificationMS.Models
         [Column("is_read")]
         public bool IsRead { get; set; } = false;
 
+        private string _createdAt = string.Empty;
+
         [Column("created_at")]
-        [Required]
         [MaxLength(50)]
-        public string CreatedAt { get; set; } = string.Empty;
+        public string CreatedAt 
+        { 
+            get => string.IsNullOrEmpty(_createdAt) ? System.DateTime.Now.ToString("yyyy-MM-dd") : _createdAt;
+            set => _createdAt = value;
+        }
     }
 }
