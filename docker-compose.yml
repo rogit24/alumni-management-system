@@ -1,0 +1,207 @@
+version: '3.8'
+
+services:
+  # 1. MySQL Database Container
+  alumni-db:
+    image: mysql:8.0
+    container_name: alumni-db
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: alumni_db
+      MYSQL_ROOT_PASSWORD: manager
+    networks:
+      - alumni-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pmanager"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # 2. Service Registry (Eureka Server)
+  service-registry:
+    build:
+      context: ./ServiceRegistry
+      dockerfile: Dockerfile
+    container_name: service-registry
+    ports:
+      - "8761:8761"
+    networks:
+      - alumni-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8761/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # 3. API Gateway
+  api-gateway:
+    build:
+      context: ./ApiGateway
+      dockerfile: Dockerfile
+    container_name: api-gateway
+    ports:
+      - "9191:9191"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://service-registry:8761/eureka/
+      - JWT_SECRET=my_super_secret_key_which_is_long_enough_for_sha256_key_and_more_characters_for_security
+    depends_on:
+      service-registry:
+        condition: service_healthy
+    networks:
+      - alumni-network
+
+  # 4. UserService (Authentication Core)
+  user-service:
+    build:
+      context: ./UserService
+      dockerfile: Dockerfile
+    container_name: user-service
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://alumni-db:3306/alumni_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=manager
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://service-registry:8761/eureka/
+      - JWT_SECRET=my_super_secret_key_which_is_long_enough_for_sha256_key_and_more_characters_for_security
+      - JWT_EXPIRATION_MS=86400000
+    depends_on:
+      alumni-db:
+        condition: service_healthy
+      service-registry:
+        condition: service_healthy
+    networks:
+      - alumni-network
+
+  # 5. ProfileMS (Profile Management)
+  profile-service:
+    build:
+      context: ./ProfileMS
+      dockerfile: Dockerfile
+    container_name: profile-service
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://alumni-db:3306/alumni_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=manager
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://service-registry:8761/eureka/
+      - JWT_SECRET=my_super_secret_key_which_is_long_enough_for_sha256_key_and_more_characters_for_security
+    depends_on:
+      alumni-db:
+        condition: service_healthy
+      service-registry:
+        condition: service_healthy
+    networks:
+      - alumni-network
+
+  # 6. JobMS (Job Listings)
+  job-service:
+    build:
+      context: ./JobMS
+      dockerfile: Dockerfile
+    container_name: job-service
+    ports:
+      - "8083:8083"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://alumni-db:3306/alumni_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=manager
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://service-registry:8761/eureka/
+    depends_on:
+      alumni-db:
+        condition: service_healthy
+      service-registry:
+        condition: service_healthy
+    networks:
+      - alumni-network
+
+  # 7. ApplicationMS (Job Applications)
+  application-service:
+    build:
+      context: ./ApplicationMS
+      dockerfile: Dockerfile
+    container_name: application-service
+    ports:
+      - "8084:8084"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://alumni-db:3306/application_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=manager
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://service-registry:8761/eureka/
+    depends_on:
+      alumni-db:
+        condition: service_healthy
+      service-registry:
+        condition: service_healthy
+    networks:
+      - alumni-network
+
+  # 8. ReferralMS (Referrals)
+  referral-service:
+    build:
+      context: ./ReferralMS
+      dockerfile: Dockerfile
+    container_name: referral-service
+    ports:
+      - "8085:8085"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://alumni-db:3306/alumni_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=manager
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://service-registry:8761/eureka/
+    depends_on:
+      alumni-db:
+        condition: service_healthy
+      service-registry:
+        condition: service_healthy
+    networks:
+      - alumni-network
+
+  # 9. MessageMS (Messaging)
+  message-service:
+    build:
+      context: ./MessageMS
+      dockerfile: Dockerfile
+    container_name: message-service
+    ports:
+      - "8086:8086"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://alumni-db:3306/alumni_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=manager
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://service-registry:8761/eureka/
+      - JWT_SECRET=my_super_secret_key_which_is_long_enough_for_sha256_key_and_more_characters_for_security
+    depends_on:
+      alumni-db:
+        condition: service_healthy
+      service-registry:
+        condition: service_healthy
+    networks:
+      - alumni-network
+
+  # 10. NotificationMS (Notifications)
+  notification-service:
+    build:
+      context: ./NotificationMS
+      dockerfile: Dockerfile
+    container_name: notification-service
+    ports:
+      - "8087:8087"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://alumni-db:3306/alumni_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=manager
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://service-registry:8761/eureka/
+    depends_on:
+      alumni-db:
+        condition: service_healthy
+      service-registry:
+        condition: service_healthy
+    networks:
+      - alumni-network
+
+networks:
+  alumni-network:
+    driver: bridge

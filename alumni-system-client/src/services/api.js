@@ -43,6 +43,14 @@ export const auth = {
     const response = await api.post('/api/v1/auth/register', { name, email, password, role });
     return response.data;
   },
+  verifyOtp: async (email, otp) => {
+    const response = await api.post('/api/v1/auth/verify-otp', { email, otp });
+    return response.data;
+  },
+  resendOtp: async (email) => {
+    const response = await api.post('/api/v1/auth/resend-otp', { email });
+    return response.data;
+  },
   getAllUsers: async () => {
     const response = await api.get('/api/v1/auth/users');
     return response.data.map(user => {
@@ -119,6 +127,137 @@ export const jobs = {
     const response = await api.delete(`/api/v1/jobs/${id}`);
     return response.data;
   },
+};
+
+export const profiles = {
+  getMe: async () => {
+    const response = await api.get('/api/v1/profiles/me');
+    return response.data;
+  },
+  getByUserId: async (userId) => {
+    const response = await api.get(`/api/v1/profiles/user/${userId}`);
+    return response.data;
+  },
+  create: async (profileData) => {
+    const response = await api.post('/api/v1/profiles', profileData);
+    return response.data;
+  },
+  update: async (id, profileData) => {
+    const response = await api.put(`/api/v1/profiles/${id}`, profileData);
+    return response.data;
+  }
+};
+
+export const applications = {
+  submit: async (appData) => {
+    const response = await api.post('/api/v1/applications', appData);
+    return response.data;
+  },
+  getMyApplications: async () => {
+    const response = await api.get('/api/v1/applications/my-applications');
+    return response.data;
+  },
+  getApplicationsForJob: async (jobId) => {
+    const response = await api.get(`/api/v1/applications/job/${jobId}`);
+    return response.data;
+  },
+  updateStatus: async (id, status) => {
+    const response = await api.patch(`/api/v1/applications/${id}/status?status=${status}`);
+    return response.data;
+  },
+  withdraw: async (id) => {
+    const response = await api.delete(`/api/v1/applications/${id}`);
+    return response.data;
+  },
+  getAll: async () => {
+    const response = await api.get('/api/v1/applications');
+    return response.data;
+  }
+};
+
+export const referrals = {
+  create: async (referralData) => {
+    const response = await api.post('/api/v1/referrals', referralData);
+    return response.data;
+  },
+  update: async (id, referralData) => {
+    const response = await api.put(`/api/v1/referrals/${id}`, referralData);
+    return response.data;
+  },
+  approve: async (id) => {
+    const response = await api.put(`/api/v1/referrals/${id}/approve`);
+    return response.data;
+  },
+  reject: async (id) => {
+    const response = await api.put(`/api/v1/referrals/${id}/reject`);
+    return response.data;
+  },
+  getStudentReferrals: async (studentId) => {
+    const response = await api.get(`/api/v1/referrals/student/${studentId}`);
+    return response.data;
+  },
+  getAlumniReferrals: async (alumniId) => {
+    const response = await api.get(`/api/v1/referrals/alumni/${alumniId}`);
+    return response.data;
+  },
+  getPending: async () => {
+    const response = await api.get('/api/v1/referrals/pending');
+    return response.data;
+  },
+  getAll: async () => {
+    const response = await api.get('/api/v1/referrals');
+    return response.data;
+  },
+  delete: async (id) => {
+    const response = await api.delete(`/api/v1/referrals/${id}`);
+    return response.data;
+  }
+};
+
+export const messages = {
+  sendMessage: async (msgData) => {
+    const response = await api.post('/api/v1/messages', msgData);
+    return response.data;
+  },
+  getInbox: async (userId) => {
+    const response = await api.get(`/api/v1/messages/inbox/${userId}`);
+    return response.data;
+  },
+  getMyInbox: async () => {
+    const response = await api.get('/api/v1/messages/inbox/me');
+    return response.data;
+  },
+  getConversation: async (otherUserId) => {
+    const response = await api.get(`/api/v1/messages/conversation/${otherUserId}`);
+    return response.data;
+  },
+  markAsRead: async (id) => {
+    const response = await api.put(`/api/v1/messages/${id}/read`);
+    return response.data;
+  }
+};
+
+export const notifications = {
+  createNotification: async (notifData) => {
+    const response = await api.post('/api/v1/notifications', notifData);
+    return response.data;
+  },
+  getAllNotifications: async () => {
+    const response = await api.get('/api/v1/notifications');
+    return response.data;
+  },
+  getUserNotifications: async (userId) => {
+    const response = await api.get(`/api/v1/notifications/user/${userId}`);
+    return response.data;
+  },
+  markAsRead: async (id) => {
+    const response = await api.put(`/api/v1/notifications/${id}/read`);
+    return response.data;
+  },
+  delete: async (id) => {
+    const response = await api.delete(`/api/v1/notifications/${id}`);
+    return response.data;
+  }
 };
 
 export default api;

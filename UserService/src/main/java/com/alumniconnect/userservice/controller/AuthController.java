@@ -25,6 +25,18 @@ public class AuthController {
         return ResponseEntity.ok(response);
     }
 
+    @PostMapping("/verify-otp")
+    public ResponseEntity<String> verifyOtp(@RequestBody java.util.Map<String, String> payload) {
+        authService.verifyOtp(payload.get("email"), payload.get("otp"));
+        return ResponseEntity.ok("Email verified successfully! 🎉");
+    }
+
+    @PostMapping("/resend-otp")
+    public ResponseEntity<String> resendOtp(@RequestBody java.util.Map<String, String> payload) {
+        authService.resendOtp(payload.get("email"));
+        return ResponseEntity.ok("OTP resent successfully! ✉️");
+    }
+
 //    @PostMapping("/login")
 //    public ResponseEntity<AuthResponse> login(@Valid @RequestBody LoginRequest request) {
 //        AuthResponse response = authService.login(request);

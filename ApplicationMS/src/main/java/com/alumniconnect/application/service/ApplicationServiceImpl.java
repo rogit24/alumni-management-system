@@ -48,7 +48,7 @@ public class ApplicationServiceImpl implements ApplicationService {
 		
 //		Validating the feign client 
 		try {
-			 jobServiceClient.getJobById(dto.getJobId());
+			 jobServiceClient.getJobById(dto.getJobId(), studentEmail, "STUDENT");
 		}catch(FeignClientException.NotFound e) {
 			throw new RuntimeException("Job not found with id :"+dto.getJobId());
 		}
@@ -106,5 +106,17 @@ public class ApplicationServiceImpl implements ApplicationService {
 		return modelMapper.map(updatedApplication,ApplicationDto.class);
 	}
 
-	
+	@Override
+	public void deleteApplication(Long id) {
+		Application application = applicationRepository.findById(id).orElseThrow(() -> 
+		new RuntimeException("Application not found with Id : " + id));
+		applicationRepository.delete(application);
+	}
+
+	@Override
+	public List<ApplicationDto> getAllApplications() {
+		return applicationRepository.findAll().stream()
+				.map(app -> modelMapper.map(app, ApplicationDto.class))
+				.collect(Collectors.toList());
+	}
 }

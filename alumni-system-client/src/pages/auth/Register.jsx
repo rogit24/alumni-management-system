@@ -13,6 +13,11 @@ function Register() {
     role: "student",
   });
 
+  const [showOtpScreen, setShowOtpScreen] = useState(false);
+  const [registeredEmail, setRegisteredEmail] = useState("");
+  const [otpCode, setOtpCode] = useState("");
+  const [isVerifying, setIsVerifying] = useState(false);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -33,10 +38,40 @@ function Register() {
         formData.password,
         formData.role.toLowerCase()
       );
-      toast.success("Registration Successful");
-      navigate("/login");
+      toast.success("Registration Successful! Please check your email for the OTP code. ✉️");
+      setRegisteredEmail(formData.email);
+      setShowOtpScreen(true);
     } catch (error) {
       const errMsg = error.response?.data?.message || "Registration Failed ❌";
+      toast.error(errMsg);
+    }
+  };
+
+  const handleVerifyOtp = async () => {
+    if (!otpCode) {
+      toast.warning("Please enter the 6-digit OTP code");
+      return;
+    }
+
+    setIsVerifying(true);
+    try {
+      await auth.verifyOtp(registeredEmail, otpCode);
+      toast.success("Email Verified Successfully! 🎉");
+      navigate("/login");
+    } catch (error) {
+      const errMsg = error.response?.data?.message || "OTP verification failed! ❌";
+      toast.error(errMsg);
+    } finally {
+      setIsVerifying(false);
+    }
+  };
+
+  const handleResendOtp = async () => {
+    try {
+      await auth.resendOtp(registeredEmail);
+      toast.success("A new OTP code has been sent to your email ✉️");
+    } catch (error) {
+      const errMsg = error.response?.data?.message || "Failed to resend OTP ❌";
       toast.error(errMsg);
     }
   };
@@ -108,58 +143,106 @@ function Register() {
           </div>
 
           <div className="col-lg-6">
-            <div className="card card-dark shadow-lg border-0 p-4">
-              <h2 className="text-center mb-4 fw-bold" style={{ color: '#0f172a' }}>
-                Create Account
-              </h2>
+            {!showOtpScreen ? (
+              <div className="card card-dark shadow-lg border-0 p-4">
+                <h2 className="text-center mb-4 fw-bold" style={{ color: '#0f172a' }}>
+                  Create Account
+                </h2>
 
-              <input
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                className="form-control mb-3"
-                onChange={handleChange}
-              />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  className="form-control mb-3"
+                  onChange={handleChange}
+                />
 
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                className="form-control mb-3"
-                onChange={handleChange}
-              />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  className="form-control mb-3"
+                  onChange={handleChange}
+                />
 
-              <input
-                type="password"
-                name="password"
-                placeholder="Password"
-                className="form-control mb-3"
-                onChange={handleChange}
-              />
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  className="form-control mb-3"
+                  onChange={handleChange}
+                />
 
-              <select
-                name="role"
-                className="form-select mb-3"
-                onChange={handleChange}
-              >
-                <option value="student">Student</option>
-                <option value="alumni">Alumni</option>
-              </select>
+                <select
+                  name="role"
+                  className="form-select mb-3"
+                  onChange={handleChange}
+                >
+                  <option value="student">Student</option>
+                  <option value="alumni">Alumni</option>
+                </select>
 
-              <button
-                className="btn gradient-btn w-100 border-0"
-                onClick={handleRegister}
-              >
-                Register Now
-              </button>
+                <button
+                  className="btn gradient-btn w-100 border-0"
+                  onClick={handleRegister}
+                >
+                  Register Now
+                </button>
 
-              <p className="text-center mt-3 mb-0">
-                Already Have Account?{" "}
-                <Link to="/login" className="fw-bold" style={{ color: '#6366f1' }}>
-                  Login
-                </Link>
-              </p>
-            </div>
+                <p className="text-center mt-3 mb-0">
+                  Already Have Account?{" "}
+                  <Link to="/login" className="fw-bold" style={{ color: '#6366f1' }}>
+                    Login
+                  </Link>
+                </p>
+              </div>
+            ) : (
+              <div className="card card-dark shadow-lg border-0 p-4 animate__animated animate__fadeIn">
+                <h2 className="text-center mb-2 fw-bold" style={{ color: '#0f172a' }}>
+                  Verify Email
+                </h2>
+                <p className="text-muted text-center mb-4" style={{ fontSize: "0.9rem" }}>
+                  A 6-digit OTP code has been dispatched to <strong>{registeredEmail}</strong>.
+                </p>
+
+                <div className="mb-3">
+                  <label className="form-label fw-semibold text-secondary">One-Time Password (OTP)</label>
+                  <input
+                    type="text"
+                    maxLength={6}
+                    placeholder="Enter 6-digit OTP"
+                    className="form-control text-center fs-4 fw-bold letter-spacing-2"
+                    style={{ letterSpacing: "8px" }}
+                    value={otpCode}
+                    onChange={(e) => setOtpCode(e.target.value)}
+                  />
+                </div>
+
+                <button
+                  className="btn gradient-btn w-100 border-0 fw-bold"
+                  onClick={handleVerifyOtp}
+                  disabled={isVerifying}
+                >
+                  {isVerifying ? "Verifying..." : "Verify & Activate"}
+                </button>
+
+                <div className="d-flex justify-content-between align-items-center mt-4">
+                  <button 
+                    onClick={handleResendOtp} 
+                    className="btn btn-link text-decoration-none fw-semibold p-0"
+                    style={{ color: '#6366f1' }}
+                  >
+                    ✉️ Resend OTP
+                  </button>
+                  <button 
+                    onClick={() => setShowOtpScreen(false)} 
+                    className="btn btn-link text-decoration-none fw-semibold text-secondary p-0"
+                  >
+                    Back to Register
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
 
         </div>

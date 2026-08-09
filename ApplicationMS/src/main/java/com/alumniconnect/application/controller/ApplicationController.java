@@ -45,7 +45,7 @@ public class ApplicationController {
 	public ResponseEntity<ApplicationDto> submit(
 			@Valid @RequestBody ApplicationDto applicationDto,
 			@RequestHeader(value="X-User-Email",required = false)String userEmail,
-			@RequestHeader(value = "X-User_Role",required= false)String userRole)
+			@RequestHeader(value = "X-User-Role",required= false)String userRole)
 			{
 		
 		validateRole(userRole, UserRole.STUDENT);
@@ -105,7 +105,25 @@ public class ApplicationController {
 
         ApplicationDto updated = applicationService.updateApplicationStatus(id, statusEnum, validatedRole);
         return ResponseEntity.ok(updated);
+	}
+
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Void> deleteApplication(
+			@PathVariable Long id,
+			@RequestHeader(value = "X-User-Email", required = false) String userEmail,
+			@RequestHeader(value = "X-User-Role", required = false) String userRole) {
 		
+		validateRole(userRole, UserRole.STUDENT, UserRole.ADMIN);
+		applicationService.deleteApplication(id);
+		return ResponseEntity.ok().build();
+	}
+
+	@GetMapping
+	public ResponseEntity<List<ApplicationDto>> getAllApplications(
+			@RequestHeader(value = "X-User-Role", required = false) String userRole) {
+		validateRole(userRole, UserRole.ADMIN);
+		List<ApplicationDto> applications = applicationService.getAllApplications();
+		return ResponseEntity.ok(applications);
 	}
 	
 //	Validation of the UserRole

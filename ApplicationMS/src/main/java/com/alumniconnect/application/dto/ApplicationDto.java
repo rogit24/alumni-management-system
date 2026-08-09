@@ -22,7 +22,6 @@ public class ApplicationDto {
     private Long id;
 
     @NotNull(message = "Job ID is required")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Long jobId;
 
     private String studentEmail;

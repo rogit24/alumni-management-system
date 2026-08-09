@@ -34,6 +34,7 @@ public class ProfileDto {
 
     private String phone;
     private String profilePicture;
+    private String resume;
     private String bio;
     private String skills;
     private String education;
@@ -62,6 +63,8 @@ public class ProfileDto {
     public void setPhone(String phone) { this.phone = phone; }
     public String getProfilePicture() { return profilePicture; }
     public void setProfilePicture(String profilePicture) { this.profilePicture = profilePicture; }
+    public String getResume() { return resume; }
+    public void setResume(String resume) { this.resume = resume; }
     public String getBio() { return bio; }
     public void setBio(String bio) { this.bio = bio; }
     public String getSkills() { return skills; }
@@ -90,6 +93,7 @@ public class ProfileDto {
         private String email;
         private String phone;
         private String profilePicture;
+        private String resume;
         private String bio;
         private String skills;
         private String education;
@@ -106,6 +110,7 @@ public class ProfileDto {
         public ProfileDtoBuilder email(String email) { this.email = email; return this; }
         public ProfileDtoBuilder phone(String phone) { this.phone = phone; return this; }
         public ProfileDtoBuilder profilePicture(String profilePicture) { this.profilePicture = profilePicture; return this; }
+        public ProfileDtoBuilder resume(String resume) { this.resume = resume; return this; }
         public ProfileDtoBuilder bio(String bio) { this.bio = bio; return this; }
         public ProfileDtoBuilder skills(String skills) { this.skills = skills; return this; }
         public ProfileDtoBuilder education(String education) { this.education = education; return this; }
@@ -124,6 +129,7 @@ public class ProfileDto {
             p.setEmail(this.email);
             p.setPhone(this.phone);
             p.setProfilePicture(this.profilePicture);
+            p.setResume(this.resume);
             p.setBio(this.bio);
             p.setSkills(this.skills);
             p.setEducation(this.education);

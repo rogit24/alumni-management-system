@@ -1,40 +1,40 @@
 import { useEffect, useState } from "react";
 import AlumniLayout from "../../layouts/AlumniLayout";
 import { toast } from "react-toastify";
+import { notifications as notificationsApi } from "../../services/api";
 
 function Notifications() {
   const [notifications, setNotifications] =
     useState([]);
 
-  const loadNotifications = () => {
-    const currentUser = JSON.parse(
-      localStorage.getItem("currentUser")
-    );
+  const loadNotifications = async () => {
+    try {
+      const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+      if (!currentUser) return;
 
-    const allNotifications =
-      JSON.parse(
-        localStorage.getItem("notifications")
-      ) || [];
+      const res = await notificationsApi.getUserNotifications(currentUser.id);
+      const mapped = res.map((n) => ({
+        id: n.id,
+        message: n.message,
+        date: n.createdAt ? new Date(n.createdAt).toLocaleString() : "Just now",
+        isRead: n.isRead,
+      }));
+      
+      setNotifications(mapped);
 
-    const myNotifications =
-      allNotifications.filter(
-        (n) =>
-          n.userEmail
-            ?.trim()
-            .toLowerCase() ===
-          currentUser?.email
-            ?.trim()
-            .toLowerCase()
-      );
-
-    const sortedNotifications =
-      [...myNotifications].sort(
-        (a, b) =>
-          new Date(b.date) -
-          new Date(a.date)
-      );
-
-    setNotifications(sortedNotifications);
+      // Auto mark unread notifications as read when page is visited
+      res.forEach(async (n) => {
+        if (!n.isRead) {
+          try {
+            await notificationsApi.markAsRead(n.id);
+          } catch (e) {
+            console.error("Failed to mark notification as read", e);
+          }
+        }
+      });
+    } catch (error) {
+      console.error("Failed to load notifications", error);
+    }
   };
 
   useEffect(() => {
@@ -42,42 +42,21 @@ function Notifications() {
 
     const interval = setInterval(() => {
       loadNotifications();
-    }, 2000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
-  const clearNotifications = () => {
-    const currentUser = JSON.parse(
-      localStorage.getItem("currentUser")
-    );
-
-    const allNotifications =
-      JSON.parse(
-        localStorage.getItem("notifications")
-      ) || [];
-
-    const remaining =
-      allNotifications.filter(
-        (n) =>
-          n.userEmail
-            ?.trim()
-            .toLowerCase() !==
-          currentUser?.email
-            ?.trim()
-            .toLowerCase()
-      );
-
-    localStorage.setItem(
-      "notifications",
-      JSON.stringify(remaining)
-    );
-
-    setNotifications([]);
-
-    toast.success(
-      "All Notifications Cleared Successfully"
-    );
+  const clearNotifications = async () => {
+    try {
+      for (const n of notifications) {
+        await notificationsApi.delete(n.id);
+      }
+      setNotifications([]);
+      toast.success("All Notifications Cleared Successfully");
+    } catch (error) {
+      toast.error("Failed to clear notifications ❌");
+    }
   };
 
   return (
