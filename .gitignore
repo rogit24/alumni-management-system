@@ -1,2 +1,8 @@
 /.metadata/
 **/target/
+# .NET
+bin/
+obj/
+
+# macOS
+.DS_Store
