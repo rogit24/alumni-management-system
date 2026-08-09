@@ -6,3 +6,6 @@ obj/
 
 # macOS
 .DS_Store
+**/.DS_Store
+
+NotificationMS/java_backup/
