@@ -21,6 +21,7 @@ import StudentApplications from "./pages/student/Applications";
 import StudentReferrals from "./pages/student/Referrals";
 import Messages from "./pages/student/Messages";
 import Notifications from "./pages/student/Notifications";
+import StudentChatbot from "./pages/student/StudentChatbot";
 
 // Alumni
 import AlumniDashboard from "./pages/alumni/AlumniDashboard";
@@ -101,6 +102,11 @@ function App() {
         <Route
           path="/student/notifications"
           element={<Notifications />}
+        />
+
+        <Route
+          path="/student/chatbot"
+          element={<StudentChatbot />}
         />
 
         {/* Alumni Routes */}

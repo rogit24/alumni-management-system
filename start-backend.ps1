@@ -35,6 +35,11 @@ foreach ($service in $services) {
     Start-Sleep -Seconds $delay
 }
 
+Write-Host "Launching AiService (Python FastAPI)..." -ForegroundColor Yellow
+Start-Process python -ArgumentList "main.py" -WorkingDirectory "AiService" -RedirectStandardOutput "logs\AiService-stdout.log" -RedirectStandardError "logs\AiService-stderr.log" -NoNewWindow
+Write-Host "Waiting 5 seconds..." -ForegroundColor DarkGray
+Start-Sleep -Seconds 5
+
 Write-Host "=============================================" -ForegroundColor Green
 Write-Host "All services started successfully in the background!" -ForegroundColor Green
 Write-Host "=============================================" -ForegroundColor Green

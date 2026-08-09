@@ -36,6 +36,11 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
                 return chain.filter(exchange);
             }
 
+            // 0.5. Bypass CORS preflight OPTIONS requests
+            if (request.getMethod().name().equals("OPTIONS")) {
+                return chain.filter(exchange);
+            }
+
             // 1. Check if Authorization header exists
             if (!request.getHeaders().containsKey(HttpHeaders.AUTHORIZATION)) {
                 return onError(exchange, "Missing Authorization Header", HttpStatus.UNAUTHORIZED);

@@ -146,6 +146,10 @@ function Sidebar() {
               )}
             </Link>
 
+            <Link className={`sidebar-link ${isActive("/student/chatbot")}`} to="/student/chatbot">
+              <i className="bi bi-robot me-2"></i> AI Career Advisor
+            </Link>
+
             <Link className={`sidebar-link ${isActive("/student/notifications")}`} to="/student/notifications">
               <i className="bi bi-bell me-2"></i> Notifications
               {notificationCount > 0 && (

@@ -1,0 +1,65 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-08-09T00:25:33.561+05:30  INFO 38104 --- [USER-SERVICE] [           main] c.a.userservice.UserServiceApplication   : Starting UserServiceApplication v1.0.0 using Java 24.0.1 with PID 38104 (E:\alumni-management-system\UserService\target\UserService-1.0.0.jar started by ROHIT SINGH in E:\alumni-management-system)
+2026-08-09T00:25:33.568+05:30  INFO 38104 --- [USER-SERVICE] [           main] c.a.userservice.UserServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-09T00:25:36.419+05:30  INFO 38104 --- [USER-SERVICE] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-09T00:25:36.809+05:30  INFO 38104 --- [USER-SERVICE] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 368 ms. Found 1 JPA repository interface.
+2026-08-09T00:25:37.405+05:30  INFO 38104 --- [USER-SERVICE] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2ae6babd-d378-3d72-b482-7a0f76179dd4
+2026-08-09T00:25:37.818+05:30  WARN 38104 --- [USER-SERVICE] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-08-09T00:25:37.824+05:30  WARN 38104 --- [USER-SERVICE] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-08-09T00:25:38.468+05:30  INFO 38104 --- [USER-SERVICE] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-08-09T00:25:38.522+05:30  INFO 38104 --- [USER-SERVICE] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-09T00:25:38.523+05:30  INFO 38104 --- [USER-SERVICE] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-08-09T00:25:38.654+05:30  INFO 38104 --- [USER-SERVICE] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-09T00:25:38.655+05:30  INFO 38104 --- [USER-SERVICE] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4858 ms
+2026-08-09T00:25:39.198+05:30  INFO 38104 --- [USER-SERVICE] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-09T00:25:39.465+05:30  INFO 38104 --- [USER-SERVICE] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-08-09T00:25:39.618+05:30  INFO 38104 --- [USER-SERVICE] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-09T00:25:40.535+05:30  INFO 38104 --- [USER-SERVICE] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-09T00:25:40.650+05:30  INFO 38104 --- [USER-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-09T00:25:41.345+05:30  INFO 38104 --- [USER-SERVICE] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e159116
+2026-08-09T00:25:41.351+05:30  INFO 38104 --- [USER-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-09T00:25:41.506+05:30  WARN 38104 --- [USER-SERVICE] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-09T00:25:43.636+05:30  INFO 38104 --- [USER-SERVICE] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-09T00:25:43.782+05:30  INFO 38104 --- [USER-SERVICE] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T00:25:45.493+05:30  WARN 38104 --- [USER-SERVICE] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-09T00:25:45.725+05:30  WARN 38104 --- [USER-SERVICE] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c089f1ff-8608-4323-a0e2-4bc70207693d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-08-09T00:25:46.931+05:30  INFO 38104 --- [USER-SERVICE] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@d79a69b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51158fb1, org.springframework.security.web.context.SecurityContextHolderFilter@4924ad09, org.springframework.security.web.header.HeaderWriterFilter@1e6cd1c, org.springframework.web.filter.CorsFilter@62682ece, org.springframework.security.web.authentication.logout.LogoutFilter@6c2d124e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a1540be, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6aff157e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c83e9ca, org.springframework.security.web.access.ExceptionTranslationFilter@489989eb, org.springframework.security.web.access.intercept.AuthorizationFilter@7bb4f09d]
+2026-08-09T00:25:49.585+05:30  INFO 38104 --- [USER-SERVICE] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-08-09T00:25:50.646+05:30  INFO 38104 --- [USER-SERVICE] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-08-09T00:25:50.736+05:30  INFO 38104 --- [USER-SERVICE] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-08-09T00:25:51.023+05:30  WARN 38104 --- [USER-SERVICE] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-08-09T00:25:51.186+05:30  INFO 38104 --- [USER-SERVICE] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-08-09T00:25:51.776+05:30  INFO 38104 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-08-09T00:25:51.796+05:30  INFO 38104 --- [USER-SERVICE] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-09T00:25:51.904+05:30  INFO 38104 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-08-09T00:25:51.906+05:30  INFO 38104 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-08-09T00:25:51.911+05:30  INFO 38104 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-08-09T00:25:51.914+05:30  INFO 38104 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-08-09T00:25:51.915+05:30  INFO 38104 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-08-09T00:25:51.916+05:30  INFO 38104 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-08-09T00:25:51.917+05:30  INFO 38104 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-08-09T00:25:53.739+05:30  INFO 38104 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-08-09T00:25:53.748+05:30  INFO 38104 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-08-09T00:25:53.761+05:30  INFO 38104 --- [USER-SERVICE] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-08-09T00:25:53.777+05:30  INFO 38104 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1786215353774 with initial instances count: 1
+2026-08-09T00:25:53.786+05:30  INFO 38104 --- [USER-SERVICE] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-SERVICE with eureka with status UP
+2026-08-09T00:25:53.789+05:30  INFO 38104 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1786215353789, current=UP, previous=STARTING]
+2026-08-09T00:25:53.824+05:30  INFO 38104 --- [USER-SERVICE] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/localhost:USER-SERVICE:8081: registering service...
+2026-08-09T00:25:53.950+05:30  INFO 38104 --- [USER-SERVICE] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2026-08-09T00:25:53.960+05:30  INFO 38104 --- [USER-SERVICE] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2026-08-09T00:25:54.027+05:30  INFO 38104 --- [USER-SERVICE] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/localhost:USER-SERVICE:8081 - registration status: 204
+2026-08-09T00:25:56.029+05:30  INFO 38104 --- [USER-SERVICE] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-08-09T00:25:56.080+05:30  INFO 38104 --- [USER-SERVICE] [           main] c.a.userservice.UserServiceApplication   : Started UserServiceApplication in 24.747 seconds (process running for 25.98)

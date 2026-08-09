@@ -260,4 +260,15 @@ export const notifications = {
   }
 };
 
+export const ai = {
+  generateJobDescription: async (prompt) => {
+    const response = await api.post('/api/v1/ai/job/generate', { prompt });
+    return response.data; // Expected response: { title, description, company, location, salary, jobType }
+  },
+  chatWithCareerAdvisor: async (query) => {
+    const response = await api.post('/api/v1/ai/career/chatbot', { query });
+    return response.data; // Expected response: { reply, matches }
+  }
+};
+
 export default api;
