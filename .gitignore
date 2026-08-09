@@ -1,2 +1,61 @@
-/.metadata/
+# Build Outputs & Targets
 **/target/
+**/bin/
+**/obj/
+dist/
+dist-ssr/
+
+# Node/Frontend dependencies
+**/node_modules/
+
+# Python Virtual Environments & Cache
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+.venv/
+venv/
+ENV/
+env/
+
+# AI Service Local Database & Vector Store
+**/AiService/chroma_db/
+
+# Local Environment / Credentials (VERY IMPORTANT)
+**/AiService/.env
+.env
+.env*.local
+
+# Logs
+/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# JVM Crash & Replay logs
+hs_err_pid*.log
+replay_pid*.log
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+.metadata/
+.classpath
+.project
+.settings/
+.factorypath
+*.class
+*.iml
+*.ipr
+*.iws

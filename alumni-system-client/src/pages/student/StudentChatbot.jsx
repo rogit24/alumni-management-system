@@ -35,40 +35,144 @@ function StudentChatbot() {
     const queryText = textToSend || input;
     if (!queryText.trim()) return;
 
-    // Add user message
+    const botMsgId = Date.now();
+    console.log("[handleSend] Initialized message IDs. botMsgId =", botMsgId);
+
+    // Create user and bot messages
     const userMsg = {
       sender: "user",
       text: queryText,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     };
 
-    setMessages((prev) => [...prev, userMsg]);
+    const botMsg = {
+      sender: "bot",
+      text: "",
+      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      id: botMsgId,
+    };
+
+    // Update messages state in a single atomic update
+    setMessages((prev) => [...prev, userMsg, botMsg]);
+    
     if (!textToSend) setInput("");
     setLoading(true);
+    setMatches([]); // Clear matches for the new query
 
     try {
-      const response = await aiService.chatWithCareerAdvisor(queryText);
-      
-      const botMsg = {
-        sender: "bot",
-        text: response.reply || "I'm sorry, I couldn't process that query.",
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-      };
+      const user = JSON.parse(localStorage.getItem("currentUser"));
+      const token = user ? user.token : "";
 
-      setMessages((prev) => [...prev, botMsg]);
+      console.log("[handleSend] Initiating fetch to chatbot API...");
+      const response = await fetch("http://localhost:9191/api/v1/ai/career/chatbot", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`,
+        },
+        body: JSON.stringify({ query: queryText }),
+      });
 
-      // Set matches if returned
-      if (response.matches && response.matches.length > 0) {
-        setMatches(response.matches);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
+
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder("utf-8");
+      let done = false;
+      let buffer = "";
+      let accumulatedReply = "";
+
+      console.log("[handleSend] Reading stream chunks...");
+      while (!done) {
+        const { value, done: readerDone } = await reader.read();
+        done = readerDone;
+        
+        if (value) {
+          buffer += decoder.decode(value, { stream: !done });
+          
+          // Split buffer by newline to process complete JSON chunks
+          const lines = buffer.split("\n");
+          // Keep the last partial line in buffer
+          buffer = lines.pop() || "";
+
+          for (const line of lines) {
+            const cleanedLine = line.trim();
+            if (!cleanedLine) continue;
+            try {
+              console.log("[handleSend] Parsed line:", cleanedLine);
+              const data = JSON.parse(cleanedLine);
+              if (data.matches) {
+                console.log("[handleSend] Found matches:", data.matches);
+                setMatches(data.matches);
+              }
+              if (data.token !== undefined) {
+                accumulatedReply += data.token;
+                console.log("[handleSend] Token received:", JSON.stringify(data.token), "Accumulated length:", accumulatedReply.length);
+                setMessages((prev) => {
+                  const updated = prev.map((msg) => {
+                    if (msg.id === botMsgId) {
+                      console.log("[handleSend] Updating bot msg text. msg.id matches botMsgId.");
+                      return { ...msg, text: accumulatedReply };
+                    }
+                    return msg;
+                  });
+                  return updated;
+                });
+              }
+              if (data.error) {
+                console.error("[handleSend] Stream error detail:", data.error);
+              }
+            } catch (err) {
+              console.warn("[handleSend] JSON parse warning on stream line:", err, cleanedLine);
+            }
+          }
+        }
+      }
+
+      // If buffer has anything left after stream ends
+      const cleanedBuffer = buffer.trim();
+      if (cleanedBuffer) {
+        try {
+          console.log("[handleSend] Parsing final buffer line:", cleanedBuffer);
+          const data = JSON.parse(cleanedBuffer);
+          if (data.matches) setMatches(data.matches);
+          if (data.token !== undefined) {
+            accumulatedReply += data.token;
+            setMessages((prev) =>
+              prev.map((msg) =>
+                msg.id === botMsgId ? { ...msg, text: accumulatedReply } : msg
+              )
+            );
+          }
+        } catch (err) {
+          console.warn("[handleSend] JSON parse warning on final stream buffer:", err, buffer);
+        }
+      }
+
+      console.log("[handleSend] Stream completed. Accumulated reply length:", accumulatedReply.length);
+      // Fallback if no text was streamed
+      if (!accumulatedReply) {
+        console.warn("[handleSend] No tokens were streamed, applying fallback.");
+        setMessages((prev) =>
+          prev.map((msg) =>
+            msg.id === botMsgId ? { ...msg, text: "I'm sorry, I couldn't generate a response." } : msg
+          )
+        );
+      }
+
     } catch (error) {
-      console.error(error);
-      const botErrorMsg = {
-        sender: "bot",
-        text: "Sorry, I had trouble reaching the AI service. Please make sure the AI microservice is running.",
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-      };
-      setMessages((prev) => [...prev, botErrorMsg]);
+      console.error("[handleSend] Error during fetch/stream:", error);
+      setMessages((prev) =>
+        prev.map((msg) =>
+          msg.id === botMsgId
+            ? {
+                ...msg,
+                text: "Sorry, I had trouble reaching the AI service. Please make sure the AI microservice is running.",
+              }
+            : msg
+        )
+      );
       toast.error("Failed to connect to AI Career Advisor");
     } finally {
       setLoading(false);
@@ -86,7 +190,7 @@ function StudentChatbot() {
       <div className="container-fluid py-2">
         <div className="row">
           {/* Chat Interface Column */}
-          <div className={matches.length > 0 ? "col-lg-8 mb-4" : "col-12 mb-4"}>
+          <div className="col-12 mb-4">
             <div className="card shadow border-0" style={{ height: "78vh", borderRadius: "16px", overflow: "hidden" }}>
               
               {/* Card Header */}
@@ -185,36 +289,6 @@ function StudentChatbot() {
 
             </div>
           </div>
-
-          {/* Job Recommendation Column */}
-          {matches.length > 0 && (
-            <div className="col-lg-4">
-              <div className="card shadow border-0" style={{ height: "78vh", borderRadius: "16px", overflow: "hidden" }}>
-                <div className="card-header bg-primary text-white py-3">
-                  <h5 className="m-0 font-weight-bold d-flex align-items-center gap-2">
-                    🎯 Recommended Matches
-                  </h5>
-                </div>
-                <div className="card-body p-3" style={{ overflowY: "auto" }}>
-                  <p className="text-muted small mb-3">AI identified the following real-time listings matching your credentials and query query:</p>
-                  
-                  {matches.map((job) => (
-                    <div key={job.id} className="card border-primary mb-3 shadow-sm hover-card">
-                      <div className="card-body p-3">
-                        <span className="badge bg-light text-primary border border-primary rounded-pill mb-2 float-end">{job.jobType}</span>
-                        <h6 className="card-title font-weight-bold mb-1">{job.title}</h6>
-                        <p className="text-muted small mb-2">{job.company} • {job.location}</p>
-                        <div className="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
-                          <span className="text-success small font-weight-bold">💰 {job.salary} Package</span>
-                          <span className="badge bg-info text-dark rounded-pill">Match Score: {job.matchScore ? Math.round(job.matchScore * 100) : 92}%</span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
 
         </div>
       </div>

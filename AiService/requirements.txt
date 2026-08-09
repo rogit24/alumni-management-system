@@ -8,3 +8,5 @@ langchain-community==0.0.28
 langchain-core==0.1.33
 langchain-google-genai
 langchain-openai
+python-dotenv
+chromadb

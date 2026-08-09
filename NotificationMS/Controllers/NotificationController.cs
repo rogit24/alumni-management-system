@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using NotificationMS.DTOs;
+using Microsoft.EntityFrameworkCore;
+using NotificationMS.Data;
 using NotificationMS.Models;
-using NotificationMS.Services;
 
 namespace NotificationMS.Controllers
 {
@@ -9,79 +9,97 @@ namespace NotificationMS.Controllers
     [Route("api/v1/notifications")]
     public class NotificationController : ControllerBase
     {
-        private readonly INotificationService _notificationService;
+        private readonly NotificationDbContext _context;
 
-        public NotificationController(INotificationService notificationService)
+        public NotificationController(NotificationDbContext context)
         {
-            _notificationService = notificationService;
+            _context = context;
         }
 
         // Create Notification
         [HttpPost]
-        public async Task<ActionResult<NotificationDto>> CreateNotification([FromBody] NotificationDto dto)
+        public async Task<ActionResult<Notification>> CreateNotification([FromBody] Notification notification)
         {
-            if (!ModelState.IsValid)
+            if (notification == null)
             {
-                return BadRequest(ModelState);
+                return BadRequest("Notification request body is null.");
             }
 
-            var created = await _notificationService.CreateNotificationAsync(dto);
-            return Ok(created);
+            _context.Notifications.Add(notification);
+            await _context.SaveChangesAsync();
+
+            return Ok(notification);
         }
 
         // Get All Notifications
         [HttpGet]
-        public async Task<ActionResult<List<Notification>>> GetAllNotifications()
+        public async Task<ActionResult<IEnumerable<Notification>>> GetAllNotifications()
         {
-            var notifications = await _notificationService.GetAllNotificationsAsync();
-            return Ok(notifications);
+            var list = await _context.Notifications.ToListAsync();
+            return Ok(list);
         }
 
         // Get Notification By Id
-        [HttpGet("{id:long}")]
+        [HttpGet("{id}")]
         public async Task<ActionResult<Notification>> GetNotificationById(long id)
         {
-            var notification = await _notificationService.GetNotificationByIdAsync(id);
+            var notification = await _context.Notifications.FindAsync(id);
+            if (notification == null)
+            {
+                return NotFound($"Notification with ID {id} not found.");
+            }
             return Ok(notification);
         }
 
         // Get Notifications of User
-        [HttpGet("user/{userId:long}")]
-        public async Task<ActionResult<List<Notification>>> GetUserNotifications(long userId)
+        [HttpGet("user/{userId}")]
+        public async Task<ActionResult<IEnumerable<Notification>>> GetUserNotifications(long userId)
         {
-            var notifications = await _notificationService.GetUserNotificationsAsync(userId);
-            return Ok(notifications);
+            var userNotifications = await _context.Notifications
+                .Where(n => n.UserId == userId)
+                .ToListAsync();
+            return Ok(userNotifications);
         }
 
         // Get Read/Unread Notifications
-        [HttpGet("status/{isRead:bool}")]
-        public async Task<ActionResult<List<Notification>>> GetNotificationsByReadStatus(bool isRead)
+        [HttpGet("status/{isRead}")]
+        public async Task<ActionResult<IEnumerable<Notification>>> GetNotificationsByReadStatus(bool isRead)
         {
-            var notifications = await _notificationService.GetNotificationsByReadStatusAsync(isRead);
+            var notifications = await _context.Notifications
+                .Where(n => n.IsRead == isRead)
+                .ToListAsync();
             return Ok(notifications);
         }
 
         // Mark Notification As Read
-        [HttpPut("{id:long}/read")]
+        [HttpPut("{id}/read")]
         public async Task<ActionResult<Notification>> MarkAsRead(long id)
         {
-            var notification = await _notificationService.MarkAsReadAsync(id);
+            var notification = await _context.Notifications.FindAsync(id);
+            if (notification == null)
+            {
+                return NotFound($"Notification with ID {id} not found.");
+            }
+
+            notification.IsRead = true;
+            await _context.SaveChangesAsync();
+
             return Ok(notification);
         }
 
         // Delete Notification
-        [HttpDelete("{id:long}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteNotification(long id)
         {
-            await _notificationService.DeleteNotificationAsync(id);
-            return Ok();
-        }
+            var notification = await _context.Notifications.FindAsync(id);
+            if (notification == null)
+            {
+                return NotFound($"Notification with ID {id} not found.");
+            }
 
-        // Delete All Notifications of User
-        [HttpDelete("user/{userId:long}")]
-        public async Task<IActionResult> DeleteUserNotifications(long userId)
-        {
-            await _notificationService.DeleteUserNotificationsAsync(userId);
+            _context.Notifications.Remove(notification);
+            await _context.SaveChangesAsync();
+
             return Ok();
         }
     }

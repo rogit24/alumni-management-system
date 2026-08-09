@@ -217,11 +217,14 @@ services:
       - USER_SERVICE_URL=http://user-service:8081
       - PROFILE_SERVICE_URL=http://profile-service:8082
       - JOB_SERVICE_URL=http://job-service:8083
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
     depends_on:
       service-registry:
         condition: service_healthy
     networks:
       - alumni-network
+
 
 networks:
   alumni-network:

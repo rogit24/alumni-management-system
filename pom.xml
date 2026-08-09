@@ -36,7 +36,6 @@
         <module>ProfileMS</module>
         <module>MessageMS</module>
         <module>ReferralMS</module>
-        <module>NotificationMS</module>
     </modules>
 
     <dependencyManagement>

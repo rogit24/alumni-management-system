@@ -12,30 +12,21 @@ namespace NotificationMS.Models
         public long Id { get; set; }
 
         [Column("user_id")]
-        [Required]
         public long UserId { get; set; }
 
         [Column("title")]
-        [Required]
-        [MaxLength(255)]
-        public string Title { get; set; } = string.Empty;
+        public string? Title { get; set; }
 
         [Column("message")]
-        [Required]
-        [MaxLength(2000)]
-        public string Message { get; set; } = string.Empty;
+        public string? Message { get; set; }
 
         [Column("type")]
-        [Required]
-        [MaxLength(50)]
-        public string Type { get; set; } = string.Empty; // Store NotificationType as string
+        public NotificationMS.Enums.NotificationType Type { get; set; }
 
         [Column("is_read")]
         public bool IsRead { get; set; } = false;
 
         [Column("created_at")]
-        [Required]
-        [MaxLength(50)]
-        public string CreatedAt { get; set; } = string.Empty;
+        public string? CreatedAt { get; set; }
     }
 }

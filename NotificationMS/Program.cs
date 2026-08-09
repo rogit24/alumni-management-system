@@ -1,138 +1,108 @@
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Storage;
 using NotificationMS.Data;
-using NotificationMS.Middleware;
-using NotificationMS.Services;
 using Steeltoe.Discovery.Client;
-using Steeltoe.Discovery.Eureka;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure Eureka ServiceUrl from environment if present
-var eurekaEnvUrl = Environment.GetEnvironmentVariable("EUREKA_CLIENT_SERVICEURL_DEFAULTZONE");
-if (!string.IsNullOrEmpty(eurekaEnvUrl))
+// Determine port
+var portEnv = Environment.GetEnvironmentVariable("PORT") ?? "8087";
+builder.WebHost.UseUrls($"http://*:{portEnv}");
+
+// Configure DB Connection from SPRING_DATASOURCE environment variables
+string springUrl = Environment.GetEnvironmentVariable("SPRING_DATASOURCE_URL") ?? "";
+string dbUser = Environment.GetEnvironmentVariable("SPRING_DATASOURCE_USERNAME") ?? "root";
+string dbPassword = Environment.GetEnvironmentVariable("SPRING_DATASOURCE_PASSWORD") ?? "manager";
+
+string server = "localhost";
+string port = "3306";
+string database = "notification_db";
+
+if (!string.IsNullOrEmpty(springUrl))
 {
-    builder.Configuration["eureka:client:serviceUrl"] = eurekaEnvUrl;
+    try
+    {
+        string cleanUrl = springUrl.Replace("jdbc:mysql://", "");
+        int questionMarkIndex = cleanUrl.IndexOf('?');
+        if (questionMarkIndex != -1)
+        {
+            cleanUrl = cleanUrl.Substring(0, questionMarkIndex);
+        }
+        
+        int slashIndex = cleanUrl.IndexOf('/');
+        if (slashIndex != -1)
+        {
+            database = cleanUrl.Substring(slashIndex + 1);
+            string hostAndPort = cleanUrl.Substring(0, slashIndex);
+            int colonIndex = hostAndPort.IndexOf(':');
+            if (colonIndex != -1)
+            {
+                server = hostAndPort.Substring(0, colonIndex);
+                port = hostAndPort.Substring(colonIndex + 1);
+            }
+            else
+            {
+                server = hostAndPort;
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error parsing SPRING_DATASOURCE_URL: {ex.Message}. Using default connection details.");
+    }
 }
 
-// Add Steeltoe Eureka Discovery Client
-builder.Services.AddServiceDiscovery(options => options.UseEureka());
+string connectionString = $"server={server};port={port};database={database};uid={dbUser};pwd={dbPassword};AllowUserVariables=True;UseAffectedRows=True";
 
-// Configure Database Connection (MySQL)
-var connectionString = BuildConnectionString(builder.Configuration);
-
-// Fixed MySQL version avoids network auto-detection blocking during startup
+// Register EF Core DbContext with MySQL
 builder.Services.AddDbContext<NotificationDbContext>(options =>
-{
-    options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 31)));
-});
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
-// Configure Services & Dependency Injection
-builder.Services.AddScoped<INotificationService, NotificationService>();
+// Add MVC Controllers
+builder.Services.AddControllers();
 
-// Configure Controllers & JSON serialization options
-builder.Services.AddControllers()
-    .AddJsonOptions(options =>
-    {
-        options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
-        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-    });
-
-// Configure OpenAPI / Swagger
+// Add Swagger / OpenAPI Support
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// CORS configuration
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll", policy =>
-    {
-        policy.AllowAnyOrigin()
-              .AllowAnyHeader()
-              .AllowAnyMethod();
-    });
-});
+// Register Steeltoe Eureka Discovery Client
+builder.Services.AddDiscoveryClient(builder.Configuration);
 
 var app = builder.Build();
 
-// Ensure MySQL database tables exist (creates 'notifications' table in alumni_db)
-using (var scope = app.Services.CreateScope())
+// Enable Swagger UI in all environments for gateway aggregation
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    var dbContext = scope.ServiceProvider.GetRequiredService<NotificationDbContext>();
-    var dbCreator = dbContext.Database.GetService<IRelationalDatabaseCreator>();
-    if (dbCreator != null)
-    {
-        if (!dbCreator.Exists())
-        {
-            dbCreator.Create();
-        }
-        try
-        {
-            dbCreator.CreateTables();
-        }
-        catch
-        {
-            // Table(s) already exist in database
-        }
-    }
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Notification API v1");
+    c.RoutePrefix = "swagger"; // Standard ASP.NET Core path: localhost:8087/swagger
+});
 
-// Global Exception Handler Middleware
-app.UseMiddleware<GlobalExceptionMiddleware>();
-
-// Configure HTTP pipeline
-if (app.Environment.IsDevelopment() || true)
+// Eureka Swagger aggregation rewrites: map v3/api-docs expected by Gateway to local swagger json
+app.MapGet("/v3/api-docs", async context =>
 {
-    app.UseSwagger(c =>
-    {
-        c.RouteTemplate = "v3/api-docs";
-    });
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/v3/api-docs", "Notification Service API v1");
-        c.RoutePrefix = "swagger";
-    });
-}
+    context.Response.Redirect("/swagger/v1/swagger.json");
+    await Task.CompletedTask;
+});
 
-app.UseCors("AllowAll");
+// Health check endpoint
+app.MapGet("/health", () => Results.Ok(new { Status = "UP" }));
 
 app.UseAuthorization();
-
 app.MapControllers();
 
-app.Run();
-
-static string BuildConnectionString(IConfiguration config)
+// Apply migrations or guarantee database exists
+using (var scope = app.Services.CreateScope())
 {
-    var springUrl = Environment.GetEnvironmentVariable("SPRING_DATASOURCE_URL");
-    var springUser = Environment.GetEnvironmentVariable("SPRING_DATASOURCE_USERNAME") ?? "root";
-    var springPwd = Environment.GetEnvironmentVariable("SPRING_DATASOURCE_PASSWORD") ?? "Naveen12";
-
-    if (!string.IsNullOrEmpty(springUrl))
+    var context = scope.ServiceProvider.GetRequiredService<NotificationDbContext>();
+    try
     {
-        string host = "localhost";
-        string db = "alumni_db";
-        try
-        {
-            var cleanUrl = springUrl.Replace("jdbc:mysql:replication://", "").Replace("jdbc:mysql://", "");
-            var parts = cleanUrl.Split('/');
-            if (parts.Length > 0)
-            {
-                var hosts = parts[0].Split(',')[0].Split('?')[0];
-                host = hosts.Split(':')[0];
-            }
-            if (parts.Length > 1)
-            {
-                db = parts[1].Split('?')[0];
-            }
-        }
-        catch { }
-        return $"Server={host};Port=3306;Database={db};Uid={springUser};Pwd={springPwd};";
+        context.Database.EnsureCreated();
+        Console.WriteLine("Database and tables verified/created successfully.");
     }
-
-    return config.GetConnectionString("DefaultConnection") 
-        ?? "Server=localhost;Port=3306;Database=alumni_db;Uid=root;Pwd=Naveen12;";
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Database initialization warning: {ex.Message}");
+    }
 }
+
+app.Run();

@@ -6,10 +6,13 @@ import java.util.List;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import com.alumniconnect.template.client.MessageClient;
 import com.alumniconnect.template.client.NotificationClient;
 import com.alumniconnect.template.client.UserServiceClient;
+import com.alumniconnect.template.dto.MessageDto;
 import com.alumniconnect.template.dto.NotificationDto;
 import com.alumniconnect.template.dto.ReferralRequestDto;
+import com.alumniconnect.template.dto.UserDto;
 import com.alumniconnect.template.entity.ReferralRequest;
 import com.alumniconnect.template.enums.ReferralStatus;
 import com.alumniconnect.template.exception.ResourceNotFoundException;
@@ -22,16 +25,19 @@ public class ReferralService {
     private final ModelMapper modelMapper;
     private final UserServiceClient userServiceClient;
     private final NotificationClient notificationClient;
+    private final MessageClient messageClient;
 
     public ReferralService(ReferralRepository referralRepository,
                            ModelMapper modelMapper,
                            UserServiceClient userServiceClient,
-                           NotificationClient notificationClient) {
+                           NotificationClient notificationClient,
+                           MessageClient messageClient) {
 
         this.referralRepository = referralRepository;
         this.modelMapper = modelMapper;
         this.userServiceClient = userServiceClient;
         this.notificationClient = notificationClient;
+        this.messageClient = messageClient;
     }
 
     // Get Student Details
@@ -50,6 +56,29 @@ public class ReferralService {
 
         ReferralRequest savedReferral =
                 referralRepository.save(referralRequest);
+
+        // Fetch Student and Alumni info for identity propagation and receiver info
+        try {
+            UserDto student = userServiceClient.getUserById(dto.getStudentId());
+            UserDto alumni = userServiceClient.getUserById(dto.getAlumniId());
+            
+            if (student != null && alumni != null) {
+                MessageDto message = new MessageDto();
+                message.setReceiverId(alumni.getId());
+                message.setReceiverEmail(alumni.getEmail());
+                message.setMessageContent("Hi, I have requested a referral for the role of " 
+                        + dto.getJobRole() + " at " + dto.getCompany() + ". Message: " + dto.getMessage());
+                
+                messageClient.sendMessage(
+                    message,
+                    student.getId().toString(),
+                    student.getEmail(),
+                    student.getRole()
+                );
+            }
+        } catch (Exception e) {
+            System.err.println("Failed to send referral orchestration chat message: " + e.getMessage());
+        }
 
         // Send Notification
         NotificationDto notification = new NotificationDto();

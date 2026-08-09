@@ -18,9 +18,9 @@ public interface MessageRepository extends JpaRepository<Message, Long> {
     @Query("SELECT m FROM Message m WHERE m.receiverId = :userId OR m.senderId = :userId ORDER BY m.sentAt DESC")
     List<Message> findInboxByUserId(@Param("userId") Long userId);
 
-    @Query(value = "SELECT COUNT(*) FROM users WHERE id = :userId", nativeQuery = true)
+    @Query(value = "SELECT COUNT(*) FROM user_db.users WHERE id = :userId", nativeQuery = true)
     int countUserById(@Param("userId") Long userId);
 
-    @Query(value = "SELECT email FROM users WHERE id = :userId", nativeQuery = true)
+    @Query(value = "SELECT email FROM user_db.users WHERE id = :userId", nativeQuery = true)
     Optional<String> findUserEmailById(@Param("userId") Long userId);
 }

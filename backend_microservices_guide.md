@@ -5,10 +5,15 @@
 | Service Name | Technology | Default Port | Description |
 | :--- | :--- | :--- | :--- |
 | **ServiceRegistry** | Spring Cloud Eureka Server | `8761` | Service discovery and registry |
-| **ApiGateway** | Spring Cloud Gateway | `8080` | Entry point, routing, and JWT authentication filter |
+| **ApiGateway** | Spring Cloud Gateway | `9191` | Entry point, routing, and JWT authentication filter |
 | **UserService** | Spring Boot, Spring Security | `8081` | User registration, authentication, and JWT token issuance |
-| **ProfileMS** | Spring Boot, Spring Data JPA | `8082` | Profile CRUD, 1-to-1 user-profile constraint, ownership enforcement |
-| **MessageMS** | Spring Boot, Spring Data JPA | `8083` | Student-Alumni messaging, conversation threads, read receipts |
+| **ProfileMS** | Spring Boot, Spring Data JPA | `8082` | Profile CRUD, 1-to-1 user-profile constraint |
+| **JobMS** | Spring Boot, Spring Data JPA | `8083` | Job listings, details, and search capabilities |
+| **ApplicationMS** | Spring Boot, Spring Data JPA | `8084` | Job applications and tracking |
+| **ReferralMS** | Spring Boot, Spring Data JPA | `8085` | Referral request orchestration using Feign |
+| **MessageMS** | Spring Boot, Spring Data JPA | `8086` | Chat messages and peer-to-peer communication |
+| **NotificationMS** | ASP.NET Core Web API, EF Core | `8087` | System notifications, alerts, and read statuses |
+| **AiService** | FastAPI (Python), LangChain | `8000` | Career chatbot, resume grading, and AI queries |
 
 ---
 
@@ -18,13 +23,13 @@
 [ Frontend / Client ]
          │
          ▼
-  [ ApiGateway :8080 ] ───(JWT Validation Filter)
+  [ ApiGateway :9191 ] ───(JWT Validation Filter)
          │
- ┌───────┼───────────────────┬───────────────────┐
- │       │                   │                   │
- ▼       ▼                   ▼                   ▼
-[UserService]         [ProfileMS]         [MessageMS]       [ServiceRegistry]
-  (:8081)               (:8082)             (:8083)             (:8761)
+ ┌───────┼───────────────┬───────────────┬───────────────┐
+ │       │               │               │               │
+ ▼       ▼               ▼               ▼               ▼
+[UserService]      [ProfileMS]     [MessageMS]     [NotificationMS]   ...
+  (:8081)            (:8082)         (:8086)         (:8087)
 ```
 
 1. **Authentication:** Client sends credentials to `POST /api/auth/login` on `UserService`. Returns JWT signed with secret key containing `userId` and `roles`.

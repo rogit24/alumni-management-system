@@ -9,6 +9,8 @@ import com.alumniconnect.profileservice.repository.ProfileRepository;
 import com.alumniconnect.profileservice.service.ProfileService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ProfileServiceImpl implements ProfileService {
@@ -90,4 +92,12 @@ public class ProfileServiceImpl implements ProfileService {
 
         profileRepository.delete(existingProfile);
     }
+
+    @Override
+    public List<ProfileDto> getAllProfiles() {
+        return profileRepository.findAll().stream()
+                .map(profile -> modelMapper.map(profile, ProfileDto.class))
+                .collect(Collectors.toList());
+    }
 }
+

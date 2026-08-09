@@ -138,7 +138,7 @@ public class ApplicationController {
     	}catch(IllegalArgumentException e) {
     		throw new RuntimeException("Access denied: Unauthorized role: " + userRoleStr);
         }
-    	for(UserRole allowedRole : UserRole.values()) {
+    	for(UserRole allowedRole : allowedRoles) {
     		if(userRole == allowedRole) {
     			return userRole;
     		}
