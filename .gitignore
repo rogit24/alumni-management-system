@@ -59,3 +59,12 @@ Thumbs.db
 *.iml
 *.ipr
 *.iws
+
+# Ignore all markdown files except README.md / Readme.md
+*.md
+**/*.md
+!README.md
+!Readme.md
+!**/README.md
+!**/Readme.md
+
