@@ -1,11 +1,12 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:9191', // API Gateway port
+  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:9191',
   headers: {
     'Content-Type': 'application/json',
   },
 });
+
 
 // Request interceptor to automatically add JWT token to Authorization headers
 api.interceptors.request.use(
