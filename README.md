@@ -44,7 +44,7 @@ graph TD
         AIService -->|HTTP REST| ProfileMS
     end
 
-    subgraph Persistence Layer (Database-per-Service)
+    subgraph "Persistence Layer (Database-per-Service)"
         UserService -->|MySQL| DB_User[(user_db)]
         ProfileMS -->|MySQL| DB_Profile[(profile_db)]
         JobMS -->|MySQL| DB_Job[(job_db)]
